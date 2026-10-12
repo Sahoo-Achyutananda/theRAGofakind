@@ -1,0 +1,11 @@
+[
+  {"query": "What does Article 21 say?", "expected_articles": ["21"], "note": "Article-number lookup - embeddings are weak with numbers"},
+  {"query": "What is Article 356 about?", "expected_articles": ["356"], "note": "Article-number lookup"},
+  {"query": "What is Article 370?", "expected_articles": ["370"], "note": "Article-number lookup; watch for LLM answering from its own knowledge"},
+  {"query": "Is the right to property a fundamental right?", "expected_articles": ["300A"], "note": "Answer lives in Part XII, far from the Fundamental Rights chunks"},
+  {"query": "What does Article 31 say?", "expected_articles": ["31"], "note": "Omitted article - does the LLM admit it was omitted?"},
+  {"query": "Can peaceful assembly be restricted in the interest of public order?", "expected_articles": ["19"], "note": "19(3) only says 'sub-clause (b) of the said clause' - 'assembly' is in 19(1)"},
+  {"query": "What does the right to equality say?", "expected_articles": ["14"], "note": "'Right to Equality' is a section heading that was stripped"},
+  {"query": "What are the fundamental duties of citizens?", "expected_articles": ["51A"], "note": "Text says 'It shall be the duty of every citizen'"},
+  {"query": "What are the Directive Principles of State Policy?", "expected_articles": ["36", "37"], "note": "Part heading; articles rarely repeat the phrase"}
+]

@@ -1,0 +1,656 @@
+[
+  {
+    "query": "Who is NOT protected by the arrest and detention safeguards?",
+    "expected_articles": [
+      "22"
+    ],
+    "note": "Exclusions (enemy aliens, preventive detention) are in 22(3)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "baseline_top3": [
+      "22_2",
+      "22_0",
+      "22_4"
+    ],
+    "reranked_top3": [
+      "22_0",
+      "22_2",
+      "22_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "22_0",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.6602,
+        "ce_score": 6.4755
+      },
+      {
+        "chunk_id": "22_2",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.6674,
+        "ce_score": 5.2172
+      },
+      {
+        "chunk_id": "22_1",
+        "bi_rank": 6,
+        "ce_rank": 3,
+        "bi_score": 0.5947,
+        "ce_score": 5.1037
+      },
+      {
+        "chunk_id": "22_4",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.6335,
+        "ce_score": 4.1579
+      },
+      {
+        "chunk_id": "22_5",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.5648,
+        "ce_score": 4.1063
+      },
+      {
+        "chunk_id": "22_3",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.6266,
+        "ce_score": 3.4424
+      },
+      {
+        "chunk_id": "22_6",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "bi_score": 0.6156,
+        "ce_score": 2.4713
+      },
+      {
+        "chunk_id": "361_2",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.4663,
+        "ce_score": -0.2812
+      },
+      {
+        "chunk_id": "20_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.5043,
+        "ce_score": -7.1714
+      },
+      {
+        "chunk_id": "373_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4331,
+        "ce_score": -7.6439
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 34.2,
+      "rerank": 364.9,
+      "llm_baseline": 4321.3,
+      "llm_reranked": 3823.1
+    },
+    "answer_baseline": "Based on the provided context, the protection and safeguards against arrest and detention under clauses (1) and (2) do not apply to:\n\n1. Any person who for the time being is an enemy alien [Article 22(3)(a)].\n2. Any person who is arrested or detained under any law providing for preventive detention [Article 22(3)(b)].",
+    "answer_reranked": "Based on the provided context, the safeguards against arrest and detention (outlined in clauses (1) and (2) of Article 22) do NOT apply to:\n\n1. Any person who for the time being is an enemy alien [Article 22(3)(a)].\n2. Any person who is arrested or detained under any law providing for preventive detention [Article 22(3)(b)]."
+  },
+  {
+    "query": "Within how many hours must an arrested person be produced before a magistrate?",
+    "expected_articles": [
+      "22"
+    ],
+    "note": "Answer is 24 hours, in 22(2)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "baseline_top3": [
+      "22_1",
+      "22_3",
+      "22_6"
+    ],
+    "reranked_top3": [
+      "22_1",
+      "22_3",
+      "22_6"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "22_1",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.7162,
+        "ce_score": 9.3008
+      },
+      {
+        "chunk_id": "22_3",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.5672,
+        "ce_score": -3.5959
+      },
+      {
+        "chunk_id": "22_6",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.5263,
+        "ce_score": -5.3943
+      },
+      {
+        "chunk_id": "22_0",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.4172,
+        "ce_score": -6.7703
+      },
+      {
+        "chunk_id": "22_4",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.4614,
+        "ce_score": -8.0361
+      },
+      {
+        "chunk_id": "22_2",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "bi_score": 0.4269,
+        "ce_score": -9.9127
+      },
+      {
+        "chunk_id": "243ZQ_1",
+        "bi_rank": 10,
+        "ce_rank": 7,
+        "bi_score": 0.4122,
+        "ce_score": -10.6825
+      },
+      {
+        "chunk_id": "233A_0",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "bi_score": 0.4324,
+        "ce_score": -10.7463
+      },
+      {
+        "chunk_id": "226_2",
+        "bi_rank": 7,
+        "ce_rank": 9,
+        "bi_score": 0.4193,
+        "ce_score": -10.8868
+      },
+      {
+        "chunk_id": "217_1",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.4183,
+        "ce_score": -11.0702
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 35.8,
+      "rerank": 482.5,
+      "llm_baseline": 3294.5,
+      "llm_reranked": 3156.0
+    },
+    "answer_baseline": "An arrested person must be produced before the nearest magistrate within a period of twenty-four hours of their arrest, excluding the time necessary for the journey from the place of arrest to the court of the magistrate (Article 22(2)).",
+    "answer_reranked": "An arrested person must be produced before the nearest magistrate within twenty-four hours of their arrest, excluding the time necessary for the journey from the place of arrest to the court of the magistrate (Article 22(2))."
+  },
+  {
+    "query": "What can the Rajya Sabha NOT do with a Money Bill?",
+    "expected_articles": [
+      "109"
+    ],
+    "note": "Can only recommend within 14 days; 107 and 110 also say 'Money Bill'",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "117_2",
+      "110_0",
+      "198_0"
+    ],
+    "reranked_top3": [
+      "198_3",
+      "199_2",
+      "110_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "198_3",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.5715,
+        "ce_score": 0.6117
+      },
+      {
+        "chunk_id": "199_2",
+        "bi_rank": 10,
+        "ce_rank": 2,
+        "bi_score": 0.5493,
+        "ce_score": -0.7752
+      },
+      {
+        "chunk_id": "110_2",
+        "bi_rank": 6,
+        "ce_rank": 3,
+        "bi_score": 0.5601,
+        "ce_score": -0.9391
+      },
+      {
+        "chunk_id": "198_0",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.5785,
+        "ce_score": -1.5018
+      },
+      {
+        "chunk_id": "197_2",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.5522,
+        "ce_score": -2.1864
+      },
+      {
+        "chunk_id": "110_0",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.6162,
+        "ce_score": -2.6198
+      },
+      {
+        "chunk_id": "199_0",
+        "bi_rank": 7,
+        "ce_rank": 7,
+        "bi_score": 0.5573,
+        "ce_score": -3.4186
+      },
+      {
+        "chunk_id": "117_2",
+        "bi_rank": 1,
+        "ce_rank": 8,
+        "bi_score": 0.6424,
+        "ce_score": -3.7067
+      },
+      {
+        "chunk_id": "114_1",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.5632,
+        "ce_score": -7.3979
+      },
+      {
+        "chunk_id": "116_0",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.551,
+        "ce_score": -9.5452
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 34.6,
+      "rerank": 487.2,
+      "llm_baseline": 3489.2,
+      "llm_reranked": 2748.0
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Which titles is the State NOT allowed to confer?",
+    "expected_articles": [
+      "18"
+    ],
+    "note": "Exceptions for military and academic distinctions",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "18_0",
+      "348_2",
+      "246_2"
+    ],
+    "reranked_top3": [
+      "18_0",
+      "32A_0",
+      "304_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "18_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.5135,
+        "ce_score": 0.0562
+      },
+      {
+        "chunk_id": "32A_0",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "bi_score": 0.4532,
+        "ce_score": -6.9479
+      },
+      {
+        "chunk_id": "304_0",
+        "bi_rank": 6,
+        "ce_rank": 3,
+        "bi_score": 0.4537,
+        "ce_score": -8.8708
+      },
+      {
+        "chunk_id": "246_2",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.4682,
+        "ce_score": -9.3774
+      },
+      {
+        "chunk_id": "3_0",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "bi_score": 0.4549,
+        "ce_score": -9.4369
+      },
+      {
+        "chunk_id": "228A_0",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.4446,
+        "ce_score": -10.1195
+      },
+      {
+        "chunk_id": "19_5",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.4472,
+        "ce_score": -10.2297
+      },
+      {
+        "chunk_id": "348_2",
+        "bi_rank": 2,
+        "ce_rank": 8,
+        "bi_score": 0.4926,
+        "ce_score": -10.4002
+      },
+      {
+        "chunk_id": "382_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4524,
+        "ce_score": -10.5064
+      },
+      {
+        "chunk_id": "214_0",
+        "bi_rank": 4,
+        "ce_rank": 10,
+        "bi_score": 0.4557,
+        "ce_score": -10.5416
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 35.2,
+      "rerank": 578.0,
+      "llm_baseline": 3382.6,
+      "llm_reranked": 2690.5
+    },
+    "answer_baseline": "Based on the provided context, the State is not allowed to confer any title that is not a military or academic distinction (Article 18).",
+    "answer_reranked": "Based on Article 18(1), the State is not allowed to confer any title that is not a military or academic distinction."
+  },
+  {
+    "query": "Can a non-citizen holding a public office accept a foreign title without permission?",
+    "expected_articles": [
+      "18"
+    ],
+    "note": "Role-specific constraint in 18(3)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "18_0",
+      "102_0",
+      "191_0"
+    ],
+    "reranked_top3": [
+      "18_0",
+      "102_0",
+      "191_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "18_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6275,
+        "ce_score": 6.2273
+      },
+      {
+        "chunk_id": "102_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.456,
+        "ce_score": -1.6404
+      },
+      {
+        "chunk_id": "191_0",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.4525,
+        "ce_score": -3.2737
+      },
+      {
+        "chunk_id": "319_1",
+        "bi_rank": 4,
+        "ce_rank": 4,
+        "bi_score": 0.3992,
+        "ce_score": -6.5294
+      },
+      {
+        "chunk_id": "316_3",
+        "bi_rank": 9,
+        "ce_rank": 5,
+        "bi_score": 0.3739,
+        "ce_score": -6.9711
+      },
+      {
+        "chunk_id": "59_0",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.3637,
+        "ce_score": -7.4255
+      },
+      {
+        "chunk_id": "310_1",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.3803,
+        "ce_score": -8.2181
+      },
+      {
+        "chunk_id": "148_3",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.3772,
+        "ce_score": -9.2412
+      },
+      {
+        "chunk_id": "31A_1",
+        "bi_rank": 7,
+        "ce_rank": 9,
+        "bi_score": 0.3798,
+        "ce_score": -9.6813
+      },
+      {
+        "chunk_id": "361B_1",
+        "bi_rank": 5,
+        "ce_rank": 10,
+        "bi_score": 0.3869,
+        "ce_score": -10.3722
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 37.9,
+      "rerank": 516.4,
+      "llm_baseline": 3901.5,
+      "llm_reranked": 3329.0
+    },
+    "answer_baseline": "No. Under Article 18(3), a person who is not a citizen of India cannot accept any title from any foreign State while holding an office of profit or trust under the State without the consent of the President.",
+    "answer_reranked": "No. A person who is not a citizen of India, while holding an office of profit or trust under the State, cannot accept any title from any foreign State without the consent of the President (Article 18(3))."
+  },
+  {
+    "query": "Is religious instruction allowed in government-funded schools?",
+    "expected_articles": [
+      "28"
+    ],
+    "note": "Banned in wholly State-funded schools, allowed in some others",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "28_0",
+      "30_0",
+      "15_4"
+    ],
+    "reranked_top3": [
+      "28_0",
+      "30_0",
+      "15_4"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "28_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.675,
+        "ce_score": 4.5588
+      },
+      {
+        "chunk_id": "30_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.4982,
+        "ce_score": -6.6217
+      },
+      {
+        "chunk_id": "15_4",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.4487,
+        "ce_score": -7.9558
+      },
+      {
+        "chunk_id": "26_0",
+        "bi_rank": 6,
+        "ce_rank": 4,
+        "bi_score": 0.418,
+        "ce_score": -8.821
+      },
+      {
+        "chunk_id": "15_5",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.4283,
+        "ce_score": -8.91
+      },
+      {
+        "chunk_id": "27_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.4215,
+        "ce_score": -9.3354
+      },
+      {
+        "chunk_id": "21A_0",
+        "bi_rank": 7,
+        "ce_rank": 7,
+        "bi_score": 0.4122,
+        "ce_score": -9.3864
+      },
+      {
+        "chunk_id": "25_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.3684,
+        "ce_score": -9.461
+      },
+      {
+        "chunk_id": "15_3",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.3892,
+        "ce_score": -9.8167
+      },
+      {
+        "chunk_id": "25_1",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.3726,
+        "ce_score": -10.094
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 39.3,
+      "rerank": 475.4,
+      "llm_baseline": 5772.5,
+      "llm_reranked": 4948.7
+    },
+    "answer_baseline": "Based on the provided context:\n\n* **Wholly State-Funded Institutions:** No religious instruction shall be provided in any educational institution that is wholly maintained out of State funds [Article 28(1)].\n* **Exception for Trusts/Endowments:** Religious instruction is permitted in an institution administered by the State if it was established under an endowment or trust that requires such instruction to be imparted [Article 28(2)].\n* **State-Aided Institutions:** In educational institutions receiving aid out of State funds, religious instruction may be imparted, but no person attending can be required to take part in any religious instruction or attend religious worship unless they (or their guardian, if a minor) give consent [Article 28(3)].",
+    "answer_reranked": "Based on the provided context, the rules regarding religious instruction in government-funded or State-administered educational institutions are as follows:\n\n* **Institutions wholly maintained out of State funds:** No religious instruction shall be provided in any educational institution that is wholly maintained out of State funds (Article 28(1)).\n* **State-administered institutions under an endowment or trust:** Religious instruction is permitted in an educational institution administered by the State if it was established under any endowment or trust requiring that religious instruction be imparted in it (Article 28(2)).\n* **Institutions receiving aid out of State funds:** In educational institutions receiving aid out of State funds (or recognized by the State), religious instruction may take place, but no person attending can be required to participate in any religious instruction or attend religious worship unless that person—or their guardian, if they are a minor—has given consent (Article 28(3))."
+  }
+]

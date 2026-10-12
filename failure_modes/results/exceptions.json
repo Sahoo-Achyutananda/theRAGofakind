@@ -1,0 +1,1003 @@
+[
+  {
+    "query": "Can the State make special laws only for women?",
+    "expected_articles": [
+      "15"
+    ],
+    "note": "15(1) bans sex discrimination; the exception is 15(3)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    "baseline_top3": [
+      "15_2",
+      "246_2",
+      "15_3"
+    ],
+    "reranked_top3": [
+      "15_2",
+      "15_4",
+      "15_3"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "15_2",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.5591,
+        "ce_score": 6.1455
+      },
+      {
+        "chunk_id": "15_4",
+        "bi_rank": 9,
+        "ce_rank": 2,
+        "bi_score": 0.4568,
+        "ce_score": -1.5239
+      },
+      {
+        "chunk_id": "15_3",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.4915,
+        "ce_score": -2.0301
+      },
+      {
+        "chunk_id": "332A_0",
+        "bi_rank": 8,
+        "ce_rank": 4,
+        "bi_score": 0.4588,
+        "ce_score": -2.4652
+      },
+      {
+        "chunk_id": "15_0",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.4606,
+        "ce_score": -7.6865
+      },
+      {
+        "chunk_id": "246_2",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.5355,
+        "ce_score": -8.4672
+      },
+      {
+        "chunk_id": "246_0",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.4903,
+        "ce_score": -9.4185
+      },
+      {
+        "chunk_id": "304_0",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "bi_score": 0.47,
+        "ce_score": -10.3856
+      },
+      {
+        "chunk_id": "32A_0",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "bi_score": 0.469,
+        "ce_score": -10.3878
+      },
+      {
+        "chunk_id": "187_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4553,
+        "ce_score": -10.7314
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 29.2,
+      "rerank": 582.6,
+      "llm_baseline": 6243.0,
+      "llm_reranked": 4041.2
+    },
+    "answer_baseline": "Based on the provided context:\n\nYes, the State can make special provisions for women (and children) as nothing in Article 15 prevents it from doing so (Article 15(3)). \n\nHowever, the State is not restricted to making special provisions *only* for women; under Article 15(4), the State can also make special provisions for the advancement of socially and educationally backward classes of citizens, the Scheduled Castes, and the Scheduled Tribes.",
+    "answer_reranked": "Yes. According to Article 15(3), nothing in Article 15 prevents the State from making any special provision for women and children."
+  },
+  {
+    "query": "Can the State reserve government jobs for backward classes?",
+    "expected_articles": [
+      "16"
+    ],
+    "note": "16(1)-(2) say equal opportunity; the exception is 16(4)",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [
+        10
+      ],
+      "reranked": [
+        10
+      ]
+    },
+    "baseline_top3": [
+      "342A_0",
+      "342A_2",
+      "338B_9"
+    ],
+    "reranked_top3": [
+      "338B_7",
+      "338B_9",
+      "342A_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "338B_7",
+        "bi_rank": 5,
+        "ce_rank": 1,
+        "bi_score": 0.5158,
+        "ce_score": 1.5034
+      },
+      {
+        "chunk_id": "338B_9",
+        "bi_rank": 3,
+        "ce_rank": 2,
+        "bi_score": 0.5203,
+        "ce_score": 1.0459
+      },
+      {
+        "chunk_id": "342A_0",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "bi_score": 0.5741,
+        "ce_score": 0.3253
+      },
+      {
+        "chunk_id": "338B_4",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.4825,
+        "ce_score": -0.6468
+      },
+      {
+        "chunk_id": "338B_0",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.4873,
+        "ce_score": -0.9998
+      },
+      {
+        "chunk_id": "366_29",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.5164,
+        "ce_score": -1.3593
+      },
+      {
+        "chunk_id": "340_0",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.5125,
+        "ce_score": -1.4457
+      },
+      {
+        "chunk_id": "342A_2",
+        "bi_rank": 2,
+        "ce_rank": 8,
+        "bi_score": 0.5269,
+        "ce_score": -3.1012
+      },
+      {
+        "chunk_id": "338B_10",
+        "bi_rank": 7,
+        "ce_rank": 9,
+        "bi_score": 0.4875,
+        "ce_score": -3.6877
+      },
+      {
+        "chunk_id": "16_4",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4777,
+        "ce_score": -4.2257
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 20.0,
+      "rerank": 454.8,
+      "llm_baseline": 3138.2,
+      "llm_reranked": 3354.0
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Can fundamental rights be suspended during an emergency?",
+    "expected_articles": [
+      "359"
+    ],
+    "note": "Suspension allowed EXCEPT articles 20 and 21",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "baseline_top3": [
+      "359_3",
+      "359_0",
+      "359_2"
+    ],
+    "reranked_top3": [
+      "359_2",
+      "359_5",
+      "359_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "359_2",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "bi_score": 0.5907,
+        "ce_score": 6.2858
+      },
+      {
+        "chunk_id": "359_5",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "bi_score": 0.5411,
+        "ce_score": 6.1327
+      },
+      {
+        "chunk_id": "359_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.6386,
+        "ce_score": 6.0994
+      },
+      {
+        "chunk_id": "359_3",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "bi_score": 0.6658,
+        "ce_score": 5.8236
+      },
+      {
+        "chunk_id": "359_1",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "bi_score": 0.5634,
+        "ce_score": 4.8341
+      },
+      {
+        "chunk_id": "359_4",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "bi_score": 0.5517,
+        "ce_score": 4.6436
+      },
+      {
+        "chunk_id": "358_2",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.5823,
+        "ce_score": 3.6427
+      },
+      {
+        "chunk_id": "358_1",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.5262,
+        "ce_score": 3.6113
+      },
+      {
+        "chunk_id": "360_4",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.4907,
+        "ce_score": -7.8287
+      },
+      {
+        "chunk_id": "360_6",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4893,
+        "ce_score": -8.1325
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 23.7,
+      "rerank": 494.2,
+      "llm_baseline": 4629.3,
+      "llm_reranked": 4628.1
+    },
+    "answer_baseline": "Based on the provided context, during a Proclamation of Emergency, the President may by order declare that the right to move any court for the enforcement of rights conferred by Part III (except Articles 20 and 21) as mentioned in the order, along with all pending proceedings for their enforcement, shall remain suspended for the period during which the Proclamation is in force or for a shorter specified period (Article 359(1)).",
+    "answer_reranked": "Based on the provided context, during a Proclamation of Emergency, the President may by order declare the suspension of the right to move any court for the enforcement of the rights conferred by Part III (except Articles 20 and 21) that are mentioned in the order, along with any pending proceedings for their enforcement, for the duration the Proclamation is in force or for a specified shorter period (Article 359)."
+  },
+  {
+    "query": "Can the right to life be suspended during an emergency?",
+    "expected_articles": [
+      "359",
+      "21"
+    ],
+    "note": "The exception in 359 is the whole answer",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10
+      ]
+    },
+    "baseline_top3": [
+      "359_3",
+      "359_0",
+      "358_2"
+    ],
+    "reranked_top3": [
+      "359_0",
+      "359_5",
+      "359_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "359_0",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.59,
+        "ce_score": 5.4482
+      },
+      {
+        "chunk_id": "359_5",
+        "bi_rank": 4,
+        "ce_rank": 2,
+        "bi_score": 0.507,
+        "ce_score": 5.0746
+      },
+      {
+        "chunk_id": "359_2",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.501,
+        "ce_score": 4.9316
+      },
+      {
+        "chunk_id": "359_3",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "bi_score": 0.6207,
+        "ce_score": 4.5803
+      },
+      {
+        "chunk_id": "359_1",
+        "bi_rank": 6,
+        "ce_rank": 5,
+        "bi_score": 0.5008,
+        "ce_score": 3.7074
+      },
+      {
+        "chunk_id": "358_1",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.4521,
+        "ce_score": 3.2315
+      },
+      {
+        "chunk_id": "358_2",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.5485,
+        "ce_score": 3.1054
+      },
+      {
+        "chunk_id": "359_4",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.4604,
+        "ce_score": 2.6993
+      },
+      {
+        "chunk_id": "352_4",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4701,
+        "ce_score": -5.8169
+      },
+      {
+        "chunk_id": "21_0",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.4914,
+        "ce_score": -7.8169
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 21.5,
+      "rerank": 490.5,
+      "llm_baseline": 7851.8,
+      "llm_reranked": 5396.5
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Does Article 13 invalidate constitutional amendments that violate fundamental rights?",
+    "expected_articles": [
+      "13"
+    ],
+    "note": "13(2) voids such laws; 13(4) excludes amendments under 368",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        3,
+        10
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "baseline_top3": [
+      "13_3",
+      "13_1",
+      "13_0"
+    ],
+    "reranked_top3": [
+      "13_3",
+      "13_1",
+      "13_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "13_3",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.7865,
+        "ce_score": 7.1859
+      },
+      {
+        "chunk_id": "13_1",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.7321,
+        "ce_score": 6.5084
+      },
+      {
+        "chunk_id": "13_0",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.6584,
+        "ce_score": 5.8694
+      },
+      {
+        "chunk_id": "13_2",
+        "bi_rank": 10,
+        "ce_rank": 4,
+        "bi_score": 0.5122,
+        "ce_score": 3.4534
+      },
+      {
+        "chunk_id": "368_2",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.5513,
+        "ce_score": 1.6009
+      },
+      {
+        "chunk_id": "144A_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.5765,
+        "ce_score": 0.0079
+      },
+      {
+        "chunk_id": "131A_0",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.5871,
+        "ce_score": -0.0863
+      },
+      {
+        "chunk_id": "226A_0",
+        "bi_rank": 6,
+        "ce_rank": 8,
+        "bi_score": 0.5657,
+        "ce_score": -0.1866
+      },
+      {
+        "chunk_id": "228A_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.532,
+        "ce_score": -0.5127
+      },
+      {
+        "chunk_id": "232_0",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.5139,
+        "ce_score": -4.9506
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 20.5,
+      "rerank": 294.4,
+      "llm_baseline": 3494.5,
+      "llm_reranked": 3746.1
+    },
+    "answer_baseline": "Based on the provided context, no, Article 13 does not apply to constitutional amendments. Article 13(4) explicitly states that nothing in Article 13 shall apply to any amendment of the Constitution made under Article 368.",
+    "answer_reranked": "Based on the provided context, **no**, Article 13 does not invalidate constitutional amendments. \n\nAccording to Article 13(4), nothing in Article 13 shall apply to any amendment of the Constitution made under Article 368."
+  },
+  {
+    "query": "Can a person who is not an MP be appointed as a Union Minister?",
+    "expected_articles": [
+      "75"
+    ],
+    "note": "Allowed, but only for six consecutive months - 75(5)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        2
+      ]
+    },
+    "baseline_top3": [
+      "75_2",
+      "191_1",
+      "312A_1"
+    ],
+    "reranked_top3": [
+      "191_1",
+      "75_2",
+      "164_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "191_1",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.5741,
+        "ce_score": -1.3351
+      },
+      {
+        "chunk_id": "75_2",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.5913,
+        "ce_score": -1.7337
+      },
+      {
+        "chunk_id": "164_2",
+        "bi_rank": 4,
+        "ce_rank": 3,
+        "bi_score": 0.5314,
+        "ce_score": -2.2836
+      },
+      {
+        "chunk_id": "239_1",
+        "bi_rank": 5,
+        "ce_rank": 4,
+        "bi_score": 0.5228,
+        "ce_score": -2.7604
+      },
+      {
+        "chunk_id": "124A_0",
+        "bi_rank": 10,
+        "ce_rank": 5,
+        "bi_score": 0.5062,
+        "ce_score": -3.7271
+      },
+      {
+        "chunk_id": "319_0",
+        "bi_rank": 9,
+        "ce_rank": 6,
+        "bi_score": 0.5065,
+        "ce_score": -4.0458
+      },
+      {
+        "chunk_id": "312A_1",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.5376,
+        "ce_score": -4.6997
+      },
+      {
+        "chunk_id": "102_0",
+        "bi_rank": 7,
+        "ce_rank": 8,
+        "bi_score": 0.5153,
+        "ce_score": -7.0353
+      },
+      {
+        "chunk_id": "164_0",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "bi_score": 0.5225,
+        "ce_score": -7.4239
+      },
+      {
+        "chunk_id": "173_0",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.5076,
+        "ce_score": -9.0897
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 17.9,
+      "rerank": 572.7,
+      "llm_baseline": 3430.1,
+      "llm_reranked": 3357.6
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Can a person who is not an MLA become a State Minister?",
+    "expected_articles": [
+      "164"
+    ],
+    "note": "Same six-month rule, State version - 164(4)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        3,
+        5,
+        8
+      ],
+      "reranked": [
+        1,
+        2,
+        7,
+        9
+      ]
+    },
+    "baseline_top3": [
+      "164_2",
+      "75_2",
+      "164_5"
+    ],
+    "reranked_top3": [
+      "164_5",
+      "164_2",
+      "177_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "164_5",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "bi_score": 0.5345,
+        "ce_score": -0.4197
+      },
+      {
+        "chunk_id": "164_2",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.5538,
+        "ce_score": -0.5014
+      },
+      {
+        "chunk_id": "177_0",
+        "bi_rank": 7,
+        "ce_rank": 3,
+        "bi_score": 0.5099,
+        "ce_score": -4.0949
+      },
+      {
+        "chunk_id": "75_2",
+        "bi_rank": 2,
+        "ce_rank": 4,
+        "bi_score": 0.5517,
+        "ce_score": -5.0533
+      },
+      {
+        "chunk_id": "75_6",
+        "bi_rank": 6,
+        "ce_rank": 5,
+        "bi_score": 0.5189,
+        "ce_score": -5.0739
+      },
+      {
+        "chunk_id": "157_0",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.5262,
+        "ce_score": -8.3492
+      },
+      {
+        "chunk_id": "164_6",
+        "bi_rank": 8,
+        "ce_rank": 7,
+        "bi_score": 0.5049,
+        "ce_score": -9.1411
+      },
+      {
+        "chunk_id": "158_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.4993,
+        "ce_score": -9.3191
+      },
+      {
+        "chunk_id": "164_0",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.5219,
+        "ce_score": -9.4513
+      },
+      {
+        "chunk_id": "153_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.491,
+        "ce_score": -10.228
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 19.7,
+      "rerank": 354.0,
+      "llm_baseline": 4168.0,
+      "llm_reranked": 3503.1
+    },
+    "answer_baseline": "Yes. According to Article 164(4), a person who is not a member of the Legislature of the State can be a Minister, but if they are not a member of the Legislature of the State for any period of six consecutive months, they shall cease to be a Minister at the expiration of that period.",
+    "answer_reranked": "Yes, a person who is not a member of the Legislature of the State can become a State Minister, but if they are not a member for six consecutive months, they will cease to be a Minister at the expiration of that period [Article 164(4)]."
+  },
+  {
+    "query": "Can citizens be stopped from moving freely in Scheduled Tribe areas?",
+    "expected_articles": [
+      "19"
+    ],
+    "note": "Right is in 19(1)(d); the restriction is in 19(5)",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "342_0",
+      "366_25",
+      "244_0"
+    ],
+    "reranked_top3": [
+      "244_0",
+      "342_0",
+      "339_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "244_0",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "bi_score": 0.4505,
+        "ce_score": -2.3252
+      },
+      {
+        "chunk_id": "342_0",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.519,
+        "ce_score": -2.5198
+      },
+      {
+        "chunk_id": "339_0",
+        "bi_rank": 9,
+        "ce_rank": 3,
+        "bi_score": 0.4091,
+        "ce_score": -2.9319
+      },
+      {
+        "chunk_id": "338A_9",
+        "bi_rank": 8,
+        "ce_rank": 4,
+        "bi_score": 0.4223,
+        "ce_score": -3.4729
+      },
+      {
+        "chunk_id": "243M_0",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.4489,
+        "ce_score": -3.7689
+      },
+      {
+        "chunk_id": "366_25",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.5141,
+        "ce_score": -3.79
+      },
+      {
+        "chunk_id": "332_3",
+        "bi_rank": 7,
+        "ce_rank": 7,
+        "bi_score": 0.4351,
+        "ce_score": -4.0626
+      },
+      {
+        "chunk_id": "338A_7",
+        "bi_rank": 6,
+        "ce_rank": 8,
+        "bi_score": 0.4429,
+        "ce_score": -4.4626
+      },
+      {
+        "chunk_id": "243ZC_0",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.4477,
+        "ce_score": -4.8679
+      },
+      {
+        "chunk_id": "372_3",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4043,
+        "ce_score": -11.3156
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 36.0,
+      "rerank": 798.6,
+      "llm_baseline": 2848.4,
+      "llm_reranked": 3556.9
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "On what grounds can free speech be restricted?",
+    "expected_articles": [
+      "19"
+    ],
+    "note": "19(1)(a) grants the right; restrictions are in 19(2)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reranked": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "baseline_top3": [
+      "19_4",
+      "194_0",
+      "15_1"
+    ],
+    "reranked_top3": [
+      "105_0",
+      "19_4",
+      "194_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "105_0",
+        "bi_rank": 10,
+        "ce_rank": 1,
+        "bi_score": 0.4551,
+        "ce_score": 0.2672
+      },
+      {
+        "chunk_id": "19_4",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.5203,
+        "ce_score": -0.3242
+      },
+      {
+        "chunk_id": "194_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.5085,
+        "ce_score": -0.583
+      },
+      {
+        "chunk_id": "19_1",
+        "bi_rank": 6,
+        "ce_rank": 4,
+        "bi_score": 0.4805,
+        "ce_score": -0.7949
+      },
+      {
+        "chunk_id": "19_3",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.4654,
+        "ce_score": -1.0267
+      },
+      {
+        "chunk_id": "19_2",
+        "bi_rank": 7,
+        "ce_rank": 6,
+        "bi_score": 0.4747,
+        "ce_score": -1.0275
+      },
+      {
+        "chunk_id": "19_5",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.4936,
+        "ce_score": -2.3262
+      },
+      {
+        "chunk_id": "19_0",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "bi_score": 0.4893,
+        "ce_score": -2.8071
+      },
+      {
+        "chunk_id": "15_1",
+        "bi_rank": 3,
+        "ce_rank": 9,
+        "bi_score": 0.4953,
+        "ce_score": -4.1572
+      },
+      {
+        "chunk_id": "15_0",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.4615,
+        "ce_score": -5.5876
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 22.4,
+      "rerank": 431.9,
+      "llm_baseline": 6012.6,
+      "llm_reranked": 7225.5
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Based on the provided context, freedom of speech can be restricted under the following conditions:\n\n* **In Parliament:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of Parliament [Article 105(1)].\n* **In State Legislatures:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of the Legislature [Article 194(1)].\n\n*(Note: Article 19(5) in the context outlines restrictions \"in the interests of the general public or for the protection of the interests of any Scheduled Tribe,\" but explicitly applies to sub-clauses (d) and (e), not freedom of speech [Article 19(5)]. The general grounds for restricting freedom of speech outside of legislative procedures are not contained in the provided context.)*"
+  }
+]

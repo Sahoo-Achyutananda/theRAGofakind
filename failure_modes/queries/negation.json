@@ -1,0 +1,8 @@
+[
+  {"query": "Who is NOT protected by the arrest and detention safeguards?", "expected_articles": ["22"], "note": "Exclusions (enemy aliens, preventive detention) are in 22(3)"},
+  {"query": "Within how many hours must an arrested person be produced before a magistrate?", "expected_articles": ["22"], "note": "Answer is 24 hours, in 22(2)"},
+  {"query": "What can the Rajya Sabha NOT do with a Money Bill?", "expected_articles": ["109"], "note": "Can only recommend within 14 days; 107 and 110 also say 'Money Bill'"},
+  {"query": "Which titles is the State NOT allowed to confer?", "expected_articles": ["18"], "note": "Exceptions for military and academic distinctions"},
+  {"query": "Can a non-citizen holding a public office accept a foreign title without permission?", "expected_articles": ["18"], "note": "Role-specific constraint in 18(3)"},
+  {"query": "Is religious instruction allowed in government-funded schools?", "expected_articles": ["28"], "note": "Banned in wholly State-funded schools, allowed in some others"}
+]

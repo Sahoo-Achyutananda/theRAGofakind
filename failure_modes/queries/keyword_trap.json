@@ -1,0 +1,9 @@
+[
+  {"query": "Can the Governor pardon a person sentenced to death?", "expected_articles": ["72", "161"], "note": "161 matches 'Governor ... pardon' but the death-sentence nuance is in Art. 72(3)"},
+  {"query": "What is the minimum age to become President of India?", "expected_articles": ["58"], "note": "66 (Vice-President) and 157 (Governor) use the identical 'age of thirty-five years' wording"},
+  {"query": "What is the minimum age to become a member of the Lok Sabha?", "expected_articles": ["84"], "note": "173 (State Legislature) has the same 'twenty-five years of age' wording"},
+  {"query": "Who can issue Ordinances when the legislature is not in session?", "expected_articles": ["123", "213"], "note": "Union and State versions are near-duplicates"},
+  {"query": "Which court can issue a writ of habeas corpus?", "expected_articles": ["32", "226"], "note": "139 shares the same writ wording"},
+  {"query": "What is the maximum gap allowed between two sessions of Parliament?", "expected_articles": ["85"], "note": "174 is the same rule for State Legislatures"},
+  {"query": "Can the President be a member of Parliament?", "expected_articles": ["59"], "note": "66 and 158 contain the same 'shall not be a member of either House' wording"}
+]

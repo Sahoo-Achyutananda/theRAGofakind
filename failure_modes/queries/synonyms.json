@@ -1,0 +1,11 @@
+[
+  {"query": "Does an accused person have the right to remain silent?", "expected_articles": ["20"], "note": "Text says 'compelled to be a witness against himself', never 'silent'"},
+  {"query": "Can the government ban a peaceful protest?", "expected_articles": ["19"], "note": "Text says 'assemble peaceably and without arms' and 'public order'"},
+  {"query": "Is child labour allowed in India?", "expected_articles": ["24"], "note": "Text says 'no child below the age of fourteen years shall be employed'"},
+  {"query": "Is human trafficking illegal?", "expected_articles": ["23"], "note": "Text says 'traffic in human beings and begar'"},
+  {"query": "Can the President be sued in court?", "expected_articles": ["361"], "note": "Text says 'not be answerable to any court'"},
+  {"query": "How can the President be removed from office?", "expected_articles": ["56", "61"], "note": "Text uses 'impeachment' and 'violation of the Constitution'"},
+  {"query": "At what age can a citizen vote?", "expected_articles": ["326"], "note": "Text says 'adult suffrage' and 'not less than eighteen years of age'"},
+  {"query": "What is the national language of India?", "expected_articles": ["343"], "note": "Constitution only names an 'official language' - there is no 'national language'"},
+  {"query": "Is caste discrimination illegal?", "expected_articles": ["15", "17"], "note": "17 uses 'Untouchability'; 15 lists caste among grounds"}
+]

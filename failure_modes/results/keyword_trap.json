@@ -1,0 +1,763 @@
+[
+  {
+    "query": "Can the Governor pardon a person sentenced to death?",
+    "expected_articles": [
+      "72",
+      "161"
+    ],
+    "note": "161 matches 'Governor ... pardon' but the death-sentence nuance is in Art. 72(3)",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2
+      ],
+      "reranked": [
+        1,
+        2
+      ]
+    },
+    "baseline_top3": [
+      "161_0",
+      "72_0",
+      "156_0"
+    ],
+    "reranked_top3": [
+      "161_0",
+      "72_0",
+      "361_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "161_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.635,
+        "ce_score": 4.5818
+      },
+      {
+        "chunk_id": "72_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.4739,
+        "ce_score": 0.263
+      },
+      {
+        "chunk_id": "361_2",
+        "bi_rank": 4,
+        "ce_rank": 3,
+        "bi_score": 0.4219,
+        "ce_score": -2.8979
+      },
+      {
+        "chunk_id": "361_1",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.3896,
+        "ce_score": -4.8452
+      },
+      {
+        "chunk_id": "153_0",
+        "bi_rank": 6,
+        "ce_rank": 5,
+        "bi_score": 0.4049,
+        "ce_score": -7.9332
+      },
+      {
+        "chunk_id": "155_0",
+        "bi_rank": 7,
+        "ce_rank": 6,
+        "bi_score": 0.4002,
+        "ce_score": -8.4803
+      },
+      {
+        "chunk_id": "158_0",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "bi_score": 0.4163,
+        "ce_score": -8.8357
+      },
+      {
+        "chunk_id": "156_0",
+        "bi_rank": 3,
+        "ce_rank": 8,
+        "bi_score": 0.4228,
+        "ce_score": -9.7548
+      },
+      {
+        "chunk_id": "193_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.3932,
+        "ce_score": -9.8675
+      },
+      {
+        "chunk_id": "310_1",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.386,
+        "ce_score": -9.9582
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 28.6,
+      "rerank": 575.7,
+      "llm_baseline": 9704.9,
+      "llm_reranked": 7435.0
+    },
+    "answer_baseline": "Based on the provided context:\n\n* **Article 72(1)(c)** explicitly grants the **President** the power to grant pardons in all cases where the sentence is a sentence of death [Article 72(1)(c)].\n* **Article 72(3)** states that this power of the President does not affect the power of a Governor to **suspend, remit or commute** a sentence of death exercisable under any law for the time being in force [Article 72(3)]. \n* **Article 161** grants the Governor the power to grant pardons for offences against laws relating to matters to which the executive power of the State extends, but it does not explicitly mention death sentences [Article 161].\n\nBecause the context explicitly mentions the Governor's power to *suspend, remit or commute* a death sentence [Article 72(3)] but does not explicitly state whether the Governor's pardon power extends to death sentences, **the provided context does not answer this.**",
+    "answer_reranked": "Based on the provided context:\n\n* **President's Power:** The President has the power to grant pardons in all cases where the sentence is a sentence of death [Article 72(1)(c)].\n* **Governor's Power regarding Death Sentences:** Article 72(3) specifically states that nothing in Article 72(1)(c) affects the power of the Governor of a State to **suspend, remit, or commute** a sentence of death under any law for the time being in force [Article 72(3)]. It does not state that the Governor has the power to *pardon* a sentence of death. \n* **Governor's General Pardon Power:** Under Article 161, the Governor has the power to grant pardons for offences against any law relating to a matter to which the executive power of the State extends [Article 161]."
+  },
+  {
+    "query": "What is the minimum age to become President of India?",
+    "expected_articles": [
+      "58"
+    ],
+    "note": "66 (Vice-President) and 157 (Governor) use the identical 'age of thirty-five years' wording",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "58_0",
+      "66_2",
+      "173_0"
+    ],
+    "reranked_top3": [
+      "58_0",
+      "66_2",
+      "157_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "58_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6346,
+        "ce_score": 5.3113
+      },
+      {
+        "chunk_id": "66_2",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.6113,
+        "ce_score": 4.056
+      },
+      {
+        "chunk_id": "157_0",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.5273,
+        "ce_score": 1.2314
+      },
+      {
+        "chunk_id": "326_0",
+        "bi_rank": 6,
+        "ce_rank": 4,
+        "bi_score": 0.5129,
+        "ce_score": -0.4789
+      },
+      {
+        "chunk_id": "173_0",
+        "bi_rank": 3,
+        "ce_rank": 5,
+        "bi_score": 0.5467,
+        "ce_score": -1.2639
+      },
+      {
+        "chunk_id": "52_0",
+        "bi_rank": 7,
+        "ce_rank": 6,
+        "bi_score": 0.5099,
+        "ce_score": -1.4591
+      },
+      {
+        "chunk_id": "84_0",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.5466,
+        "ce_score": -1.4996
+      },
+      {
+        "chunk_id": "63_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.4689,
+        "ce_score": -3.9868
+      },
+      {
+        "chunk_id": "66_3",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4714,
+        "ce_score": -6.5961
+      },
+      {
+        "chunk_id": "171_2",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.4694,
+        "ce_score": -7.798
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 22.6,
+      "rerank": 474.3,
+      "llm_baseline": 3052.1,
+      "llm_reranked": 2902.2
+    },
+    "answer_baseline": "Based on the provided context, the minimum age to become the President of India is thirty-five years, as a person must have completed the age of thirty-five years to be eligible for election as President (Article 58).",
+    "answer_reranked": "The minimum age to become President of India is thirty-five years (Article 58)."
+  },
+  {
+    "query": "What is the minimum age to become a member of the Lok Sabha?",
+    "expected_articles": [
+      "84"
+    ],
+    "note": "173 (State Legislature) has the same 'twenty-five years of age' wording",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "84_0",
+      "173_0",
+      "326_0"
+    ],
+    "reranked_top3": [
+      "84_0",
+      "173_0",
+      "243F_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "84_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.5957,
+        "ce_score": 0.2514
+      },
+      {
+        "chunk_id": "173_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.5808,
+        "ce_score": -0.5702
+      },
+      {
+        "chunk_id": "243F_0",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.4949,
+        "ce_score": -2.2585
+      },
+      {
+        "chunk_id": "66_2",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.4803,
+        "ce_score": -4.2094
+      },
+      {
+        "chunk_id": "157_0",
+        "bi_rank": 10,
+        "ce_rank": 5,
+        "bi_score": 0.4349,
+        "ce_score": -4.3683
+      },
+      {
+        "chunk_id": "58_0",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.5051,
+        "ce_score": -4.958
+      },
+      {
+        "chunk_id": "326_0",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.5197,
+        "ce_score": -5.7124
+      },
+      {
+        "chunk_id": "171_2",
+        "bi_rank": 6,
+        "ce_rank": 8,
+        "bi_score": 0.4836,
+        "ce_score": -8.7744
+      },
+      {
+        "chunk_id": "45_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.4356,
+        "ce_score": -9.9666
+      },
+      {
+        "chunk_id": "243A_0",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.4461,
+        "ce_score": -10.3446
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 30.4,
+      "rerank": 417.2,
+      "llm_baseline": 3292.5,
+      "llm_reranked": 5979.2
+    },
+    "answer_baseline": "Based on the provided context, the minimum age to become a member of the House of the People (Lok Sabha) is twenty-five years (Article 84).",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Who can issue Ordinances when the legislature is not in session?",
+    "expected_articles": [
+      "123",
+      "213"
+    ],
+    "note": "Union and State versions are near-duplicates",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        4,
+        9
+      ],
+      "reranked": [
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    "baseline_top3": [
+      "213_3",
+      "213_2",
+      "239B_0"
+    ],
+    "reranked_top3": [
+      "213_0",
+      "239B_0",
+      "239B_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "213_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.6008,
+        "ce_score": 4.7188
+      },
+      {
+        "chunk_id": "239B_0",
+        "bi_rank": 3,
+        "ce_rank": 2,
+        "bi_score": 0.6011,
+        "ce_score": 4.6814
+      },
+      {
+        "chunk_id": "239B_2",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.5734,
+        "ce_score": 0.3519
+      },
+      {
+        "chunk_id": "213_3",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "bi_score": 0.6165,
+        "ce_score": 0.2812
+      },
+      {
+        "chunk_id": "123_2",
+        "bi_rank": 9,
+        "ce_rank": 5,
+        "bi_score": 0.5206,
+        "ce_score": 0.1964
+      },
+      {
+        "chunk_id": "213_2",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.6032,
+        "ce_score": -0.9111
+      },
+      {
+        "chunk_id": "239B_1",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.5697,
+        "ce_score": -2.2782
+      },
+      {
+        "chunk_id": "328_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.5199,
+        "ce_score": -4.9317
+      },
+      {
+        "chunk_id": "212_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.5336,
+        "ce_score": -5.3387
+      },
+      {
+        "chunk_id": "329_0",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.5425,
+        "ce_score": -8.8769
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 34.2,
+      "rerank": 451.0,
+      "llm_baseline": 4502.4,
+      "llm_reranked": 3896.9
+    },
+    "answer_baseline": "Based on the provided context:\n\n* **The Governor** can promulgate Ordinances during the recess of a State Legislature [Article 213].\n* **The Administrator** of the Union territory of Puducherry can promulgate Ordinances except when its Legislature is in session, subject to obtaining instructions from the President [Article 239B].",
+    "answer_reranked": "Based on the provided context, the following authorities can issue (promulgate) Ordinances when the legislature is not in session:\n\n1. **The Governor** of a State can promulgate Ordinances except when the Legislative Assembly of a State (or both Houses of the Legislature where a Legislative Council exists) is in session (Article 213).\n2. **The administrator** of the Union territory of Puducherry can promulgate Ordinances except when the Legislature of the Union territory is in session (Article 239B)."
+  },
+  {
+    "query": "Which court can issue a writ of habeas corpus?",
+    "expected_articles": [
+      "32",
+      "226"
+    ],
+    "note": "139 shares the same writ wording",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "reranked": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "baseline_top3": [
+      "226_0",
+      "139_0",
+      "32_0"
+    ],
+    "reranked_top3": [
+      "139_0",
+      "226_0",
+      "32_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "139_0",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.6712,
+        "ce_score": 6.2791
+      },
+      {
+        "chunk_id": "226_0",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.6897,
+        "ce_score": 4.4774
+      },
+      {
+        "chunk_id": "32_0",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.5853,
+        "ce_score": 2.4645
+      },
+      {
+        "chunk_id": "226_1",
+        "bi_rank": 4,
+        "ce_rank": 4,
+        "bi_score": 0.5353,
+        "ce_score": -2.0402
+      },
+      {
+        "chunk_id": "226_2",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.5207,
+        "ce_score": -2.3607
+      },
+      {
+        "chunk_id": "226_4",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "bi_score": 0.525,
+        "ce_score": -2.8884
+      },
+      {
+        "chunk_id": "134_1",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.513,
+        "ce_score": -7.5636
+      },
+      {
+        "chunk_id": "131_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.5114,
+        "ce_score": -9.8756
+      },
+      {
+        "chunk_id": "323B_4",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.5266,
+        "ce_score": -10.1335
+      },
+      {
+        "chunk_id": "323A_1",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.5201,
+        "ce_score": -10.3046
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 40.0,
+      "rerank": 508.9,
+      "llm_baseline": 5497.8,
+      "llm_reranked": 5965.2
+    },
+    "answer_baseline": "Based on the provided context, the following courts can issue a writ of habeas corpus:\n\n1. **High Courts:** Every High Court has the power to issue writs, including writs in the nature of habeas corpus, for the enforcement of any of the rights conferred by Part III and for any other purpose (Article 226).\n2. **The Supreme Court:** The Supreme Court has the power to issue writs, including writs in the nature of habeas corpus, for the enforcement of any of the rights conferred by Part III (Article 32). Additionally, Parliament may by law confer power on the Supreme Court to issue writs in the nature of habeas corpus for purposes other than those mentioned in clause (2) of Article 32 (Article 139).\n3. **Any other court empowered by law:** Parliament may by law empower any other court to exercise, within the local limits of its jurisdiction, the powers exercisable by the Supreme Court under Article 32(2), which includes issuing writs in the nature of habeas corpus (Article 32).",
+    "answer_reranked": "Based on the provided context, the following courts can issue a writ of habeas corpus:\n\n* **The Supreme Court:** It has the power to issue a writ of habeas corpus for the enforcement of any of the rights conferred by Part III (Article 32). Additionally, Parliament may by law confer power on the Supreme Court to issue writs of habeas corpus for purposes other than those in Article 32(2) (Article 139).\n* **High Courts:** Every High Court has the power to issue a writ of habeas corpus within its jurisdiction for the enforcement of rights conferred by Part III and for any other purpose (Article 226).\n* **Any other court:** Parliament may by law empower any other court to exercise within the local limits of its jurisdiction the power to issue such writs (Article 32)."
+  },
+  {
+    "query": "What is the maximum gap allowed between two sessions of Parliament?",
+    "expected_articles": [
+      "85"
+    ],
+    "note": "174 is the same rule for State Legislatures",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "85_0",
+      "174_0",
+      "123_1"
+    ],
+    "reranked_top3": [
+      "85_0",
+      "174_0",
+      "101_3"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "85_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6579,
+        "ce_score": -2.958
+      },
+      {
+        "chunk_id": "174_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.5191,
+        "ce_score": -6.3796
+      },
+      {
+        "chunk_id": "101_3",
+        "bi_rank": 8,
+        "ce_rank": 3,
+        "bi_score": 0.453,
+        "ce_score": -8.3248
+      },
+      {
+        "chunk_id": "320_7",
+        "bi_rank": 6,
+        "ce_rank": 4,
+        "bi_score": 0.4607,
+        "ce_score": -8.4712
+      },
+      {
+        "chunk_id": "83_0",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.4758,
+        "ce_score": -9.7304
+      },
+      {
+        "chunk_id": "101_1",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.4508,
+        "ce_score": -9.8012
+      },
+      {
+        "chunk_id": "75_6",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.4511,
+        "ce_score": -9.8459
+      },
+      {
+        "chunk_id": "172_0",
+        "bi_rank": 7,
+        "ce_rank": 8,
+        "bi_score": 0.4546,
+        "ce_score": -9.8655
+      },
+      {
+        "chunk_id": "108_1",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.4754,
+        "ce_score": -9.9456
+      },
+      {
+        "chunk_id": "123_1",
+        "bi_rank": 3,
+        "ce_rank": 10,
+        "bi_score": 0.5139,
+        "ce_score": -9.9475
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 32.7,
+      "rerank": 379.4,
+      "llm_baseline": 2988.5,
+      "llm_reranked": 3372.8
+    },
+    "answer_baseline": "Based on the provided context, six months shall not intervene between the last sitting of a House of Parliament in one session and the date appointed for its first sitting in the next session (Article 85(1)).",
+    "answer_reranked": "Based on the provided context, six months is the maximum gap allowed between two sessions of Parliament, as six months shall not intervene between the last sitting of a House of Parliament in one session and the date appointed for its first sitting in the next session (Article 85(1))."
+  },
+  {
+    "query": "Can the President be a member of Parliament?",
+    "expected_articles": [
+      "59"
+    ],
+    "note": "66 and 158 contain the same 'shall not be a member of either House' wording",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        3
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "101_1",
+      "79_0",
+      "59_0"
+    ],
+    "reranked_top3": [
+      "59_0",
+      "101_1",
+      "79_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "59_0",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "bi_score": 0.6033,
+        "ce_score": 7.0591
+      },
+      {
+        "chunk_id": "101_1",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.6179,
+        "ce_score": 5.1073
+      },
+      {
+        "chunk_id": "79_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.6149,
+        "ce_score": 2.8796
+      },
+      {
+        "chunk_id": "84_0",
+        "bi_rank": 4,
+        "ce_rank": 4,
+        "bi_score": 0.5852,
+        "ce_score": -0.1549
+      },
+      {
+        "chunk_id": "85_0",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "bi_score": 0.5553,
+        "ce_score": -0.2514
+      },
+      {
+        "chunk_id": "102_1",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.5407,
+        "ce_score": -1.0111
+      },
+      {
+        "chunk_id": "58_0",
+        "bi_rank": 7,
+        "ce_rank": 7,
+        "bi_score": 0.5507,
+        "ce_score": -1.9038
+      },
+      {
+        "chunk_id": "102_0",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.5458,
+        "ce_score": -2.0479
+      },
+      {
+        "chunk_id": "173_0",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "bi_score": 0.5549,
+        "ce_score": -3.1745
+      },
+      {
+        "chunk_id": "239_1",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.5413,
+        "ce_score": -4.6128
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 20.2,
+      "rerank": 480.3,
+      "llm_baseline": 4689.9,
+      "llm_reranked": 5242.2
+    },
+    "answer_baseline": "No. According to Article 59(1), the President shall not be a member of either House of Parliament. If a member of either House of Parliament is elected President, he shall be deemed to have vacated his seat in that House on the date on which he enters upon his office as President (Article 59(1)). \n\nAlthough Parliament consists of the President and two Houses (Article 79), the President cannot be a member of either House (Article 59(1)).",
+    "answer_reranked": "No. According to Article 59(1), the President shall not be a member of either House of Parliament or of a House of the Legislature of any State. \n\nIf a member of either House of Parliament is elected President, that person is deemed to have vacated their seat in that House on the date they enter upon the office as President (Article 59(1)). Furthermore, although Parliament consists of the President and two Houses (Article 79), the President is explicitly prohibited from being a member of either House (Article 59(1))."
+  }
+]

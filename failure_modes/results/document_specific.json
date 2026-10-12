@@ -1,0 +1,953 @@
+[
+  {
+    "query": "What does Article 21 say?",
+    "expected_articles": [
+      "21"
+    ],
+    "note": "Article-number lookup - embeddings are weak with numbers",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "21_0",
+      "257A_0",
+      "31D_0"
+    ],
+    "reranked_top3": [
+      "21_0",
+      "21A_0",
+      "257A_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "21_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.635,
+        "ce_score": 7.6923
+      },
+      {
+        "chunk_id": "21A_0",
+        "bi_rank": 6,
+        "ce_rank": 2,
+        "bi_score": 0.5694,
+        "ce_score": 5.6481
+      },
+      {
+        "chunk_id": "257A_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.5898,
+        "ce_score": -3.2392
+      },
+      {
+        "chunk_id": "387_0",
+        "bi_rank": 8,
+        "ce_rank": 4,
+        "bi_score": 0.5648,
+        "ce_score": -3.5158
+      },
+      {
+        "chunk_id": "31D_0",
+        "bi_rank": 3,
+        "ce_rank": 5,
+        "bi_score": 0.5838,
+        "ce_score": -3.6114
+      },
+      {
+        "chunk_id": "278_0",
+        "bi_rank": 9,
+        "ce_rank": 6,
+        "bi_score": 0.5575,
+        "ce_score": -4.1123
+      },
+      {
+        "chunk_id": "386_0",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "bi_score": 0.5714,
+        "ce_score": -4.4146
+      },
+      {
+        "chunk_id": "382_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.5411,
+        "ce_score": -4.6551
+      },
+      {
+        "chunk_id": "242_0",
+        "bi_rank": 4,
+        "ce_rank": 9,
+        "bi_score": 0.5717,
+        "ce_score": -5.4417
+      },
+      {
+        "chunk_id": "232_0",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.5667,
+        "ce_score": -6.3918
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 25.3,
+      "rerank": 233.1,
+      "llm_baseline": 3087.1,
+      "llm_reranked": 2519.3
+    },
+    "answer_baseline": "According to Article 21, no person shall be deprived of his life or personal liberty except according to procedure established by law (Article 21).",
+    "answer_reranked": "According to Article 21, no person shall be deprived of his life or personal liberty except according to procedure established by law (Article 21)."
+  },
+  {
+    "query": "What is Article 356 about?",
+    "expected_articles": [
+      "356"
+    ],
+    "note": "Article-number lookup",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        5
+      ],
+      "reranked": [
+        1,
+        2,
+        3
+      ]
+    },
+    "baseline_top3": [
+      "356_4",
+      "356_2",
+      "366_3"
+    ],
+    "reranked_top3": [
+      "356_4",
+      "356_1",
+      "356_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "356_4",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6192,
+        "ce_score": 7.2128
+      },
+      {
+        "chunk_id": "356_1",
+        "bi_rank": 5,
+        "ce_rank": 2,
+        "bi_score": 0.5555,
+        "ce_score": 7.0114
+      },
+      {
+        "chunk_id": "356_2",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.5828,
+        "ce_score": 6.812
+      },
+      {
+        "chunk_id": "338B_10",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.5408,
+        "ce_score": -3.5434
+      },
+      {
+        "chunk_id": "264_0",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.529,
+        "ce_score": -3.9433
+      },
+      {
+        "chunk_id": "323B_5",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.5193,
+        "ce_score": -4.5262
+      },
+      {
+        "chunk_id": "323B_1",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.5506,
+        "ce_score": -5.0204
+      },
+      {
+        "chunk_id": "323A_3",
+        "bi_rank": 4,
+        "ce_rank": 8,
+        "bi_score": 0.557,
+        "ce_score": -5.0338
+      },
+      {
+        "chunk_id": "366_3",
+        "bi_rank": 3,
+        "ce_rank": 9,
+        "bi_score": 0.5822,
+        "ce_score": -5.7581
+      },
+      {
+        "chunk_id": "366_5",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.526,
+        "ce_score": -7.9683
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 21.0,
+      "rerank": 178.7,
+      "llm_baseline": 2888.6,
+      "llm_reranked": 4170.5
+    },
+    "answer_baseline": "Based on the provided context, Article 356 is about provisions in case of failure of constitutional machinery in States (Article 356). It includes provisions allowing any such Proclamation to be revoked or varied by a subsequent Proclamation (Article 356).",
+    "answer_reranked": "Based on the provided context, Article 356 is about provisions in case of failure of constitutional machinery in States (Article 356). \n\nSpecifically, the provided context states that:\n* Nothing in the clause authorizes the President to assume any powers vested in or exercisable by a High Court, nor to suspend in whole or in part the operation of any provision of the Constitution relating to High Courts (Article 356).\n* Any such Proclamation may be revoked or varied by a subsequent Proclamation (Article 356).\n* A Proclamation requires approval by a resolution passed by the House of the People within specified timeframes upon reconstitution (Article 356)."
+  },
+  {
+    "query": "What is Article 370?",
+    "expected_articles": [
+      "370"
+    ],
+    "note": "Article-number lookup; watch for LLM answering from its own knowledge",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        2,
+        8
+      ],
+      "reranked": [
+        1,
+        2
+      ]
+    },
+    "baseline_top3": [
+      "232_0",
+      "370_3",
+      "145_2"
+    ],
+    "reranked_top3": [
+      "370_3",
+      "370_0",
+      "344_5"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "370_3",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.6369,
+        "ce_score": 7.8094
+      },
+      {
+        "chunk_id": "370_0",
+        "bi_rank": 8,
+        "ce_rank": 2,
+        "bi_score": 0.5521,
+        "ce_score": 5.7368
+      },
+      {
+        "chunk_id": "344_5",
+        "bi_rank": 10,
+        "ce_rank": 3,
+        "bi_score": 0.5341,
+        "ce_score": -2.9208
+      },
+      {
+        "chunk_id": "323B_5",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.5478,
+        "ce_score": -3.5674
+      },
+      {
+        "chunk_id": "323B_1",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.5728,
+        "ce_score": -3.5959
+      },
+      {
+        "chunk_id": "232_0",
+        "bi_rank": 1,
+        "ce_rank": 6,
+        "bi_score": 0.6391,
+        "ce_score": -3.7834
+      },
+      {
+        "chunk_id": "145_2",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.5782,
+        "ce_score": -4.1105
+      },
+      {
+        "chunk_id": "338B_10",
+        "bi_rank": 7,
+        "ce_rank": 8,
+        "bi_score": 0.553,
+        "ce_score": -4.2116
+      },
+      {
+        "chunk_id": "214_0",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "bi_score": 0.5531,
+        "ce_score": -5.6769
+      },
+      {
+        "chunk_id": "241_1",
+        "bi_rank": 5,
+        "ce_rank": 10,
+        "bi_score": 0.5625,
+        "ce_score": -5.9065
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 19.2,
+      "rerank": 456.5,
+      "llm_baseline": 3714.5,
+      "llm_reranked": 6442.1
+    },
+    "answer_baseline": "Based on the provided context, Article 370 pertains to \"Temporary provisions with respect to the State of Jammu and Kashmir\" (Article 370). \n\nUnder clause (3) of Article 370, the President may declare by public notification that the article shall cease to be operative, or shall be operative only with specified exceptions and modifications from a specified date, provided that the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370).",
+    "answer_reranked": "Based on the provided context, Article 370 outlines temporary provisions regarding the State of Jammu and Kashmir (Article 370). \n\nIts main provisions include:\n\n* **Non-applicability of Article 238:** The provisions of Article 238 do not apply to the State of Jammu and Kashmir (Article 370(1)(a)).\n* **Limitation on Parliament's Law-Making Powers:** The power of Parliament to make laws for Jammu and Kashmir is limited to:\n  1. Matters in the Union List and Concurrent List that the President declares, in consultation with the State Government, correspond to matters specified in the State's Instrument of Accession (Article 370(1)(b)(i)).\n  2. Any other matters in those Lists that the President specifies by order with the concurrence of the State Government (Article 370(1)(b)(ii)).\n* **Cessation or Modification of the Article:** The President may declare by public notification that Article 370 shall cease to be operative, or shall be operative only with specified exceptions and modifications (Article 370(3)). However, the recommendation of the State's Legislative Assembly is required before the President can issue such a notification (Article 370(3))."
+  },
+  {
+    "query": "Is the right to property a fundamental right?",
+    "expected_articles": [
+      "300A"
+    ],
+    "note": "Answer lives in Part XII, far from the Fundamental Rights chunks",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "31_0",
+      "13_3",
+      "31A_0"
+    ],
+    "reranked_top3": [
+      "13_1",
+      "13_3",
+      "13_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "13_1",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.439,
+        "ce_score": 0.7708
+      },
+      {
+        "chunk_id": "13_3",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.456,
+        "ce_score": -0.3252
+      },
+      {
+        "chunk_id": "13_0",
+        "bi_rank": 9,
+        "ce_rank": 3,
+        "bi_score": 0.4088,
+        "ce_score": -1.0225
+      },
+      {
+        "chunk_id": "30_0",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.4161,
+        "ce_score": -5.117
+      },
+      {
+        "chunk_id": "37_0",
+        "bi_rank": 6,
+        "ce_rank": 5,
+        "bi_score": 0.4249,
+        "ce_score": -6.2553
+      },
+      {
+        "chunk_id": "31A_0",
+        "bi_rank": 3,
+        "ce_rank": 6,
+        "bi_score": 0.4538,
+        "ce_score": -7.112
+      },
+      {
+        "chunk_id": "31_0",
+        "bi_rank": 1,
+        "ce_rank": 7,
+        "bi_score": 0.4833,
+        "ce_score": -7.5972
+      },
+      {
+        "chunk_id": "31A_3",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.4083,
+        "ce_score": -7.9455
+      },
+      {
+        "chunk_id": "31A_1",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.414,
+        "ce_score": -8.8368
+      },
+      {
+        "chunk_id": "32_0",
+        "bi_rank": 5,
+        "ce_rank": 10,
+        "bi_score": 0.4268,
+        "ce_score": -9.4904
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 21.7,
+      "rerank": 514.7,
+      "llm_baseline": 8583.7,
+      "llm_reranked": 2918.5
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "What does Article 31 say?",
+    "expected_articles": [
+      "31"
+    ],
+    "note": "Omitted article - does the LLM admit it was omitted?",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "31D_0",
+      "32A_0",
+      "31B_0"
+    ],
+    "reranked_top3": [
+      "31A_2",
+      "31B_0",
+      "31D_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "31A_2",
+        "bi_rank": 5,
+        "ce_rank": 1,
+        "bi_score": 0.5764,
+        "ce_score": 6.6489
+      },
+      {
+        "chunk_id": "31B_0",
+        "bi_rank": 3,
+        "ce_rank": 2,
+        "bi_score": 0.6184,
+        "ce_score": 6.1064
+      },
+      {
+        "chunk_id": "31D_0",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "bi_score": 0.6886,
+        "ce_score": 5.8685
+      },
+      {
+        "chunk_id": "386_0",
+        "bi_rank": 6,
+        "ce_rank": 4,
+        "bi_score": 0.5697,
+        "ce_score": -0.0141
+      },
+      {
+        "chunk_id": "32A_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "bi_score": 0.653,
+        "ce_score": -1.4406
+      },
+      {
+        "chunk_id": "278_0",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.6036,
+        "ce_score": -3.2481
+      },
+      {
+        "chunk_id": "381_0",
+        "bi_rank": 7,
+        "ce_rank": 7,
+        "bi_score": 0.5595,
+        "ce_score": -4.0847
+      },
+      {
+        "chunk_id": "36_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.5536,
+        "ce_score": -4.2234
+      },
+      {
+        "chunk_id": "242_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.5589,
+        "ce_score": -4.6437
+      },
+      {
+        "chunk_id": "232_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.549,
+        "ce_score": -6.5025
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 21.4,
+      "rerank": 380.8,
+      "llm_baseline": 2819.5,
+      "llm_reranked": 2429.3
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Can peaceful assembly be restricted in the interest of public order?",
+    "expected_articles": [
+      "19"
+    ],
+    "note": "19(3) only says 'sub-clause (b) of the said clause' - 'assembly' is in 19(1)",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "359_5",
+      "33_0",
+      "121_0"
+    ],
+    "reranked_top3": [
+      "33_0",
+      "105_0",
+      "359_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "33_0",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.4493,
+        "ce_score": -5.2186
+      },
+      {
+        "chunk_id": "105_0",
+        "bi_rank": 10,
+        "ce_rank": 2,
+        "bi_score": 0.3954,
+        "ce_score": -8.0883
+      },
+      {
+        "chunk_id": "359_1",
+        "bi_rank": 8,
+        "ce_rank": 3,
+        "bi_score": 0.4028,
+        "ce_score": -8.5421
+      },
+      {
+        "chunk_id": "34_0",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.4115,
+        "ce_score": -9.4775
+      },
+      {
+        "chunk_id": "121_0",
+        "bi_rank": 3,
+        "ce_rank": 5,
+        "bi_score": 0.4393,
+        "ce_score": -9.8947
+      },
+      {
+        "chunk_id": "359_5",
+        "bi_rank": 1,
+        "ce_rank": 6,
+        "bi_score": 0.4603,
+        "ce_score": -10.0814
+      },
+      {
+        "chunk_id": "123_2",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.4351,
+        "ce_score": -11.0567
+      },
+      {
+        "chunk_id": "239B_0",
+        "bi_rank": 6,
+        "ce_rank": 8,
+        "bi_score": 0.4217,
+        "ce_score": -11.0999
+      },
+      {
+        "chunk_id": "123_0",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.4231,
+        "ce_score": -11.1628
+      },
+      {
+        "chunk_id": "123_1",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.3961,
+        "ce_score": -11.1908
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 20.8,
+      "rerank": 501.3,
+      "llm_baseline": 3283.7,
+      "llm_reranked": 4058.7
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "What does the right to equality say?",
+    "expected_articles": [
+      "14"
+    ],
+    "note": "'Right to Equality' is a section heading that was stripped",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        3
+      ]
+    },
+    "baseline_top3": [
+      "14_0",
+      "39A_0",
+      "16_0"
+    ],
+    "reranked_top3": [
+      "16_1",
+      "16_0",
+      "14_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "16_1",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.4778,
+        "ce_score": -0.7329
+      },
+      {
+        "chunk_id": "16_0",
+        "bi_rank": 3,
+        "ce_rank": 2,
+        "bi_score": 0.4894,
+        "ce_score": -0.9262
+      },
+      {
+        "chunk_id": "14_0",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "bi_score": 0.5752,
+        "ce_score": -1.6576
+      },
+      {
+        "chunk_id": "16_2",
+        "bi_rank": 10,
+        "ce_rank": 4,
+        "bi_score": 0.4184,
+        "ce_score": -2.0157
+      },
+      {
+        "chunk_id": "16_3",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.4391,
+        "ce_score": -2.4019
+      },
+      {
+        "chunk_id": "39_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.4463,
+        "ce_score": -2.5993
+      },
+      {
+        "chunk_id": "39A_0",
+        "bi_rank": 2,
+        "ce_rank": 7,
+        "bi_score": 0.4901,
+        "ce_score": -3.7069
+      },
+      {
+        "chunk_id": "19_0",
+        "bi_rank": 6,
+        "ce_rank": 8,
+        "bi_score": 0.4419,
+        "ce_score": -5.7142
+      },
+      {
+        "chunk_id": "41_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.4201,
+        "ce_score": -6.4644
+      },
+      {
+        "chunk_id": "13_3",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.4398,
+        "ce_score": -10.2211
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 21.3,
+      "rerank": 465.3,
+      "llm_baseline": 5294.0,
+      "llm_reranked": 4157.6
+    },
+    "answer_baseline": "Based on the provided context, the principles regarding equality state that:\n\n* **Equality before law:** The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India (Article 14).\n* **Equality of opportunity in public employment:** There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State (Article 16).\n* **Equal justice and opportunity:** The State shall secure that the operation of the legal system promotes justice on a basis of equal opportunity, providing free legal aid to ensure that opportunities for securing justice are not denied to any citizen due to economic or other disabilities (Article 39A).",
+    "answer_reranked": "Based on the provided context, the right to equality includes the following provisions:\n\n* **Equality before law:** The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India (Article 14).\n* **Equality of opportunity in public employment:** There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State (Article 16(1)).\n* **Non-discrimination in public employment:** No citizen shall be ineligible for, or discriminated against in respect of, any employment or office under the State on grounds only of religion, race, caste, sex, descent, place of birth, residence, or any of them (Article 16(2))."
+  },
+  {
+    "query": "What are the fundamental duties of citizens?",
+    "expected_articles": [
+      "51A"
+    ],
+    "note": "Text says 'It shall be the duty of every citizen'",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        7
+      ],
+      "reranked": [
+        1,
+        2
+      ]
+    },
+    "baseline_top3": [
+      "51A_0",
+      "243W_0",
+      "37_0"
+    ],
+    "reranked_top3": [
+      "51A_0",
+      "51A_1",
+      "37_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "51A_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.5118,
+        "ce_score": 5.8887
+      },
+      {
+        "chunk_id": "51A_1",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "bi_score": 0.4432,
+        "ce_score": 4.6274
+      },
+      {
+        "chunk_id": "37_0",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.4508,
+        "ce_score": -1.4947
+      },
+      {
+        "chunk_id": "263_0",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.4379,
+        "ce_score": -5.3584
+      },
+      {
+        "chunk_id": "78_0",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.4486,
+        "ce_score": -6.1633
+      },
+      {
+        "chunk_id": "165_0",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.4357,
+        "ce_score": -7.3953
+      },
+      {
+        "chunk_id": "10_0",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.4472,
+        "ce_score": -8.3305
+      },
+      {
+        "chunk_id": "11_0",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "bi_score": 0.4484,
+        "ce_score": -8.3643
+      },
+      {
+        "chunk_id": "243W_0",
+        "bi_rank": 2,
+        "ce_rank": 9,
+        "bi_score": 0.4607,
+        "ce_score": -8.4442
+      },
+      {
+        "chunk_id": "33_0",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.4384,
+        "ce_score": -8.9086
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 18.6,
+      "rerank": 463.8,
+      "llm_baseline": 5292.8,
+      "llm_reranked": 6814.0
+    },
+    "answer_baseline": "According to Article 51A, it is the duty of every citizen of India:\n\n* To abide by the Constitution and respect its ideals and institutions, the National Flag, and the National Anthem [Article 51A(a)].\n* To cherish and follow the noble ideals which inspired our national struggle for freedom [Article 51A(b)].\n* To uphold and protect the sovereignty, unity, and integrity of India [Article 51A(c)].\n* To defend the country and render national service when called upon to do so [Article 51A(d)].\n* To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic, and regional or sectional diversities, and to renounce practices derogatory to the dignity of women [Article 51A(e)].\n* To value and preserve the rich heritage of our composite culture [Article 51A(f)].\n* To protect and improve the natural environment, including forests, lakes, rivers, and wildlife, and to have compassion for living creatures [Article 51A(g)].\n* To develop the scientific temper, humanism, and the spirit of inquiry and reform [Article 51A(h)].\n* To safeguard public property and to abjure violence [Article 51A(i)].",
+    "answer_reranked": "Based on Article 51A of the Constitution of India, it is the duty of every citizen of India:\n\n* To abide by the Constitution and respect its ideals and institutions, the National Flag, and the National Anthem [Article 51A(a)].\n* To cherish and follow the noble ideals which inspired the national struggle for freedom [Article 51A(b)].\n* To uphold and protect the sovereignty, unity, and integrity of India [Article 51A(c)].\n* To defend the country and render national service when called upon to do so [Article 51A(d)].\n* To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic, and regional or sectional diversities, and to renounce practices derogatory to the dignity of women [Article 51A(e)].\n* To value and preserve the rich heritage of our composite culture [Article 51A(f)].\n* To protect and improve the natural environment, including forests, lakes, rivers, and wildlife, and to have compassion for living creatures [Article 51A(g)].\n* To develop the scientific temper, humanism, and the spirit of inquiry and reform [Article 51A(h)].\n* To safeguard public property and to abjure violence [Article 51A(i)].\n* To strive towards excellence in all spheres of individual and collective activity so that the nation constantly rises to higher levels of endeavour and achievement [Article 51A(j)].\n* If a parent or guardian, to provide opportunities for education to his child or ward between the age of six and fourteen years [Article 51A(k)]."
+  },
+  {
+    "query": "What are the Directive Principles of State Policy?",
+    "expected_articles": [
+      "36",
+      "37"
+    ],
+    "note": "Part heading; articles rarely repeat the phrase",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        2
+      ]
+    },
+    "baseline_top3": [
+      "37_0",
+      "31C_0",
+      "256_0"
+    ],
+    "reranked_top3": [
+      "31C_0",
+      "37_0",
+      "257_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "31C_0",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "bi_score": 0.5843,
+        "ce_score": 3.7826
+      },
+      {
+        "chunk_id": "37_0",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.6209,
+        "ce_score": -2.1907
+      },
+      {
+        "chunk_id": "257_2",
+        "bi_rank": 4,
+        "ce_rank": 3,
+        "bi_score": 0.5174,
+        "ce_score": -5.5396
+      },
+      {
+        "chunk_id": "256_0",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.5548,
+        "ce_score": -5.9844
+      },
+      {
+        "chunk_id": "355_0",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.4997,
+        "ce_score": -7.2499
+      },
+      {
+        "chunk_id": "208_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.5161,
+        "ce_score": -7.3129
+      },
+      {
+        "chunk_id": "246_2",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.4971,
+        "ce_score": -7.9839
+      },
+      {
+        "chunk_id": "356_0",
+        "bi_rank": 7,
+        "ce_rank": 8,
+        "bi_score": 0.5041,
+        "ce_score": -8.3595
+      },
+      {
+        "chunk_id": "258_1",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "bi_score": 0.5059,
+        "ce_score": -8.5502
+      },
+      {
+        "chunk_id": "258A_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4931,
+        "ce_score": -8.7796
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 18.9,
+      "rerank": 536.9,
+      "llm_baseline": 9486.4,
+      "llm_reranked": 9685.1
+    },
+    "answer_baseline": "Based on the provided context, the directive principles (referred to as the principles laid down in Part IV) are defined by the following characteristics:\n\n* **Non-enforceable by courts:** The provisions containing these principles shall not be enforceable by any court [Article 37].\n* **Fundamental to governance:** They are fundamental in the governance of the country, and it is the duty of the State to apply these principles when making laws [Article 37].\n* **Protection of laws implementing them:** No law giving effect to the policy of the State towards securing all or any of these principles shall be deemed void on the ground that it is inconsistent with, takes away, or abridges the rights conferred by Article 14 or Article 19 [Article 31C]. \n* **State legislation requirement:** For a law made by a State Legislature giving effect to such policy to be protected under Article 31C, it must have been reserved for the consideration of the President and received his assent [Article 31C].",
+    "answer_reranked": "The provided context does not answer this."
+  }
+]

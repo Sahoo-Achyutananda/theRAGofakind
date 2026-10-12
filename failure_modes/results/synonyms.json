@@ -1,0 +1,970 @@
+[
+  {
+    "query": "Does an accused person have the right to remain silent?",
+    "expected_articles": [
+      "20"
+    ],
+    "note": "Text says 'compelled to be a witness against himself', never 'silent'",
+    "verdict": "rescued",
+    "expected_ranks": {
+      "baseline": [
+        6
+      ],
+      "reranked": [
+        2
+      ]
+    },
+    "baseline_top3": [
+      "311_1",
+      "22_5",
+      "22_0"
+    ],
+    "reranked_top3": [
+      "22_0",
+      "20_0",
+      "22_4"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "22_0",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "bi_score": 0.3975,
+        "ce_score": -4.7611
+      },
+      {
+        "chunk_id": "20_0",
+        "bi_rank": 6,
+        "ce_rank": 2,
+        "bi_score": 0.3538,
+        "ce_score": -5.4388
+      },
+      {
+        "chunk_id": "22_4",
+        "bi_rank": 7,
+        "ce_rank": 3,
+        "bi_score": 0.352,
+        "ce_score": -8.9766
+      },
+      {
+        "chunk_id": "311_1",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "bi_score": 0.4131,
+        "ce_score": -9.0098
+      },
+      {
+        "chunk_id": "22_5",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "bi_score": 0.4021,
+        "ce_score": -9.8084
+      },
+      {
+        "chunk_id": "96_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.3624,
+        "ce_score": -10.1496
+      },
+      {
+        "chunk_id": "181_0",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.3487,
+        "ce_score": -10.5503
+      },
+      {
+        "chunk_id": "105_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.3457,
+        "ce_score": -10.6287
+      },
+      {
+        "chunk_id": "14_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.3496,
+        "ce_score": -11.0067
+      },
+      {
+        "chunk_id": "121_0",
+        "bi_rank": 4,
+        "ce_rank": 10,
+        "bi_score": 0.3788,
+        "ce_score": -11.0251
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 36.6,
+      "rerank": 568.6,
+      "llm_baseline": 2996.9,
+      "llm_reranked": 7307.7
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Can the government ban a peaceful protest?",
+    "expected_articles": [
+      "19"
+    ],
+    "note": "Text says 'assemble peaceably and without arms' and 'public order'",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "359_3",
+      "359_0",
+      "123_2"
+    ],
+    "reranked_top3": [
+      "121_0",
+      "123_2",
+      "359_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "121_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.3737,
+        "ce_score": -10.7245
+      },
+      {
+        "chunk_id": "123_2",
+        "bi_rank": 3,
+        "ce_rank": 2,
+        "bi_score": 0.3741,
+        "ce_score": -11.0454
+      },
+      {
+        "chunk_id": "359_2",
+        "bi_rank": 7,
+        "ce_rank": 3,
+        "bi_score": 0.3346,
+        "ce_score": -11.0591
+      },
+      {
+        "chunk_id": "359_0",
+        "bi_rank": 2,
+        "ce_rank": 4,
+        "bi_score": 0.3772,
+        "ce_score": -11.0754
+      },
+      {
+        "chunk_id": "239B_0",
+        "bi_rank": 6,
+        "ce_rank": 5,
+        "bi_score": 0.3394,
+        "ce_score": -11.078
+      },
+      {
+        "chunk_id": "123_0",
+        "bi_rank": 9,
+        "ce_rank": 6,
+        "bi_score": 0.331,
+        "ce_score": -11.0929
+      },
+      {
+        "chunk_id": "31C_0",
+        "bi_rank": 8,
+        "ce_rank": 7,
+        "bi_score": 0.3328,
+        "ce_score": -11.1529
+      },
+      {
+        "chunk_id": "359_3",
+        "bi_rank": 1,
+        "ce_rank": 8,
+        "bi_score": 0.3874,
+        "ce_score": -11.1696
+      },
+      {
+        "chunk_id": "358_2",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.3634,
+        "ce_score": -11.1799
+      },
+      {
+        "chunk_id": "239B_2",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.3303,
+        "ce_score": -11.2166
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 32.9,
+      "rerank": 339.2,
+      "llm_baseline": 3079.5,
+      "llm_reranked": 2846.6
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Is child labour allowed in India?",
+    "expected_articles": [
+      "24"
+    ],
+    "note": "Text says 'no child below the age of fourteen years shall be employed'",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "24_0",
+      "39_0",
+      "338_9"
+    ],
+    "reranked_top3": [
+      "24_0",
+      "23_0",
+      "302_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "24_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.5295,
+        "ce_score": -4.7675
+      },
+      {
+        "chunk_id": "23_0",
+        "bi_rank": 6,
+        "ce_rank": 2,
+        "bi_score": 0.4113,
+        "ce_score": -6.2408
+      },
+      {
+        "chunk_id": "302_0",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.4126,
+        "ce_score": -7.7723
+      },
+      {
+        "chunk_id": "8_0",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.4051,
+        "ce_score": -7.9725
+      },
+      {
+        "chunk_id": "293_3",
+        "bi_rank": 10,
+        "ce_rank": 5,
+        "bi_score": 0.4047,
+        "ce_score": -9.1983
+      },
+      {
+        "chunk_id": "39_0",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.4289,
+        "ce_score": -9.8087
+      },
+      {
+        "chunk_id": "338_9",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.423,
+        "ce_score": -10.6256
+      },
+      {
+        "chunk_id": "15_4",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.4073,
+        "ce_score": -10.7027
+      },
+      {
+        "chunk_id": "243M_3",
+        "bi_rank": 4,
+        "ce_rank": 9,
+        "bi_score": 0.4185,
+        "ce_score": -10.7562
+      },
+      {
+        "chunk_id": "338_5",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.411,
+        "ce_score": -11.0514
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 36.0,
+      "rerank": 417.3,
+      "llm_baseline": 4741.7,
+      "llm_reranked": 2770.6
+    },
+    "answer_baseline": "Based on the provided context, child labour is restricted and prohibited in specific circumstances:\n\n* **Employment below age 14:** No child below fourteen years of age can be employed to work in any factory, mine, or engaged in any other hazardous employment (Article 24).\n* **Protection against abuse and exploitation:** The State is directed to secure that the tender age of children is not abused, that citizens are not forced by economic necessity to enter avocations unsuited to their age or strength (Article 39(e)), and that childhood and youth are protected against exploitation (Article 39(f)).",
+    "answer_reranked": "Based on the provided context, child labour is prohibited for any child below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24)."
+  },
+  {
+    "query": "Is human trafficking illegal?",
+    "expected_articles": [
+      "23"
+    ],
+    "note": "Text says 'traffic in human beings and begar'",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "23_0",
+      "301_0",
+      "15_1"
+    ],
+    "reranked_top3": [
+      "23_0",
+      "301_0",
+      "15_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "23_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.4419,
+        "ce_score": -2.6881
+      },
+      {
+        "chunk_id": "301_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.33,
+        "ce_score": -10.7042
+      },
+      {
+        "chunk_id": "15_1",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.3145,
+        "ce_score": -10.7464
+      },
+      {
+        "chunk_id": "39_0",
+        "bi_rank": 8,
+        "ce_rank": 4,
+        "bi_score": 0.2812,
+        "ce_score": -10.7827
+      },
+      {
+        "chunk_id": "22_2",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.2822,
+        "ce_score": -10.9097
+      },
+      {
+        "chunk_id": "16_1",
+        "bi_rank": 9,
+        "ce_rank": 6,
+        "bi_score": 0.2773,
+        "ce_score": -10.9104
+      },
+      {
+        "chunk_id": "15_0",
+        "bi_rank": 10,
+        "ce_rank": 7,
+        "bi_score": 0.2717,
+        "ce_score": -10.9383
+      },
+      {
+        "chunk_id": "304_0",
+        "bi_rank": 4,
+        "ce_rank": 8,
+        "bi_score": 0.3033,
+        "ce_score": -10.942
+      },
+      {
+        "chunk_id": "366_34",
+        "bi_rank": 5,
+        "ce_rank": 9,
+        "bi_score": 0.286,
+        "ce_score": -10.9968
+      },
+      {
+        "chunk_id": "24_0",
+        "bi_rank": 6,
+        "ce_rank": 10,
+        "bi_score": 0.2828,
+        "ce_score": -11.0598
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 34.3,
+      "rerank": 481.8,
+      "llm_baseline": 3859.0,
+      "llm_reranked": 3443.8
+    },
+    "answer_baseline": "Yes, human trafficking (referred to as \"traffic in human beings\") is illegal. According to Article 23(1), traffic in human beings is prohibited, and any contravention of this provision is an offence punishable in accordance with law.",
+    "answer_reranked": "Yes, human trafficking is illegal. Article 23(1) prohibits traffic in human beings and states that any contravention of this provision is an offence punishable in accordance with law."
+  },
+  {
+    "query": "Can the President be sued in court?",
+    "expected_articles": [
+      "361"
+    ],
+    "note": "Text says 'not be answerable to any court'",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "356_1",
+      "224A_0",
+      "222_0"
+    ],
+    "reranked_top3": [
+      "356_1",
+      "124_4",
+      "317_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "356_1",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.4965,
+        "ce_score": -2.8637
+      },
+      {
+        "chunk_id": "124_4",
+        "bi_rank": 9,
+        "ce_rank": 2,
+        "bi_score": 0.4386,
+        "ce_score": -3.0498
+      },
+      {
+        "chunk_id": "317_1",
+        "bi_rank": 6,
+        "ce_rank": 3,
+        "bi_score": 0.4661,
+        "ce_score": -4.128
+      },
+      {
+        "chunk_id": "128_0",
+        "bi_rank": 5,
+        "ce_rank": 4,
+        "bi_score": 0.4693,
+        "ce_score": -4.8639
+      },
+      {
+        "chunk_id": "143_0",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.4658,
+        "ce_score": -5.0109
+      },
+      {
+        "chunk_id": "224A_0",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.4874,
+        "ce_score": -5.0401
+      },
+      {
+        "chunk_id": "222_0",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.4795,
+        "ce_score": -5.4654
+      },
+      {
+        "chunk_id": "317_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.4385,
+        "ce_score": -5.4723
+      },
+      {
+        "chunk_id": "217_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4444,
+        "ce_score": -5.8881
+      },
+      {
+        "chunk_id": "124_1",
+        "bi_rank": 4,
+        "ce_rank": 10,
+        "bi_score": 0.4745,
+        "ce_score": -6.7477
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 18.7,
+      "rerank": 541.8,
+      "llm_baseline": 2837.3,
+      "llm_reranked": 3011.6
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "How can the President be removed from office?",
+    "expected_articles": [
+      "56",
+      "61"
+    ],
+    "note": "Text uses 'impeachment' and 'violation of the Constitution'",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        2,
+        7,
+        10
+      ],
+      "reranked": [
+        3,
+        5,
+        10
+      ]
+    },
+    "baseline_top3": [
+      "317_2",
+      "56_0",
+      "317_0"
+    ],
+    "reranked_top3": [
+      "317_2",
+      "124_4",
+      "56_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "317_2",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6499,
+        "ce_score": 6.9245
+      },
+      {
+        "chunk_id": "124_4",
+        "bi_rank": 4,
+        "ce_rank": 2,
+        "bi_score": 0.5975,
+        "ce_score": 6.7133
+      },
+      {
+        "chunk_id": "56_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.6375,
+        "ce_score": 6.4141
+      },
+      {
+        "chunk_id": "317_0",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.6098,
+        "ce_score": 5.991
+      },
+      {
+        "chunk_id": "61_3",
+        "bi_rank": 10,
+        "ce_rank": 5,
+        "bi_score": 0.4975,
+        "ce_score": 5.0796
+      },
+      {
+        "chunk_id": "317_1",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "bi_score": 0.5395,
+        "ce_score": 5.0507
+      },
+      {
+        "chunk_id": "67_0",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "bi_score": 0.5696,
+        "ce_score": 4.7709
+      },
+      {
+        "chunk_id": "92_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.5186,
+        "ce_score": 3.484
+      },
+      {
+        "chunk_id": "59_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.5305,
+        "ce_score": 2.819
+      },
+      {
+        "chunk_id": "61_0",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.5393,
+        "ce_score": -1.6932
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 35.0,
+      "rerank": 456.7,
+      "llm_baseline": 3132.5,
+      "llm_reranked": 3160.9
+    },
+    "answer_baseline": "The President may be removed from office by impeachment for violation of the Constitution, in the manner provided in Article 61 [Article 56(1)(b)].",
+    "answer_reranked": "The President may be removed from office for violation of the Constitution by impeachment in the manner provided in article 61 (Article 56(1)(b))."
+  },
+  {
+    "query": "At what age can a citizen vote?",
+    "expected_articles": [
+      "326"
+    ],
+    "note": "Text says 'adult suffrage' and 'not less than eighteen years of age'",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "326_0",
+      "66_2",
+      "84_0"
+    ],
+    "reranked_top3": [
+      "326_0",
+      "66_2",
+      "58_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "326_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6341,
+        "ce_score": 4.001
+      },
+      {
+        "chunk_id": "66_2",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.4999,
+        "ce_score": -0.5757
+      },
+      {
+        "chunk_id": "58_0",
+        "bi_rank": 10,
+        "ce_rank": 3,
+        "bi_score": 0.4407,
+        "ce_score": -1.2536
+      },
+      {
+        "chunk_id": "84_0",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.4969,
+        "ce_score": -1.9526
+      },
+      {
+        "chunk_id": "173_0",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "bi_score": 0.4926,
+        "ce_score": -2.0693
+      },
+      {
+        "chunk_id": "189_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.475,
+        "ce_score": -9.7334
+      },
+      {
+        "chunk_id": "387_0",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.4447,
+        "ce_score": -10.1262
+      },
+      {
+        "chunk_id": "55_1",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.4483,
+        "ce_score": -10.4479
+      },
+      {
+        "chunk_id": "57_0",
+        "bi_rank": 7,
+        "ce_rank": 9,
+        "bi_score": 0.4484,
+        "ce_score": -10.7116
+      },
+      {
+        "chunk_id": "243ZK_0",
+        "bi_rank": 6,
+        "ce_rank": 10,
+        "bi_score": 0.4491,
+        "ce_score": -11.0145
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 31.3,
+      "rerank": 451.7,
+      "llm_baseline": 3377.4,
+      "llm_reranked": 2894.3
+    },
+    "answer_baseline": "Based on the provided context, a citizen who is not less than eighteen years of age on the date fixed by or under law made by the appropriate Legislature is entitled to be registered as a voter, provided they are not otherwise disqualified (Article 326).",
+    "answer_reranked": "Based on the provided context, a citizen can be registered as a voter if they are not less than eighteen years of age on the specified date, provided they are not otherwise disqualified under the Constitution or any law (Article 326)."
+  },
+  {
+    "query": "What is the national language of India?",
+    "expected_articles": [
+      "343"
+    ],
+    "note": "Constitution only names an 'official language' - there is no 'national language'",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        2,
+        5,
+        10
+      ],
+      "reranked": [
+        3,
+        6,
+        10
+      ]
+    },
+    "baseline_top3": [
+      "346_0",
+      "343_0",
+      "351_0"
+    ],
+    "reranked_top3": [
+      "351_0",
+      "344_2",
+      "343_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "351_0",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "bi_score": 0.5459,
+        "ce_score": 1.1694
+      },
+      {
+        "chunk_id": "344_2",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "bi_score": 0.477,
+        "ce_score": 1.0236
+      },
+      {
+        "chunk_id": "343_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.5526,
+        "ce_score": 0.7718
+      },
+      {
+        "chunk_id": "346_0",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "bi_score": 0.5663,
+        "ce_score": -1.0407
+      },
+      {
+        "chunk_id": "345_0",
+        "bi_rank": 6,
+        "ce_rank": 5,
+        "bi_score": 0.4892,
+        "ce_score": -1.208
+      },
+      {
+        "chunk_id": "343_1",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "bi_score": 0.5107,
+        "ce_score": -1.9444
+      },
+      {
+        "chunk_id": "344_1",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.5359,
+        "ce_score": -2.954
+      },
+      {
+        "chunk_id": "210_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.4395,
+        "ce_score": -4.6874
+      },
+      {
+        "chunk_id": "366_16",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4444,
+        "ce_score": -6.2547
+      },
+      {
+        "chunk_id": "343_2",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.4298,
+        "ce_score": -7.8116
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 17.5,
+      "rerank": 365.5,
+      "llm_baseline": 5120.0,
+      "llm_reranked": 6353.1
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Is caste discrimination illegal?",
+    "expected_articles": [
+      "15",
+      "17"
+    ],
+    "note": "17 uses 'Untouchability'; 15 lists caste among grounds",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        10
+      ],
+      "reranked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "baseline_top3": [
+      "15_3",
+      "15_4",
+      "15_6"
+    ],
+    "reranked_top3": [
+      "15_0",
+      "15_3",
+      "15_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "15_0",
+        "bi_rank": 6,
+        "ce_rank": 1,
+        "bi_score": 0.5044,
+        "ce_score": 3.6069
+      },
+      {
+        "chunk_id": "15_3",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.5834,
+        "ce_score": 3.4414
+      },
+      {
+        "chunk_id": "15_1",
+        "bi_rank": 10,
+        "ce_rank": 3,
+        "bi_score": 0.4601,
+        "ce_score": 2.3494
+      },
+      {
+        "chunk_id": "15_2",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.4861,
+        "ce_score": 2.2185
+      },
+      {
+        "chunk_id": "15_6",
+        "bi_rank": 3,
+        "ce_rank": 5,
+        "bi_score": 0.5309,
+        "ce_score": 2.0143
+      },
+      {
+        "chunk_id": "15_4",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.5545,
+        "ce_score": 1.7931
+      },
+      {
+        "chunk_id": "15_5",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "bi_score": 0.5202,
+        "ce_score": -0.3295
+      },
+      {
+        "chunk_id": "16_4",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "bi_score": 0.5135,
+        "ce_score": -4.9361
+      },
+      {
+        "chunk_id": "338_9",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4788,
+        "ce_score": -5.6454
+      },
+      {
+        "chunk_id": "341_0",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.4763,
+        "ce_score": -6.1214
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 21.2,
+      "rerank": 447.4,
+      "llm_baseline": 7136.3,
+      "llm_reranked": 4794.2
+    },
+    "answer_baseline": "Based on the provided context, Article 15 provides for the prohibition of discrimination on the grounds of caste, among other grounds (Article 15). \n\nAdditionally, the context specifies that special provisions may be made by the State for the advancement of Scheduled Castes, including provisions relating to admission to educational institutions (Article 15(4), Article 15(5)).",
+    "answer_reranked": "Yes, discrimination based on caste is prohibited under Article 15:\n\n* **Article 15(1)** provides that the State shall not discriminate against any citizen on grounds only of caste, religion, race, sex, place of birth, or any of them.\n* **Article 15(2)** states that no citizen shall, on grounds only of caste (among other grounds), be subject to any disability, liability, restriction, or condition with regard to:\n  * Access to shops, public restaurants, hotels, and places of public entertainment.\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public.\n* **Article 15(4)** notes an exception that allows the State to make special provisions for the advancement of socially and educationally backward classes of citizens, or for the Scheduled Castes and the Scheduled Tribes."
+  }
+]

@@ -1,0 +1,610 @@
+[
+  {
+    "query": "Is the right to privacy a fundamental right?",
+    "expected_articles": [],
+    "note": "Comes from a Supreme Court judgment, not the text",
+    "verdict": "no_expected",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "19_0",
+      "22_5",
+      "22_0"
+    ],
+    "reranked_top3": [
+      "13_3",
+      "19_0",
+      "19_4"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "13_3",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.3999,
+        "ce_score": -2.4083
+      },
+      {
+        "chunk_id": "19_0",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.4128,
+        "ce_score": -5.2124
+      },
+      {
+        "chunk_id": "19_4",
+        "bi_rank": 6,
+        "ce_rank": 3,
+        "bi_score": 0.3868,
+        "ce_score": -7.6282
+      },
+      {
+        "chunk_id": "19_5",
+        "bi_rank": 5,
+        "ce_rank": 4,
+        "bi_score": 0.389,
+        "ce_score": -8.041
+      },
+      {
+        "chunk_id": "41_0",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.3803,
+        "ce_score": -8.2262
+      },
+      {
+        "chunk_id": "21_0",
+        "bi_rank": 8,
+        "ce_rank": 6,
+        "bi_score": 0.3802,
+        "ce_score": -8.2489
+      },
+      {
+        "chunk_id": "22_0",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.4023,
+        "ce_score": -8.9148
+      },
+      {
+        "chunk_id": "32_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.3718,
+        "ce_score": -9.8164
+      },
+      {
+        "chunk_id": "22_5",
+        "bi_rank": 2,
+        "ce_rank": 9,
+        "bi_score": 0.4093,
+        "ce_score": -10.1328
+      },
+      {
+        "chunk_id": "15_1",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.3678,
+        "ce_score": -10.1335
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 27.3,
+      "rerank": 535.7,
+      "llm_baseline": 2773.2,
+      "llm_reranked": 1964.2
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "When was the right to education added to the Constitution?",
+    "expected_articles": [
+      "21A"
+    ],
+    "note": "Year/amendment is only in the removed footnotes",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "21A_0",
+      "30_0",
+      "242_0"
+    ],
+    "reranked_top3": [
+      "21A_0",
+      "242_0",
+      "41_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "21A_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.6221,
+        "ce_score": -0.1554
+      },
+      {
+        "chunk_id": "242_0",
+        "bi_rank": 3,
+        "ce_rank": 2,
+        "bi_score": 0.4957,
+        "ce_score": -3.3474
+      },
+      {
+        "chunk_id": "41_0",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.4523,
+        "ce_score": -3.4573
+      },
+      {
+        "chunk_id": "390_0",
+        "bi_rank": 6,
+        "ce_rank": 4,
+        "bi_score": 0.4447,
+        "ce_score": -3.8886
+      },
+      {
+        "chunk_id": "31D_0",
+        "bi_rank": 9,
+        "ce_rank": 5,
+        "bi_score": 0.43,
+        "ce_score": -4.7625
+      },
+      {
+        "chunk_id": "30_0",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "bi_score": 0.5527,
+        "ce_score": -5.3033
+      },
+      {
+        "chunk_id": "31_0",
+        "bi_rank": 10,
+        "ce_rank": 7,
+        "bi_score": 0.4278,
+        "ce_score": -5.669
+      },
+      {
+        "chunk_id": "386_0",
+        "bi_rank": 4,
+        "ce_rank": 8,
+        "bi_score": 0.4605,
+        "ce_score": -5.8153
+      },
+      {
+        "chunk_id": "15_5",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "bi_score": 0.4354,
+        "ce_score": -9.4345
+      },
+      {
+        "chunk_id": "15_4",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.439,
+        "ce_score": -9.5196
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 2455.3,
+      "rerank": 1568.8,
+      "llm_baseline": 3580.0,
+      "llm_reranked": 2775.6
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "Which amendment inserted Article 21A?",
+    "expected_articles": [
+      "21A"
+    ],
+    "note": "Footnote-only answer - v1 should fail",
+    "verdict": "both_miss",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "242_0",
+      "257A_0",
+      "31D_0"
+    ],
+    "reranked_top3": [
+      "242_0",
+      "144A_0",
+      "257A_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "242_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.7055,
+        "ce_score": -0.0534
+      },
+      {
+        "chunk_id": "144A_0",
+        "bi_rank": 8,
+        "ce_rank": 2,
+        "bi_score": 0.6225,
+        "ce_score": -0.3674
+      },
+      {
+        "chunk_id": "257A_0",
+        "bi_rank": 2,
+        "ce_rank": 3,
+        "bi_score": 0.6961,
+        "ce_score": -0.4693
+      },
+      {
+        "chunk_id": "31_0",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.6283,
+        "ce_score": -1.2526
+      },
+      {
+        "chunk_id": "380_0",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "bi_score": 0.6387,
+        "ce_score": -1.6658
+      },
+      {
+        "chunk_id": "386_0",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "bi_score": 0.6337,
+        "ce_score": -1.6905
+      },
+      {
+        "chunk_id": "31D_0",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "bi_score": 0.6781,
+        "ce_score": -1.9672
+      },
+      {
+        "chunk_id": "232_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.6202,
+        "ce_score": -2.0242
+      },
+      {
+        "chunk_id": "368_3",
+        "bi_rank": 4,
+        "ce_rank": 9,
+        "bi_score": 0.6415,
+        "ce_score": -2.2445
+      },
+      {
+        "chunk_id": "278_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.6141,
+        "ce_score": -2.3096
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 2180.5,
+      "rerank": 3060.9,
+      "llm_baseline": 2562.5,
+      "llm_reranked": 2342.9
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "What is the basic structure doctrine?",
+    "expected_articles": [],
+    "note": "Judicial doctrine, not in the text",
+    "verdict": "no_expected",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "37_0",
+      "366_17",
+      "366_5"
+    ],
+    "reranked_top3": [
+      "37_0",
+      "243W_0",
+      "366_10"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "37_0",
+        "bi_rank": 1,
+        "ce_rank": 1,
+        "bi_score": 0.4428,
+        "ce_score": -10.4773
+      },
+      {
+        "chunk_id": "243W_0",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "bi_score": 0.3447,
+        "ce_score": -10.7649
+      },
+      {
+        "chunk_id": "366_10",
+        "bi_rank": 4,
+        "ce_rank": 3,
+        "bi_score": 0.3636,
+        "ce_score": -10.9748
+      },
+      {
+        "chunk_id": "80_2",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "bi_score": 0.3319,
+        "ce_score": -11.0302
+      },
+      {
+        "chunk_id": "118_0",
+        "bi_rank": 10,
+        "ce_rank": 5,
+        "bi_score": 0.3308,
+        "ce_score": -11.1568
+      },
+      {
+        "chunk_id": "366_23",
+        "bi_rank": 8,
+        "ce_rank": 6,
+        "bi_score": 0.3417,
+        "ce_score": -11.258
+      },
+      {
+        "chunk_id": "366_30",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "bi_score": 0.3472,
+        "ce_score": -11.3123
+      },
+      {
+        "chunk_id": "366_17",
+        "bi_rank": 2,
+        "ce_rank": 8,
+        "bi_score": 0.3812,
+        "ce_score": -11.3229
+      },
+      {
+        "chunk_id": "366_5",
+        "bi_rank": 3,
+        "ce_rank": 9,
+        "bi_score": 0.37,
+        "ce_score": -11.3778
+      },
+      {
+        "chunk_id": "366_0",
+        "bi_rank": 6,
+        "ce_rank": 10,
+        "bi_score": 0.3448,
+        "ce_score": -11.404
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 479.3,
+      "rerank": 1761.8,
+      "llm_baseline": 2721.5,
+      "llm_reranked": 2391.0
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "What is the definition of an illiterate person in the Constitution?",
+    "expected_articles": [],
+    "note": "Not defined anywhere in the articles",
+    "verdict": "no_expected",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "173_0",
+      "194_3",
+      "144A_0"
+    ],
+    "reranked_top3": [
+      "366_0",
+      "194_3",
+      "366_3"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "366_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.3859,
+        "ce_score": -5.9702
+      },
+      {
+        "chunk_id": "194_3",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.3959,
+        "ce_score": -7.9158
+      },
+      {
+        "chunk_id": "366_3",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.3858,
+        "ce_score": -8.0534
+      },
+      {
+        "chunk_id": "124_6",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "bi_score": 0.3778,
+        "ce_score": -8.8984
+      },
+      {
+        "chunk_id": "194_0",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.3704,
+        "ce_score": -9.2943
+      },
+      {
+        "chunk_id": "144A_0",
+        "bi_rank": 3,
+        "ce_rank": 6,
+        "bi_score": 0.3932,
+        "ce_score": -9.66
+      },
+      {
+        "chunk_id": "228A_0",
+        "bi_rank": 10,
+        "ce_rank": 7,
+        "bi_score": 0.3663,
+        "ce_score": -9.8921
+      },
+      {
+        "chunk_id": "173_0",
+        "bi_rank": 1,
+        "ce_rank": 8,
+        "bi_score": 0.4125,
+        "ce_score": -10.6282
+      },
+      {
+        "chunk_id": "347_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.3702,
+        "ce_score": -10.8464
+      },
+      {
+        "chunk_id": "177_0",
+        "bi_rank": 6,
+        "ce_rank": 10,
+        "bi_score": 0.3843,
+        "ce_score": -10.9656
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 132.5,
+      "rerank": 721.9,
+      "llm_baseline": 2638.6,
+      "llm_reranked": 2945.7
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  },
+  {
+    "query": "What does the First Schedule list?",
+    "expected_articles": [],
+    "note": "Schedules were excluded from the corpus",
+    "verdict": "no_expected",
+    "expected_ranks": {
+      "baseline": [],
+      "reranked": []
+    },
+    "baseline_top3": [
+      "366_23",
+      "391_0",
+      "339_0"
+    ],
+    "reranked_top3": [
+      "4_0",
+      "391_0",
+      "366_23"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "4_0",
+        "bi_rank": 5,
+        "ce_rank": 1,
+        "bi_score": 0.3312,
+        "ce_score": -0.9769
+      },
+      {
+        "chunk_id": "391_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.3972,
+        "ce_score": -1.4548
+      },
+      {
+        "chunk_id": "366_23",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "bi_score": 0.4226,
+        "ce_score": -4.4341
+      },
+      {
+        "chunk_id": "244_0",
+        "bi_rank": 4,
+        "ce_rank": 4,
+        "bi_score": 0.3745,
+        "ce_score": -6.5545
+      },
+      {
+        "chunk_id": "80_1",
+        "bi_rank": 7,
+        "ce_rank": 5,
+        "bi_score": 0.3062,
+        "ce_score": -9.0258
+      },
+      {
+        "chunk_id": "339_0",
+        "bi_rank": 3,
+        "ce_rank": 6,
+        "bi_score": 0.3771,
+        "ce_score": -10.5137
+      },
+      {
+        "chunk_id": "338A_4",
+        "bi_rank": 10,
+        "ce_rank": 7,
+        "bi_score": 0.2854,
+        "ce_score": -10.5598
+      },
+      {
+        "chunk_id": "338A_6",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.3048,
+        "ce_score": -10.6338
+      },
+      {
+        "chunk_id": "338A_0",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "bi_score": 0.3078,
+        "ce_score": -10.7275
+      },
+      {
+        "chunk_id": "338A_9",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "bi_score": 0.2991,
+        "ce_score": -10.8829
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 61.6,
+      "rerank": 867.6,
+      "llm_baseline": 2856.2,
+      "llm_reranked": 3431.1
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
+  }
+]

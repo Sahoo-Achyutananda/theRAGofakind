@@ -1,0 +1,8 @@
+[
+  {"query": "Is the right to privacy a fundamental right?", "expected_articles": [], "note": "Comes from a Supreme Court judgment, not the text"},
+  {"query": "When was the right to education added to the Constitution?", "expected_articles": ["21A"], "note": "Year/amendment is only in the removed footnotes"},
+  {"query": "Which amendment inserted Article 21A?", "expected_articles": ["21A"], "note": "Footnote-only answer - v1 should fail"},
+  {"query": "What is the basic structure doctrine?", "expected_articles": [], "note": "Judicial doctrine, not in the text"},
+  {"query": "What is the definition of an illiterate person in the Constitution?", "expected_articles": [], "note": "Not defined anywhere in the articles"},
+  {"query": "What does the First Schedule list?", "expected_articles": [], "note": "Schedules were excluded from the corpus"}
+]
