@@ -7,14 +7,17 @@ and exposes the same steps as the notebook as small API endpoints:
     GET  /api/articles            list of all articles (for the explorer tab)
     GET  /api/articles/{number}   all chunks of one article
     POST /api/retrieve            Pipeline 1: bi-encoder top 10
-    POST /api/rerank              Pipeline 2: cross-encoder re-ranks those 10
+    POST /api/retrieve_hybrid     BM25 + bi-encoder, fused with RRF (same as hybrid.ipynb)
+    POST /api/rerank              Pipeline 2: cross-encoder re-ranks the given 10
     POST /api/generate            Gemini answer from the given chunks
 
 Run from this folder:   py -3.11 -m uvicorn app:app --port 8000
 """
 import json
 import os
+import re
 import time
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -23,6 +26,7 @@ from fastapi import FastAPI, HTTPException
 from google import genai
 from google.genai import types
 from pydantic import BaseModel
+from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder, SentenceTransformer
 
 ROOT = Path(__file__).resolve().parents[2]          # the project folder
@@ -45,6 +49,17 @@ else:                                               # notebook didn't save them:
     chunk_embs = bi_encoder.encode([c["text"] for c in chunks], batch_size=64,
                                    normalize_embeddings=True)
     np.save(emb_path, chunk_embs)
+
+# BM25 keyword index - same tokenizer and settings as hybrid.ipynb
+STOPWORDS = set("""a an the of and or to in on for by with is are be shall any
+such as that this it its at from under which who whom what can does do not""".split())
+
+
+def tokenize(text):
+    return [t for t in re.findall(r"[a-z0-9]+", text.lower()) if t not in STOPWORDS]
+
+
+bm25 = BM25Okapi([tokenize(c["text"]) for c in chunks], k1=1.5, b=0.75)
 
 client = genai.Client()
 
@@ -105,6 +120,28 @@ def retrieve(body: QueryIn, k: int = 10):
     top_idx = np.argsort(-scores)[:k]
     results = [{**chunks[i], "rank": r + 1, "score": float(scores[i])}
                for r, i in enumerate(top_idx)]
+    return {"results": results, "ms": ms_since(t0)}
+
+
+@app.post("/api/retrieve_hybrid")
+def retrieve_hybrid(body: QueryIn, k: int = 10, pool: int = 50):
+    t0 = time.perf_counter()
+    q = bi_encoder.encode(body.query, normalize_embeddings=True)
+    dense_rank = np.argsort(-(chunk_embs @ q))[:pool]                       # top 50 by meaning
+    bm25_rank = np.argsort(-bm25.get_scores(tokenize(body.query)))[:pool]   # top 50 by keywords
+
+    # Reciprocal Rank Fusion: each list votes 1 / (60 + rank)
+    fused = Counter()
+    for ranking in (dense_rank, bm25_rank):
+        for rank, idx in enumerate(ranking, start=1):
+            fused[idx] += 1 / (60 + rank)
+
+    # where each chunk sat in the two input lists (None = outside the top 50)
+    dense_pos = {int(i): r for r, i in enumerate(dense_rank, start=1)}
+    bm25_pos = {int(i): r for r, i in enumerate(bm25_rank, start=1)}
+    results = [{**chunks[i], "rank": r + 1, "score": float(s),
+                "dense_rank": dense_pos.get(int(i)), "bm25_rank": bm25_pos.get(int(i))}
+               for r, (i, s) in enumerate(fused.most_common(k))]
     return {"results": results, "ms": ms_since(t0)}
 
 

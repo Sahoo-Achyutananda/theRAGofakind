@@ -20,6 +20,9 @@ export const getArticle = (number) => request(`/api/articles/${encodeURIComponen
 // Pipeline 1: bi-encoder top 10
 export const retrieve = (query) => request("/api/retrieve", { query });
 
+// BM25 + bi-encoder top 10, fused with Reciprocal Rank Fusion
+export const retrieveHybrid = (query) => request("/api/retrieve_hybrid", { query });
+
 // Pipeline 2: cross-encoder re-ranks the given chunks
 export const rerank = (query, chunkIds) => request("/api/rerank", { query, chunk_ids: chunkIds });
 

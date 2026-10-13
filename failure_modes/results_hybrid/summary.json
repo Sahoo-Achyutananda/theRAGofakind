@@ -1,0 +1,1143 @@
+[
+  {
+    "mode": "document_specific",
+    "query": "What does Article 21 say?",
+    "expected_articles": [
+      "21"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "21_0",
+      "21A_0",
+      "257A_0"
+    ],
+    "hybrid_top3": [
+      "21_0",
+      "366_21",
+      "257A_0"
+    ],
+    "latency_ms": {
+      "dense": 40.0,
+      "hybrid": 61.3,
+      "rerank_dense": 216.9,
+      "rerank_hybrid": 246.2
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "What is Article 356 about?",
+    "expected_articles": [
+      "356"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "356_4",
+      "356_1",
+      "356_2"
+    ],
+    "hybrid_top3": [
+      "356_4",
+      "356_1",
+      "356_2"
+    ],
+    "latency_ms": {
+      "dense": 30.7,
+      "hybrid": 40.9,
+      "rerank_dense": 246.0,
+      "rerank_hybrid": 327.4
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "What is Article 370?",
+    "expected_articles": [
+      "370"
+    ],
+    "dense@10": 2,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "370_3",
+      "370_0",
+      "344_5"
+    ],
+    "hybrid_top3": [
+      "370_2",
+      "370_3",
+      "370_0"
+    ],
+    "latency_ms": {
+      "dense": 23.3,
+      "hybrid": 26.8,
+      "rerank_dense": 599.3,
+      "rerank_hybrid": 557.8
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "Is the right to property a fundamental right?",
+    "expected_articles": [
+      "300A"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": 7,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "13_1",
+      "13_3",
+      "13_0"
+    ],
+    "hybrid_top3": [
+      "13_1",
+      "13_3",
+      "13_0"
+    ],
+    "latency_ms": {
+      "dense": 30.8,
+      "hybrid": 27.8,
+      "rerank_dense": 862.7,
+      "rerank_hybrid": 547.6
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "What does Article 31 say?",
+    "expected_articles": [
+      "31"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "31A_2",
+      "31B_0",
+      "31D_0"
+    ],
+    "hybrid_top3": [
+      "31_0",
+      "31D_0",
+      "31C_0"
+    ],
+    "latency_ms": {
+      "dense": 28.3,
+      "hybrid": 30.5,
+      "rerank_dense": 448.6,
+      "rerank_hybrid": 466.5
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "Can peaceful assembly be restricted in the interest of public order?",
+    "expected_articles": [
+      "19"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": 3,
+    "hybrid+ce@3": 2,
+    "dense_top3": [
+      "33_0",
+      "105_0",
+      "359_1"
+    ],
+    "hybrid_top3": [
+      "302_0",
+      "19_2",
+      "19_3"
+    ],
+    "latency_ms": {
+      "dense": 31.7,
+      "hybrid": 30.0,
+      "rerank_dense": 682.1,
+      "rerank_hybrid": 625.9
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "What does the right to equality say?",
+    "expected_articles": [
+      "14"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 3,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 3,
+    "dense_top3": [
+      "16_1",
+      "16_0",
+      "14_0"
+    ],
+    "hybrid_top3": [
+      "16_1",
+      "16_0",
+      "14_0"
+    ],
+    "latency_ms": {
+      "dense": 23.8,
+      "hybrid": 24.9,
+      "rerank_dense": 637.1,
+      "rerank_hybrid": 421.9
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "What are the fundamental duties of citizens?",
+    "expected_articles": [
+      "51A"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "51A_0",
+      "51A_1",
+      "37_0"
+    ],
+    "hybrid_top3": [
+      "51A_0",
+      "51A_1",
+      "37_0"
+    ],
+    "latency_ms": {
+      "dense": 30.3,
+      "hybrid": 27.2,
+      "rerank_dense": 599.7,
+      "rerank_hybrid": 660.4
+    }
+  },
+  {
+    "mode": "document_specific",
+    "query": "What are the Directive Principles of State Policy?",
+    "expected_articles": [
+      "36",
+      "37"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 2,
+    "hybrid@10": 2,
+    "hybrid+ce@3": 3,
+    "dense_top3": [
+      "31C_0",
+      "37_0",
+      "257_2"
+    ],
+    "hybrid_top3": [
+      "31C_0",
+      "39_0",
+      "37_0"
+    ],
+    "latency_ms": {
+      "dense": 23.5,
+      "hybrid": 29.7,
+      "rerank_dense": 608.4,
+      "rerank_hybrid": 708.4
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can the State make special laws only for women?",
+    "expected_articles": [
+      "15"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "15_2",
+      "15_4",
+      "15_3"
+    ],
+    "hybrid_top3": [
+      "15_2",
+      "332A_0",
+      "245_0"
+    ],
+    "latency_ms": {
+      "dense": 93.3,
+      "hybrid": 31.7,
+      "rerank_dense": 635.4,
+      "rerank_hybrid": 460.3
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can the State reserve government jobs for backward classes?",
+    "expected_articles": [
+      "16"
+    ],
+    "dense@10": 10,
+    "dense+ce@3": null,
+    "hybrid@10": null,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "338B_7",
+      "338B_9",
+      "342A_0"
+    ],
+    "hybrid_top3": [
+      "338B_7",
+      "338B_9",
+      "342A_0"
+    ],
+    "latency_ms": {
+      "dense": 34.0,
+      "hybrid": 28.5,
+      "rerank_dense": 677.9,
+      "rerank_hybrid": 485.9
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can fundamental rights be suspended during an emergency?",
+    "expected_articles": [
+      "359"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "359_2",
+      "359_5",
+      "359_0"
+    ],
+    "hybrid_top3": [
+      "359_2",
+      "359_5",
+      "359_0"
+    ],
+    "latency_ms": {
+      "dense": 24.4,
+      "hybrid": 26.7,
+      "rerank_dense": 570.8,
+      "rerank_hybrid": 612.4
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can the right to life be suspended during an emergency?",
+    "expected_articles": [
+      "359",
+      "21"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "359_0",
+      "359_5",
+      "359_2"
+    ],
+    "hybrid_top3": [
+      "359_0",
+      "359_2",
+      "359_3"
+    ],
+    "latency_ms": {
+      "dense": 37.0,
+      "hybrid": 29.6,
+      "rerank_dense": 601.6,
+      "rerank_hybrid": 610.3
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Does Article 13 invalidate constitutional amendments that violate fundamental rights?",
+    "expected_articles": [
+      "13"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "13_3",
+      "13_1",
+      "13_0"
+    ],
+    "hybrid_top3": [
+      "13_3",
+      "13_1",
+      "13_0"
+    ],
+    "latency_ms": {
+      "dense": 29.1,
+      "hybrid": 31.7,
+      "rerank_dense": 354.2,
+      "rerank_hybrid": 345.6
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can a person who is not an MP be appointed as a Union Minister?",
+    "expected_articles": [
+      "75"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 2,
+    "hybrid@10": 3,
+    "hybrid+ce@3": 2,
+    "dense_top3": [
+      "191_1",
+      "75_2",
+      "164_2"
+    ],
+    "hybrid_top3": [
+      "191_1",
+      "75_2",
+      "309_0"
+    ],
+    "latency_ms": {
+      "dense": 27.8,
+      "hybrid": 31.1,
+      "rerank_dense": 595.5,
+      "rerank_hybrid": 601.3
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can a person who is not an MLA become a State Minister?",
+    "expected_articles": [
+      "164"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "164_5",
+      "164_2",
+      "177_0"
+    ],
+    "hybrid_top3": [
+      "164_5",
+      "101_1",
+      "191_1"
+    ],
+    "latency_ms": {
+      "dense": 43.1,
+      "hybrid": 27.4,
+      "rerank_dense": 430.4,
+      "rerank_hybrid": 560.5
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "Can citizens be stopped from moving freely in Scheduled Tribe areas?",
+    "expected_articles": [
+      "19"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": 10,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "244_0",
+      "342_0",
+      "339_0"
+    ],
+    "hybrid_top3": [
+      "15_3",
+      "332_7",
+      "244_0"
+    ],
+    "latency_ms": {
+      "dense": 30.1,
+      "hybrid": 31.2,
+      "rerank_dense": 637.6,
+      "rerank_hybrid": 521.8
+    }
+  },
+  {
+    "mode": "exceptions",
+    "query": "On what grounds can free speech be restricted?",
+    "expected_articles": [
+      "19"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 2,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 2,
+    "dense_top3": [
+      "105_0",
+      "19_4",
+      "194_0"
+    ],
+    "hybrid_top3": [
+      "105_0",
+      "19_4",
+      "194_0"
+    ],
+    "latency_ms": {
+      "dense": 28.7,
+      "hybrid": 26.8,
+      "rerank_dense": 534.9,
+      "rerank_hybrid": 330.8
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "Can the Governor pardon a person sentenced to death?",
+    "expected_articles": [
+      "72",
+      "161"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "161_0",
+      "72_0",
+      "361_2"
+    ],
+    "hybrid_top3": [
+      "161_0",
+      "72_0",
+      "153_0"
+    ],
+    "latency_ms": {
+      "dense": 26.5,
+      "hybrid": 56.5,
+      "rerank_dense": 722.9,
+      "rerank_hybrid": 606.9
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "What is the minimum age to become President of India?",
+    "expected_articles": [
+      "58"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 2,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "58_0",
+      "66_2",
+      "157_0"
+    ],
+    "hybrid_top3": [
+      "58_0",
+      "66_2",
+      "157_0"
+    ],
+    "latency_ms": {
+      "dense": 27.1,
+      "hybrid": 28.9,
+      "rerank_dense": 630.0,
+      "rerank_hybrid": 460.4
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "What is the minimum age to become a member of the Lok Sabha?",
+    "expected_articles": [
+      "84"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 4,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "84_0",
+      "173_0",
+      "243F_0"
+    ],
+    "hybrid_top3": [
+      "84_0",
+      "173_0",
+      "243F_0"
+    ],
+    "latency_ms": {
+      "dense": 23.7,
+      "hybrid": 28.8,
+      "rerank_dense": 532.6,
+      "rerank_hybrid": 460.0
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "Who can issue Ordinances when the legislature is not in session?",
+    "expected_articles": [
+      "123",
+      "213"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "213_0",
+      "239B_0",
+      "239B_2"
+    ],
+    "hybrid_top3": [
+      "213_0",
+      "239B_0",
+      "123_0"
+    ],
+    "latency_ms": {
+      "dense": 28.0,
+      "hybrid": 26.9,
+      "rerank_dense": 585.4,
+      "rerank_hybrid": 570.4
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "Which court can issue a writ of habeas corpus?",
+    "expected_articles": [
+      "32",
+      "226"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 2,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 2,
+    "dense_top3": [
+      "139_0",
+      "226_0",
+      "32_0"
+    ],
+    "hybrid_top3": [
+      "139_0",
+      "226_0",
+      "32_0"
+    ],
+    "latency_ms": {
+      "dense": 23.0,
+      "hybrid": 23.6,
+      "rerank_dense": 553.7,
+      "rerank_hybrid": 526.1
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "What is the maximum gap allowed between two sessions of Parliament?",
+    "expected_articles": [
+      "85"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "85_0",
+      "174_0",
+      "101_3"
+    ],
+    "hybrid_top3": [
+      "85_0",
+      "174_0",
+      "302_0"
+    ],
+    "latency_ms": {
+      "dense": 25.0,
+      "hybrid": 27.6,
+      "rerank_dense": 474.3,
+      "rerank_hybrid": 527.1
+    }
+  },
+  {
+    "mode": "keyword_trap",
+    "query": "Can the President be a member of Parliament?",
+    "expected_articles": [
+      "59"
+    ],
+    "dense@10": 3,
+    "dense+ce@3": 1,
+    "hybrid@10": 2,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "59_0",
+      "101_1",
+      "79_0"
+    ],
+    "hybrid_top3": [
+      "59_0",
+      "101_1",
+      "66_1"
+    ],
+    "latency_ms": {
+      "dense": 24.8,
+      "hybrid": 24.6,
+      "rerank_dense": 567.7,
+      "rerank_hybrid": 524.4
+    }
+  },
+  {
+    "mode": "negation",
+    "query": "Who is NOT protected by the arrest and detention safeguards?",
+    "expected_articles": [
+      "22"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "22_0",
+      "22_2",
+      "22_1"
+    ],
+    "hybrid_top3": [
+      "22_0",
+      "22_2",
+      "22_1"
+    ],
+    "latency_ms": {
+      "dense": 21.5,
+      "hybrid": 25.3,
+      "rerank_dense": 471.6,
+      "rerank_hybrid": 439.8
+    }
+  },
+  {
+    "mode": "negation",
+    "query": "Within how many hours must an arrested person be produced before a magistrate?",
+    "expected_articles": [
+      "22"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "22_1",
+      "22_3",
+      "22_6"
+    ],
+    "hybrid_top3": [
+      "22_1",
+      "22_3",
+      "22_0"
+    ],
+    "latency_ms": {
+      "dense": 25.1,
+      "hybrid": 28.3,
+      "rerank_dense": 592.2,
+      "rerank_hybrid": 579.2
+    }
+  },
+  {
+    "mode": "negation",
+    "query": "What can the Rajya Sabha NOT do with a Money Bill?",
+    "expected_articles": [
+      "109"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": 8,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "198_3",
+      "199_2",
+      "110_2"
+    ],
+    "hybrid_top3": [
+      "198_3",
+      "199_2",
+      "110_2"
+    ],
+    "latency_ms": {
+      "dense": 27.6,
+      "hybrid": 27.0,
+      "rerank_dense": 568.5,
+      "rerank_hybrid": 565.3
+    }
+  },
+  {
+    "mode": "negation",
+    "query": "Which titles is the State NOT allowed to confer?",
+    "expected_articles": [
+      "18"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "18_0",
+      "32A_0",
+      "304_0"
+    ],
+    "hybrid_top3": [
+      "18_0",
+      "258_1",
+      "138_0"
+    ],
+    "latency_ms": {
+      "dense": 22.2,
+      "hybrid": 27.8,
+      "rerank_dense": 683.7,
+      "rerank_hybrid": 570.1
+    }
+  },
+  {
+    "mode": "negation",
+    "query": "Can a non-citizen holding a public office accept a foreign title without permission?",
+    "expected_articles": [
+      "18"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "18_0",
+      "102_0",
+      "191_0"
+    ],
+    "hybrid_top3": [
+      "18_0",
+      "102_0",
+      "191_0"
+    ],
+    "latency_ms": {
+      "dense": 27.1,
+      "hybrid": 30.8,
+      "rerank_dense": 579.5,
+      "rerank_hybrid": 577.5
+    }
+  },
+  {
+    "mode": "negation",
+    "query": "Is religious instruction allowed in government-funded schools?",
+    "expected_articles": [
+      "28"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "28_0",
+      "30_0",
+      "15_4"
+    ],
+    "hybrid_top3": [
+      "28_0",
+      "350A_0",
+      "30_0"
+    ],
+    "latency_ms": {
+      "dense": 31.2,
+      "hybrid": 28.8,
+      "rerank_dense": 544.4,
+      "rerank_hybrid": 567.0
+    }
+  },
+  {
+    "mode": "out_of_corpus",
+    "query": "When was the right to education added to the Constitution?",
+    "expected_articles": [
+      "21A"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "21A_0",
+      "242_0",
+      "41_0"
+    ],
+    "hybrid_top3": [
+      "21A_0",
+      "337_0",
+      "242_0"
+    ],
+    "latency_ms": {
+      "dense": 28.4,
+      "hybrid": 31.1,
+      "rerank_dense": 568.7,
+      "rerank_hybrid": 516.5
+    }
+  },
+  {
+    "mode": "out_of_corpus",
+    "query": "Which amendment inserted Article 21A?",
+    "expected_articles": [
+      "21A"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": null,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "242_0",
+      "144A_0",
+      "257A_0"
+    ],
+    "hybrid_top3": [
+      "242_0",
+      "32A_0",
+      "226A_0"
+    ],
+    "latency_ms": {
+      "dense": 20.8,
+      "hybrid": 22.1,
+      "rerank_dense": 233.8,
+      "rerank_hybrid": 393.8
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "Does an accused person have the right to remain silent?",
+    "expected_articles": [
+      "20"
+    ],
+    "dense@10": 6,
+    "dense+ce@3": 2,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 2,
+    "dense_top3": [
+      "22_0",
+      "20_0",
+      "22_4"
+    ],
+    "hybrid_top3": [
+      "22_0",
+      "20_0",
+      "134_0"
+    ],
+    "latency_ms": {
+      "dense": 24.7,
+      "hybrid": 25.8,
+      "rerank_dense": 552.2,
+      "rerank_hybrid": 469.0
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "Can the government ban a peaceful protest?",
+    "expected_articles": [
+      "19"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": null,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "121_0",
+      "123_2",
+      "359_2"
+    ],
+    "hybrid_top3": [
+      "121_0",
+      "293_2",
+      "287_0"
+    ],
+    "latency_ms": {
+      "dense": 22.5,
+      "hybrid": 22.8,
+      "rerank_dense": 447.3,
+      "rerank_hybrid": 495.3
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "Is child labour allowed in India?",
+    "expected_articles": [
+      "24"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "24_0",
+      "23_0",
+      "302_0"
+    ],
+    "hybrid_top3": [
+      "24_0",
+      "23_0",
+      "340_0"
+    ],
+    "latency_ms": {
+      "dense": 22.8,
+      "hybrid": 24.6,
+      "rerank_dense": 573.4,
+      "rerank_hybrid": 636.2
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "Is human trafficking illegal?",
+    "expected_articles": [
+      "23"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "23_0",
+      "301_0",
+      "15_1"
+    ],
+    "hybrid_top3": [
+      "23_0",
+      "233A_1",
+      "371D_11"
+    ],
+    "latency_ms": {
+      "dense": 28.5,
+      "hybrid": 23.0,
+      "rerank_dense": 547.8,
+      "rerank_hybrid": 593.7
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "Can the President be sued in court?",
+    "expected_articles": [
+      "361"
+    ],
+    "dense@10": null,
+    "dense+ce@3": null,
+    "hybrid@10": null,
+    "hybrid+ce@3": null,
+    "dense_top3": [
+      "356_1",
+      "124_4",
+      "317_1"
+    ],
+    "hybrid_top3": [
+      "300_0",
+      "124_4",
+      "317_1"
+    ],
+    "latency_ms": {
+      "dense": 22.0,
+      "hybrid": 26.0,
+      "rerank_dense": 568.1,
+      "rerank_hybrid": 578.8
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "How can the President be removed from office?",
+    "expected_articles": [
+      "56",
+      "61"
+    ],
+    "dense@10": 2,
+    "dense+ce@3": 3,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 3,
+    "dense_top3": [
+      "317_2",
+      "124_4",
+      "56_0"
+    ],
+    "hybrid_top3": [
+      "317_2",
+      "124_4",
+      "56_0"
+    ],
+    "latency_ms": {
+      "dense": 34.4,
+      "hybrid": 23.4,
+      "rerank_dense": 551.5,
+      "rerank_hybrid": 584.9
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "At what age can a citizen vote?",
+    "expected_articles": [
+      "326"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 2,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "326_0",
+      "66_2",
+      "58_0"
+    ],
+    "hybrid_top3": [
+      "326_0",
+      "66_2",
+      "58_0"
+    ],
+    "latency_ms": {
+      "dense": 20.5,
+      "hybrid": 26.6,
+      "rerank_dense": 539.5,
+      "rerank_hybrid": 450.3
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "What is the national language of India?",
+    "expected_articles": [
+      "343"
+    ],
+    "dense@10": 2,
+    "dense+ce@3": 3,
+    "hybrid@10": 4,
+    "hybrid+ce@3": 3,
+    "dense_top3": [
+      "351_0",
+      "344_2",
+      "343_0"
+    ],
+    "hybrid_top3": [
+      "351_0",
+      "344_2",
+      "343_0"
+    ],
+    "latency_ms": {
+      "dense": 21.2,
+      "hybrid": 24.8,
+      "rerank_dense": 426.6,
+      "rerank_hybrid": 409.9
+    }
+  },
+  {
+    "mode": "synonyms",
+    "query": "Is caste discrimination illegal?",
+    "expected_articles": [
+      "15",
+      "17"
+    ],
+    "dense@10": 1,
+    "dense+ce@3": 1,
+    "hybrid@10": 1,
+    "hybrid+ce@3": 1,
+    "dense_top3": [
+      "15_0",
+      "15_3",
+      "15_1"
+    ],
+    "hybrid_top3": [
+      "15_0",
+      "15_3",
+      "15_1"
+    ],
+    "latency_ms": {
+      "dense": 21.9,
+      "hybrid": 23.4,
+      "rerank_dense": 537.5,
+      "rerank_hybrid": 576.1
+    }
+  }
+]
