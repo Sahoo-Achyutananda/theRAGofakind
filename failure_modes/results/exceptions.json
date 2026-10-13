@@ -103,13 +103,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 29.2,
-      "rerank": 582.6,
-      "llm_baseline": 6243.0,
-      "llm_reranked": 4041.2
+      "retrieval": 30.5,
+      "rerank": 745.6,
+      "llm_baseline": 5575.5,
+      "llm_reranked": 8335.2
     },
-    "answer_baseline": "Based on the provided context:\n\nYes, the State can make special provisions for women (and children) as nothing in Article 15 prevents it from doing so (Article 15(3)). \n\nHowever, the State is not restricted to making special provisions *only* for women; under Article 15(4), the State can also make special provisions for the advancement of socially and educationally backward classes of citizens, the Scheduled Castes, and the Scheduled Tribes.",
-    "answer_reranked": "Yes. According to Article 15(3), nothing in Article 15 prevents the State from making any special provision for women and children."
+    "answer_baseline": "Based on the provided context:\n\nNo, the State can make special provisions not only for women, but also for other specified groups:\n\n* Under **Article 15(3)**, the State is permitted to make special provisions for **women and children**.\n* Under **Article 15(4)**, the State is also permitted to make special provisions for the advancement of any **socially and educationally backward classes of citizens**, as well as for the **Scheduled Castes and the Scheduled Tribes**.",
+    "answer_reranked": "Yes, nothing in Article 15 prevents the State from making any special provision for women and children [Article 15(3)]."
   },
   {
     "query": "Can the State reserve government jobs for backward classes?",
@@ -209,10 +209,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 20.0,
-      "rerank": 454.8,
-      "llm_baseline": 3138.2,
-      "llm_reranked": 3354.0
+      "retrieval": 26.0,
+      "rerank": 534.3,
+      "llm_baseline": 3395.6,
+      "llm_reranked": 2622.3
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -325,13 +325,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 23.7,
-      "rerank": 494.2,
-      "llm_baseline": 4629.3,
-      "llm_reranked": 4628.1
+      "retrieval": 28.9,
+      "rerank": 652.2,
+      "llm_baseline": 5287.7,
+      "llm_reranked": 4238.8
     },
-    "answer_baseline": "Based on the provided context, during a Proclamation of Emergency, the President may by order declare that the right to move any court for the enforcement of rights conferred by Part III (except Articles 20 and 21) as mentioned in the order, along with all pending proceedings for their enforcement, shall remain suspended for the period during which the Proclamation is in force or for a shorter specified period (Article 359(1)).",
-    "answer_reranked": "Based on the provided context, during a Proclamation of Emergency, the President may by order declare the suspension of the right to move any court for the enforcement of the rights conferred by Part III (except Articles 20 and 21) that are mentioned in the order, along with any pending proceedings for their enforcement, for the duration the Proclamation is in force or for a specified shorter period (Article 359)."
+    "answer_baseline": "Based on the provided context, during a Proclamation of Emergency, the President may by order declare that the **right to move any court for the enforcement** of specified rights conferred by Part III (except Articles 20 and 21) shall remain suspended for the duration of the emergency or for a specified shorter period (Article 359(1)). All pending proceedings in any court for the enforcement of those specified rights are also suspended during this period (Article 359(1)).",
+    "answer_reranked": "Based on the provided context, the right to move any court for the enforcement of fundamental rights (the rights conferred by Part III) can be suspended during an emergency, with specific exceptions:\n\nUnder **Article 359(1)**, when a Proclamation of Emergency is in operation, the President may by order declare that the right to move any court for the enforcement of the rights conferred by Part III (except Articles 20 and 21) mentioned in the order, along with any pending proceedings for their enforcement, shall remain suspended for the duration of the Proclamation or for a shorter period specified in the order."
   },
   {
     "query": "Can the right to life be suspended during an emergency?",
@@ -444,10 +444,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 21.5,
-      "rerank": 490.5,
-      "llm_baseline": 7851.8,
-      "llm_reranked": 5396.5
+      "retrieval": 28.8,
+      "rerank": 552.4,
+      "llm_baseline": 7212.1,
+      "llm_reranked": 6755.9
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -556,13 +556,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 20.5,
-      "rerank": 294.4,
-      "llm_baseline": 3494.5,
-      "llm_reranked": 3746.1
+      "retrieval": 37.1,
+      "rerank": 337.5,
+      "llm_baseline": 3695.6,
+      "llm_reranked": 3644.7
     },
-    "answer_baseline": "Based on the provided context, no, Article 13 does not apply to constitutional amendments. Article 13(4) explicitly states that nothing in Article 13 shall apply to any amendment of the Constitution made under Article 368.",
-    "answer_reranked": "Based on the provided context, **no**, Article 13 does not invalidate constitutional amendments. \n\nAccording to Article 13(4), nothing in Article 13 shall apply to any amendment of the Constitution made under Article 368."
+    "answer_baseline": "No. According to Article 13(4), nothing in Article 13 applies to any amendment of the Constitution made under Article 368. Therefore, Article 13 does not invalidate constitutional amendments made under Article 368 (Article 13(4)).",
+    "answer_reranked": "No. Article 13 does not apply to or invalidate constitutional amendments. According to Article 13(4), nothing in Article 13 shall apply to any amendment of the Constitution made under Article 368."
   },
   {
     "query": "Can a person who is not an MP be appointed as a Union Minister?",
@@ -662,10 +662,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 17.9,
-      "rerank": 572.7,
-      "llm_baseline": 3430.1,
-      "llm_reranked": 3357.6
+      "retrieval": 29.7,
+      "rerank": 563.3,
+      "llm_baseline": 3251.5,
+      "llm_reranked": 3458.7
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -774,13 +774,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 19.7,
-      "rerank": 354.0,
-      "llm_baseline": 4168.0,
-      "llm_reranked": 3503.1
+      "retrieval": 36.5,
+      "rerank": 403.3,
+      "llm_baseline": 4439.4,
+      "llm_reranked": 4035.1
     },
-    "answer_baseline": "Yes. According to Article 164(4), a person who is not a member of the Legislature of the State can be a Minister, but if they are not a member of the Legislature of the State for any period of six consecutive months, they shall cease to be a Minister at the expiration of that period.",
-    "answer_reranked": "Yes, a person who is not a member of the Legislature of the State can become a State Minister, but if they are not a member for six consecutive months, they will cease to be a Minister at the expiration of that period [Article 164(4)]."
+    "answer_baseline": "Yes. A person who is not a member of the Legislature of the State can become a State Minister, but they must become a member within six consecutive months; otherwise, at the expiration of that period, they shall cease to be a Minister (Article 164(4)).",
+    "answer_reranked": "Yes. A person who is not a member of the Legislature of the State can be appointed as a Minister, but under Article 164(4), a Minister who for any period of six consecutive months is not a member of the Legislature of the State shall cease to be a Minister at the expiration of that period."
   },
   {
     "query": "Can citizens be stopped from moving freely in Scheduled Tribe areas?",
@@ -876,10 +876,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 36.0,
-      "rerank": 798.6,
-      "llm_baseline": 2848.4,
-      "llm_reranked": 3556.9
+      "retrieval": 34.7,
+      "rerank": 584.6,
+      "llm_baseline": 3085.1,
+      "llm_reranked": 3513.1
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -992,12 +992,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 22.4,
-      "rerank": 431.9,
-      "llm_baseline": 6012.6,
-      "llm_reranked": 7225.5
+      "retrieval": 28.0,
+      "rerank": 470.1,
+      "llm_baseline": 8590.9,
+      "llm_reranked": 6498.6
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "Based on the provided context, freedom of speech can be restricted under the following conditions:\n\n* **In Parliament:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of Parliament [Article 105(1)].\n* **In State Legislatures:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of the Legislature [Article 194(1)].\n\n*(Note: Article 19(5) in the context outlines restrictions \"in the interests of the general public or for the protection of the interests of any Scheduled Tribe,\" but explicitly applies to sub-clauses (d) and (e), not freedom of speech [Article 19(5)]. The general grounds for restricting freedom of speech outside of legislative procedures are not contained in the provided context.)*"
+    "answer_reranked": "Based on the provided context, grounds regarding restrictions on freedom of speech are mentioned for Parliament and State Legislatures:\n\n* **In Parliament:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of Parliament (Article 105(1)).\n* **In State Legislatures:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of the Legislature (Article 194(1)).\n\n*(Note: The provided text for Article 19(5) mentions restrictions in the interests of the general public or for the protection of any Scheduled Tribe, but specifies that this applies to sub-clauses (d) and (e), not freedom of speech).*"
   }
 ]

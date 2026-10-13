@@ -97,10 +97,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 36.6,
-      "rerank": 568.6,
-      "llm_baseline": 2996.9,
-      "llm_reranked": 7307.7
+      "retrieval": 29.2,
+      "rerank": 620.4,
+      "llm_baseline": 3656.5,
+      "llm_reranked": 7300.2
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -199,10 +199,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 32.9,
-      "rerank": 339.2,
-      "llm_baseline": 3079.5,
-      "llm_reranked": 2846.6
+      "retrieval": 24.6,
+      "rerank": 497.8,
+      "llm_baseline": 3071.1,
+      "llm_reranked": 3607.8
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -305,13 +305,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 36.0,
-      "rerank": 417.3,
-      "llm_baseline": 4741.7,
-      "llm_reranked": 2770.6
+      "retrieval": 28.9,
+      "rerank": 604.1,
+      "llm_baseline": 4398.1,
+      "llm_reranked": 3690.4
     },
-    "answer_baseline": "Based on the provided context, child labour is restricted and prohibited in specific circumstances:\n\n* **Employment below age 14:** No child below fourteen years of age can be employed to work in any factory, mine, or engaged in any other hazardous employment (Article 24).\n* **Protection against abuse and exploitation:** The State is directed to secure that the tender age of children is not abused, that citizens are not forced by economic necessity to enter avocations unsuited to their age or strength (Article 39(e)), and that childhood and youth are protected against exploitation (Article 39(f)).",
-    "answer_reranked": "Based on the provided context, child labour is prohibited for any child below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24)."
+    "answer_baseline": "Based on the provided context:\n\nChild labour is prohibited for children below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24). \n\nAdditionally, the State is required to direct its policy to ensure that the tender age of children is not abused, and that childhood and youth are protected against exploitation and against moral and material abandonment (Article 39).",
+    "answer_reranked": "Based on the provided context, child labour is prohibited for children below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24)."
   },
   {
     "query": "Is human trafficking illegal?",
@@ -411,13 +411,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 34.3,
-      "rerank": 481.8,
-      "llm_baseline": 3859.0,
-      "llm_reranked": 3443.8
+      "retrieval": 25.1,
+      "rerank": 531.7,
+      "llm_baseline": 3008.7,
+      "llm_reranked": 2756.8
     },
-    "answer_baseline": "Yes, human trafficking (referred to as \"traffic in human beings\") is illegal. According to Article 23(1), traffic in human beings is prohibited, and any contravention of this provision is an offence punishable in accordance with law.",
-    "answer_reranked": "Yes, human trafficking is illegal. Article 23(1) prohibits traffic in human beings and states that any contravention of this provision is an offence punishable in accordance with law."
+    "answer_baseline": "Yes, human trafficking (\"traffic in human beings\") is prohibited, and any contravention of this provision is an offence punishable in accordance with law (Article 23(1)).",
+    "answer_reranked": "Yes, traffic in human beings is prohibited, and any contravention of this provision is an offence punishable in accordance with law (Article 23(1))."
   },
   {
     "query": "Can the President be sued in court?",
@@ -513,10 +513,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 18.7,
-      "rerank": 541.8,
-      "llm_baseline": 2837.3,
-      "llm_reranked": 3011.6
+      "retrieval": 35.0,
+      "rerank": 544.7,
+      "llm_baseline": 3028.1,
+      "llm_reranked": 2967.4
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -624,13 +624,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 35.0,
-      "rerank": 456.7,
-      "llm_baseline": 3132.5,
-      "llm_reranked": 3160.9
+      "retrieval": 32.7,
+      "rerank": 769.1,
+      "llm_baseline": 3205.3,
+      "llm_reranked": 3524.8
     },
     "answer_baseline": "The President may be removed from office by impeachment for violation of the Constitution, in the manner provided in Article 61 [Article 56(1)(b)].",
-    "answer_reranked": "The President may be removed from office for violation of the Constitution by impeachment in the manner provided in article 61 (Article 56(1)(b))."
+    "answer_reranked": "Based on the provided context, the President may be removed from office for a violation of the Constitution by impeachment in the manner provided in article 61 (Article 56(1)(b))."
   },
   {
     "query": "At what age can a citizen vote?",
@@ -730,13 +730,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 31.3,
-      "rerank": 451.7,
-      "llm_baseline": 3377.4,
-      "llm_reranked": 2894.3
+      "retrieval": 22.0,
+      "rerank": 636.6,
+      "llm_baseline": 3418.0,
+      "llm_reranked": 3052.4
     },
-    "answer_baseline": "Based on the provided context, a citizen who is not less than eighteen years of age on the date fixed by or under law made by the appropriate Legislature is entitled to be registered as a voter, provided they are not otherwise disqualified (Article 326).",
-    "answer_reranked": "Based on the provided context, a citizen can be registered as a voter if they are not less than eighteen years of age on the specified date, provided they are not otherwise disqualified under the Constitution or any law (Article 326)."
+    "answer_baseline": "Based on the provided context, a citizen can be registered as a voter if they are not less than eighteen years of age on a date fixed by or under any law made by the appropriate Legislature, provided they are not otherwise disqualified (Article 326).",
+    "answer_reranked": "Based on the provided context, a citizen who is not less than eighteen years of age on the specified date is entitled to be registered as a voter, provided they are not otherwise disqualified (Article 326)."
   },
   {
     "query": "What is the national language of India?",
@@ -840,12 +840,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 17.5,
-      "rerank": 365.5,
-      "llm_baseline": 5120.0,
-      "llm_reranked": 6353.1
+      "retrieval": 23.9,
+      "rerank": 422.3,
+      "llm_baseline": 4471.4,
+      "llm_reranked": 3623.0
     },
-    "answer_baseline": "The provided context does not answer this.",
+    "answer_baseline": "The provided context does not answer this. \n\nThe context specifies that Hindi in Devanagari script is the \"official language of the Union\" (Article 343(1)), but it does not state or mention a \"national language\" of India.",
     "answer_reranked": "The provided context does not answer this."
   },
   {
@@ -959,12 +959,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 21.2,
-      "rerank": 447.4,
-      "llm_baseline": 7136.3,
-      "llm_reranked": 4794.2
+      "retrieval": 30.6,
+      "rerank": 812.9,
+      "llm_baseline": 7150.0,
+      "llm_reranked": 4764.4
     },
-    "answer_baseline": "Based on the provided context, Article 15 provides for the prohibition of discrimination on the grounds of caste, among other grounds (Article 15). \n\nAdditionally, the context specifies that special provisions may be made by the State for the advancement of Scheduled Castes, including provisions relating to admission to educational institutions (Article 15(4), Article 15(5)).",
-    "answer_reranked": "Yes, discrimination based on caste is prohibited under Article 15:\n\n* **Article 15(1)** provides that the State shall not discriminate against any citizen on grounds only of caste, religion, race, sex, place of birth, or any of them.\n* **Article 15(2)** states that no citizen shall, on grounds only of caste (among other grounds), be subject to any disability, liability, restriction, or condition with regard to:\n  * Access to shops, public restaurants, hotels, and places of public entertainment.\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public.\n* **Article 15(4)** notes an exception that allows the State to make special provisions for the advancement of socially and educationally backward classes of citizens, or for the Scheduled Castes and the Scheduled Tribes."
+    "answer_baseline": "Based on the provided context, Article 15 provides for the \"Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth\" (Article 15).",
+    "answer_reranked": "Yes, caste discrimination is prohibited based on the following provisions:\n\n* **Article 15(1)** provides that the State shall not discriminate against any citizen on grounds only of caste (along with religion, race, sex, place of birth, or any of them).\n* **Article 15(2)** provides that no citizen shall, on grounds only of caste (or religion, race, sex, place of birth, or any of them), be subjected to any disability, liability, restriction, or condition regarding:\n  * Access to shops, public restaurants, hotels, and places of public entertainment; or\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public."
   }
 ]

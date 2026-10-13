@@ -1,1 +1,4 @@
 .env
+node_modules/
+web_explorer/frontend/dist/
+__pycache__/
