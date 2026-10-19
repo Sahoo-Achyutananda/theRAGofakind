@@ -5,6 +5,9 @@
       "20"
     ],
     "note": "Text says 'compelled to be a witness against himself', never 'silent'",
+    "relevant_chunks": [
+      "20_0"
+    ],
     "verdict": "rescued",
     "expected_ranks": {
       "baseline": [
@@ -97,16 +100,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 29.2,
-      "rerank": 620.4,
-      "llm_baseline": 3656.5,
-      "llm_reranked": 7300.2
+      "retrieval": 29.8,
+      "rerank": 590.1,
+      "llm_baseline": 3182.6,
+      "llm_reranked": 7561.2
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "The provided context does not answer this.",
-    "relevant_chunks": [
-      "20_0"
-    ]
+    "answer_reranked": "The provided context does not answer this."
   },
   {
     "query": "Can the government ban a peaceful protest?",
@@ -202,10 +202,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 24.6,
-      "rerank": 497.8,
-      "llm_baseline": 3071.1,
-      "llm_reranked": 3607.8
+      "retrieval": 27.5,
+      "rerank": 386.2,
+      "llm_baseline": 9895.5,
+      "llm_reranked": 3262.3
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -308,13 +308,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 28.9,
-      "rerank": 604.1,
-      "llm_baseline": 4398.1,
-      "llm_reranked": 3690.4
+      "retrieval": 33.4,
+      "rerank": 475.4,
+      "llm_baseline": 5616.6,
+      "llm_reranked": 6637.1
     },
-    "answer_baseline": "Based on the provided context:\n\nChild labour is prohibited for children below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24). \n\nAdditionally, the State is required to direct its policy to ensure that the tender age of children is not abused, and that childhood and youth are protected against exploitation and against moral and material abandonment (Article 39).",
-    "answer_reranked": "Based on the provided context, child labour is prohibited for children below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24)."
+    "answer_baseline": "Based on the provided context, child labour is strictly prohibited for children below the age of fourteen years in any factory, mine, or other hazardous employment (Article 24). \n\nAdditionally, the State is required to direct its policy to ensure that:\n* The tender age of children is not abused and they are not forced by economic necessity to enter occupations unsuited to their age or strength (Article 39(e)).\n* Children are protected against exploitation and given opportunities and facilities to develop in a healthy manner and in conditions of freedom and dignity (Article 39(f)).",
+    "answer_reranked": "Based on the provided context, child labour is prohibited for children below the age of fourteen years in any factory, mine, or in any other hazardous employment (Article 24). The context does not mention whether child labour outside of these specific conditions is permitted or prohibited."
   },
   {
     "query": "Is human trafficking illegal?",
@@ -414,12 +414,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 25.1,
-      "rerank": 531.7,
-      "llm_baseline": 3008.7,
-      "llm_reranked": 2756.8
+      "retrieval": 25.3,
+      "rerank": 466.7,
+      "llm_baseline": 7346.3,
+      "llm_reranked": 5915.9
     },
-    "answer_baseline": "Yes, human trafficking (\"traffic in human beings\") is prohibited, and any contravention of this provision is an offence punishable in accordance with law (Article 23(1)).",
+    "answer_baseline": "Yes, traffic in human beings is prohibited, and any contravention of this provision is an offence punishable in accordance with law (Article 23(1)).",
     "answer_reranked": "Yes, traffic in human beings is prohibited, and any contravention of this provision is an offence punishable in accordance with law (Article 23(1))."
   },
   {
@@ -516,10 +516,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 35.0,
-      "rerank": 544.7,
-      "llm_baseline": 3028.1,
-      "llm_reranked": 2967.4
+      "retrieval": 19.6,
+      "rerank": 520.7,
+      "llm_baseline": 7096.1,
+      "llm_reranked": 3271.1
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -627,13 +627,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 32.7,
-      "rerank": 769.1,
-      "llm_baseline": 3205.3,
-      "llm_reranked": 3524.8
+      "retrieval": 22.4,
+      "rerank": 466.7,
+      "llm_baseline": 6200.2,
+      "llm_reranked": 4540.8
     },
-    "answer_baseline": "The President may be removed from office by impeachment for violation of the Constitution, in the manner provided in Article 61 [Article 56(1)(b)].",
-    "answer_reranked": "Based on the provided context, the President may be removed from office for a violation of the Constitution by impeachment in the manner provided in article 61 (Article 56(1)(b))."
+    "answer_baseline": "Based on the provided context, the President can be removed from office by impeachment for violation of the Constitution, in the manner provided in Article 61 (Article 56).",
+    "answer_reranked": "Based on the provided context, the President can be removed from office by impeachment for violation of the Constitution, in the manner provided in article 61 (Article 56(1)(b))."
   },
   {
     "query": "At what age can a citizen vote?",
@@ -733,13 +733,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 22.0,
-      "rerank": 636.6,
-      "llm_baseline": 3418.0,
-      "llm_reranked": 3052.4
+      "retrieval": 21.4,
+      "rerank": 455.8,
+      "llm_baseline": 6105.4,
+      "llm_reranked": 4706.7
     },
-    "answer_baseline": "Based on the provided context, a citizen can be registered as a voter if they are not less than eighteen years of age on a date fixed by or under any law made by the appropriate Legislature, provided they are not otherwise disqualified (Article 326).",
-    "answer_reranked": "Based on the provided context, a citizen who is not less than eighteen years of age on the specified date is entitled to be registered as a voter, provided they are not otherwise disqualified (Article 326)."
+    "answer_baseline": "A citizen can vote if they are not less than eighteen years of age, provided they are not otherwise disqualified under the Constitution or any law made by the appropriate Legislature (Article 326).",
+    "answer_reranked": "A citizen who is not less than eighteen years of age is entitled to be registered as a voter, provided they are not otherwise disqualified under the Constitution or any law (Article 326)."
   },
   {
     "query": "What is the national language of India?",
@@ -843,12 +843,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 23.9,
-      "rerank": 422.3,
-      "llm_baseline": 4471.4,
-      "llm_reranked": 3623.0
+      "retrieval": 20.6,
+      "rerank": 480.3,
+      "llm_baseline": 7093.6,
+      "llm_reranked": 4290.7
     },
-    "answer_baseline": "The provided context does not answer this. \n\nThe context specifies that Hindi in Devanagari script is the \"official language of the Union\" (Article 343(1)), but it does not state or mention a \"national language\" of India.",
+    "answer_baseline": "The provided context does not answer this. The context specifies that the official language of the Union is Hindi in Devanagari script (Article 343), but it does not mention a national language of India.",
     "answer_reranked": "The provided context does not answer this."
   },
   {
@@ -858,6 +858,10 @@
       "17"
     ],
     "note": "17 uses 'Untouchability'; 15 lists caste among grounds",
+    "relevant_chunks": [
+      "15_0",
+      "15_1"
+    ],
     "verdict": "both_ok",
     "expected_ranks": {
       "baseline": [
@@ -962,17 +966,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 30.6,
-      "rerank": 812.9,
-      "llm_baseline": 7150.0,
-      "llm_reranked": 4764.4
+      "retrieval": 21.7,
+      "rerank": 520.8,
+      "llm_baseline": 13696.6,
+      "llm_reranked": 5138.5
     },
-    "answer_baseline": "Based on the provided context, Article 15 provides for the \"Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth\" (Article 15).",
-    "answer_reranked": "Yes, caste discrimination is prohibited based on the following provisions:\n\n* **Article 15(1)** provides that the State shall not discriminate against any citizen on grounds only of caste (along with religion, race, sex, place of birth, or any of them).\n* **Article 15(2)** provides that no citizen shall, on grounds only of caste (or religion, race, sex, place of birth, or any of them), be subjected to any disability, liability, restriction, or condition regarding:\n  * Access to shops, public restaurants, hotels, and places of public entertainment; or\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public.",
-    "relevant_chunks": [
-      "15_0",
-      "15_1"
-    ]
+    "answer_baseline": "Yes. Article 15 provides for the prohibition of discrimination on grounds of religion, race, caste, sex, or place of birth (Article 15).",
+    "answer_reranked": "Yes, discrimination based on caste is prohibited under Article 15:\n\n* **Discrimination by the State:** The State shall not discriminate against any citizen on grounds only of caste (among other grounds) (Article 15(1)).\n* **Discrimination regarding public access:** No citizen can be subjected to any disability, liability, restriction, or condition based only on caste regarding access to shops, public restaurants, hotels, places of public entertainment, or the use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public (Article 15(2))."
   },
   {
     "query": "Is the President immune from court proceedings?",
@@ -1078,12 +1078,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 37.4,
-      "rerank": 606.3,
-      "llm_baseline": 3084.1,
-      "llm_reranked": 4700.6
+      "retrieval": 32.1,
+      "rerank": 568.7,
+      "llm_baseline": 3658.9,
+      "llm_reranked": 5577.1
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "Based on the provided context:\n\n* Under **Article 361(1)**, the President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties. \n* Under **Article 361(1)**, an exception exists where the conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under article 61.\n* Under **Article 361(2)**, the President is immune from criminal proceedings, as no criminal proceedings whatsoever shall be instituted or continued against the President in any court during his term of office."
+    "answer_reranked": "Yes, the President has immunity from certain court proceedings under the following provisions:\n\n* **Article 361(1)**: The President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties.\n* **Article 361(1)**: However, the conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under article 61.\n* **Article 361(2)**: No criminal proceedings whatsoever shall be instituted or continued against the President in any court during his term of office."
   }
 ]

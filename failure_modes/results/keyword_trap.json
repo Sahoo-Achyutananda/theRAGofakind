@@ -100,13 +100,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 35.2,
-      "rerank": 786.2,
-      "llm_baseline": 10921.7,
-      "llm_reranked": 8538.1
+      "retrieval": 29.8,
+      "rerank": 603.3,
+      "llm_baseline": 12776.3,
+      "llm_reranked": 11275.5
     },
-    "answer_baseline": "Based on the provided context:\n\nNo. The power to grant pardons in all cases where the sentence is a sentence of death is conferred on the President [Article 72(1)(c)]. \n\nRegarding a sentence of death, the Governor's saved power under any law in force is limited to the power to **suspend, remit, or commute** the sentence, which does not include granting a pardon [Article 72(3)]. While Article 161 grants the Governor general power to pardon offences against laws to which the executive power of the State extends [Article 161], it does not extend the power to pardon a death sentence [Article 72(1)(c), Article 72(3)].",
-    "answer_reranked": "Based on the provided context, it is not explicitly stated whether the Governor can grant a *pardon* for a sentence of death. \n\nThe context specifies that:\n* The President has the power to grant pardons in all cases where the sentence is a sentence of death [Article 72(1)(c)].\n* Nothing in Article 72(1)(c) affects the power to **suspend, remit or commute** a sentence of death exercisable by the Governor of a State under any law for the time being in force [Article 72(3)].\n* The Governor has the power to grant pardons, reprieves, respites, or remissions of punishment for any person convicted of an offence against any law relating to a matter to which the executive power of the State extends [Article 161]."
+    "answer_baseline": "The provided context does not answer this. \n\nWhile the provided text states that the President has the power to grant pardons in all cases where the sentence is a sentence of death [Article 72(1)(c)], it only explicitly preserves the Governor's power to \"suspend, remit or commute\" a sentence of death [Article 72(3)]. Article 161 gives the Governor the power to grant pardons for offences relating to matters to which the executive power of the State extends [Article 161], but the context does not explicitly clarify whether this includes the power to pardon a death sentence.",
+    "answer_reranked": "Based on the provided context, the text does not explicitly state whether the Governor can grant a pardon for a sentence of death. \n\nThe context provides the following specific details:\n* The President has the power to grant pardons in all cases where the sentence is a sentence of death [Article 72(1)(c)].\n* The Governor has the power to suspend, remit, or commute a sentence of death under any law for the time being in force [Article 72(3)].\n* The Governor has the power to grant pardons for offences against any law relating to a matter to which the executive power of the State extends [Article 161].\n\nBecause the context does not explicitly clarify if a death sentence falls under the Governor's pardon power, the provided context does not answer this."
   },
   {
     "query": "What is the minimum age to become President of India?",
@@ -206,13 +206,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 26.1,
-      "rerank": 480.3,
-      "llm_baseline": 2791.4,
-      "llm_reranked": 3388.1
+      "retrieval": 24.5,
+      "rerank": 446.2,
+      "llm_baseline": 4499.3,
+      "llm_reranked": 4612.0
     },
-    "answer_baseline": "Based on the provided context, the minimum age to be eligible for election as President of India is thirty-five years (Article 58).",
-    "answer_reranked": "Based on the provided context, a person must have completed the age of thirty-five years to be eligible for election as President of India (Article 58(1)(b))."
+    "answer_baseline": "Based on the provided context, the minimum age to become the President of India is thirty-five years (Article 58).",
+    "answer_reranked": "The minimum age to become the President of India is thirty-five years (Article 58)."
   },
   {
     "query": "What is the minimum age to become a member of the Lok Sabha?",
@@ -312,13 +312,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 28.4,
-      "rerank": 496.4,
-      "llm_baseline": 5537.8,
-      "llm_reranked": 5820.7
+      "retrieval": 28.5,
+      "rerank": 470.9,
+      "llm_baseline": 5342.3,
+      "llm_reranked": 19200.0
     },
     "answer_baseline": "Based on the provided context, the minimum age to become a member of the House of the People (Lok Sabha) is twenty-five years of age (Article 84).",
-    "answer_reranked": "Based on the provided context, a person must be not less than twenty-five years of age to fill a seat in the House of the People (Lok Sabha) (Article 84)."
+    "answer_reranked": "The provided context does not answer this. While Article 84 states that a person must be not less than twenty-five years of age for a seat in the House of the People, the provided context does not mention the \"Lok Sabha\" [Article 84]."
   },
   {
     "query": "Who can issue Ordinances when the legislature is not in session?",
@@ -425,13 +425,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 24.0,
-      "rerank": 602.6,
-      "llm_baseline": 4340.8,
-      "llm_reranked": 4497.7
+      "retrieval": 23.0,
+      "rerank": 529.1,
+      "llm_baseline": 4861.3,
+      "llm_reranked": 4945.4
     },
-    "answer_baseline": "Based on the provided context:\n\n* The **Governor** can promulgate Ordinances during the recess of the Legislature (Article 213).\n* The **administrator** of the Union territory of Puducherry can promulgate Ordinances except when the Legislature is in session, after obtaining instructions from the President (Article 239B).",
-    "answer_reranked": "Based on the provided context, the following can issue (promulgate) Ordinances when the legislature is not in session:\n\n* **The Governor** of a State can promulgate Ordinances when the Legislative Assembly is not in session, or when both Houses are not in session in a State that has a Legislative Council [Article 213].\n* **The Administrator** of the Union territory of Puducherry can promulgate Ordinances when the Legislature of the Union territory is not in session [Article 239B]."
+    "answer_baseline": "Based on the provided context, the following authorities can issue/promulgate Ordinances when the legislature is not in session:\n\n* **The Governor** can promulgate Ordinances during the recess of the State Legislature (Article 213).\n* **The administrator** of the Union territory of Puducherry can promulgate Ordinances when its Legislature is not in session, after obtaining instructions from the President (Article 239B).",
+    "answer_reranked": "Based on the provided context, the following authorities can promulgate (issue) Ordinances when the legislature is not in session:\n\n1. **The Governor of a State:** Can promulgate Ordinances when the Legislative Assembly is not in session, or in States with a Legislative Council, when both Houses of the Legislature are not in session (Article 213).\n2. **The Administrator of the Union territory of Puducherry:** Can promulgate Ordinances when the Legislature of the Union territory is not in session (Article 239B)."
   },
   {
     "query": "Which court can issue a writ of habeas corpus?",
@@ -540,13 +540,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 35.4,
-      "rerank": 698.8,
-      "llm_baseline": 5102.5,
-      "llm_reranked": 4759.6
+      "retrieval": 26.2,
+      "rerank": 514.0,
+      "llm_baseline": 5823.2,
+      "llm_reranked": 6517.7
     },
-    "answer_baseline": "Based on the provided context, the following courts can issue a writ of habeas corpus:\n\n1. **The Supreme Court**: \n   * It has the power to issue writs in the nature of habeas corpus for the enforcement of any of the rights conferred by Part III (Article 32(2)). \n   * Parliament may also by law confer power on the Supreme Court to issue writs of habeas corpus for purposes other than those mentioned in Article 32(2) (Article 139).\n\n2. **High Courts**: \n   * Every High Court has the power to issue writs in the nature of habeas corpus for the enforcement of rights conferred by Part III and for any other purpose within its territorial jurisdiction (Article 226(1)).\n\n3. **Any other court**: \n   * Parliament may by law empower any other court to exercise within the local limits of its jurisdiction the power to issue such writs (Article 32(3)).",
-    "answer_reranked": "Based on the provided context, the following courts can issue a writ of habeas corpus:\n\n* **The Supreme Court:** Has the power to issue a writ of habeas corpus for the enforcement of any of the rights conferred by Part III (Article 32(2)). Additionally, Parliament may by law confer power on the Supreme Court to issue writs of habeas corpus for purposes other than those mentioned in Article 32(2) (Article 139).\n* **High Courts:** Every High Court has the power to issue a writ of habeas corpus for the enforcement of any of the rights conferred by Part III and for any other purpose (Article 226(1)).\n* **Other Courts:** Parliament may by law empower any other court to exercise within the local limits of its jurisdiction all or any of the powers exercisable by the Supreme Court (which includes issuing writs of habeas corpus) under Article 32(2) (Article 32(3))."
+    "answer_baseline": "Based on the provided context, the following courts can issue a writ of habeas corpus:\n\n1. **The Supreme Court:** Possesses the power to issue writs, including writs in the nature of habeas corpus, for the enforcement of rights conferred by Part III (Article 32(2)). Additionally, Parliament may by law confer power on the Supreme Court to issue such writs for other purposes (Article 139).\n2. **High Courts:** Every High Court has the power to issue writs, including writs in the nature of habeas corpus, for the enforcement of rights conferred by Part III and for any other purpose (Article 226(1)).\n3. **Any other court:** Parliament may by law empower any other court to exercise, within the local limits of its jurisdiction, the powers exercisable by the Supreme Court (which includes issuing writs of habeas corpus) (Article 32(3)).",
+    "answer_reranked": "Based on the provided context, the following courts can issue a writ of habeas corpus:\n\n* **The Supreme Court:** Has the power to issue writs in the nature of habeas corpus for the enforcement of the rights conferred by Part III (Article 32(2)). Additionally, Parliament may by law confer power on the Supreme Court to issue such writs for purposes other than those mentioned in clause (2) of Article 32 (Article 139).\n* **High Courts:** Every High Court has the power to issue writs in the nature of habeas corpus within its jurisdiction for the enforcement of any of the rights conferred by Part III and for any other purpose (Article 226(1)).\n* **Any other court:** Parliament may by law empower any other court to exercise, within the local limits of its jurisdiction, all or any of the powers exercisable by the Supreme Court (which includes issuing writs of habeas corpus) for the enforcement of rights conferred by Part III (Article 32(3))."
   },
   {
     "query": "What is the maximum gap allowed between two sessions of Parliament?",
@@ -646,13 +646,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 26.1,
-      "rerank": 454.7,
-      "llm_baseline": 3094.1,
-      "llm_reranked": 3149.5
+      "retrieval": 26.3,
+      "rerank": 430.0,
+      "llm_baseline": 3501.4,
+      "llm_reranked": 4838.0
     },
-    "answer_baseline": "Based on the provided context, six months shall not intervene between the last sitting of a House of Parliament in one session and the date appointed for its first sitting in the next session (Article 85).",
-    "answer_reranked": "According to Article 85, six months shall not intervene between the last sitting of Parliament in one session and the date appointed for its first sitting in the next session."
+    "answer_baseline": "Based on the provided context, six months shall not intervene between the last sitting of a House of Parliament in one session and the date appointed for its first sitting in the next session [Article 85(1)]. Thus, the maximum gap allowed between two sessions is six months [Article 85(1)].",
+    "answer_reranked": "Six months shall not intervene between the last sitting of a House of Parliament in one session and the date appointed for its first sitting in the next session (Article 85)."
   },
   {
     "query": "Can the President be a member of Parliament?",
@@ -752,13 +752,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 23.4,
-      "rerank": 573.8,
-      "llm_baseline": 4417.3,
-      "llm_reranked": 4085.0
+      "retrieval": 24.3,
+      "rerank": 561.3,
+      "llm_baseline": 5695.8,
+      "llm_reranked": 5056.5
     },
-    "answer_baseline": "Based on the provided context, no, the President shall not be a member of either House of Parliament (Article 59(1)). \n\nIf a member of either House of Parliament is elected President, he shall be deemed to have vacated his seat in that House on the date on which he enters upon his office as President (Article 59(1)). \n\nNote that while the President is part of the Parliament—which consists of the President and two Houses (Article 79)—the President cannot be a member of either House of Parliament (Article 59(1)).",
-    "answer_reranked": "No, the President shall not be a member of either House of Parliament (Article 59(1)). \n\nIf a member of either House of Parliament is elected President, he shall be deemed to have vacated his seat in that House on the date on which he enters upon his office as President (Article 59(1)). While Parliament consists of the President and two Houses (Article 79), the President cannot be a member of either House (Article 59(1))."
+    "answer_baseline": "Based on the provided context, no, the President cannot be a member of either House of Parliament (Article 59(1)). \n\nIf a member of either House of Parliament is elected President, he is deemed to have vacated his seat in that House on the date he enters upon his office as President (Article 59(1)). While the President is part of Parliament alongside the Council of States and the House of the People (Article 79), he cannot hold a membership in either House (Article 59(1)).",
+    "answer_reranked": "No, the President cannot be a member of Parliament. According to Article 59(1), the President shall not be a member of either House of Parliament (or of a House of the Legislature of any State). If a member of either House of Parliament is elected President, they are deemed to have vacated their seat in that House on the date they enter upon office as President (Article 59(1)). \n\nAlthough Parliament consists of the President and two Houses (Article 79), the President cannot hold a seat as a member of either House (Article 59(1))."
   },
   {
     "query": "Who appoints the judges of a High Court?",
@@ -863,13 +863,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 78.7,
-      "rerank": 846.4,
-      "llm_baseline": 11394.6,
-      "llm_reranked": 3604.6
+      "retrieval": 27.3,
+      "rerank": 551.7,
+      "llm_baseline": 9363.4,
+      "llm_reranked": 4204.1
     },
-    "answer_baseline": "The provided context does not contain an answer regarding who appoints permanent judges of a High Court. \n\nHowever, based on the provided context for other categories of High Court judges:\n* **Additional Judges:** Appointed by the President, in consultation with the National Judicial Appointments Commission [Article 224(1)].\n* **Acting Judges:** Appointed by the President, in consultation with the National Judicial Appointments Commission [Article 224(2)].\n* **Retired Judges (to sit and act as a Judge):** Requested by the National Judicial Appointments Commission on a reference made to it by the Chief Justice of a High Court, with the previous consent of the President [Article 224A].",
-    "answer_reranked": "According to the provided context, the Judges of a High Court are appointed by the **President**:\n\n* **Article 217(1)** states that every Judge of a High Court shall be appointed by the President by warrant under his hand and seal. \n* **Article 216** states that a High Court shall consist of a Chief Justice and such other Judges as the President may from time to time deem it necessary to appoint."
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Based on the provided context, the Judges of a High Court are appointed by the President by warrant under his hand and seal (Article 217(1)). Article 216 also states that a High Court consists of a Chief Justice and such other Judges as the President may deem it necessary to appoint."
   },
   {
     "query": "Who is the supreme commander of the Defence Forces?",
@@ -972,13 +972,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 37.9,
-      "rerank": 474.1,
-      "llm_baseline": 3019.8,
-      "llm_reranked": 2571.8
+      "retrieval": 24.5,
+      "rerank": 413.3,
+      "llm_baseline": 3355.9,
+      "llm_reranked": 3243.0
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "Based on the provided context, the supreme command of the Defence Forces of the Union is vested in the President (Article 53)."
+    "answer_reranked": "Based on the provided context, the supreme command of the Defence Forces of the Union is vested in the President (Article 53(2))."
   },
   {
     "query": "What is a Money Bill?",
@@ -1087,11 +1087,11 @@
     ],
     "latency_ms": {
       "retrieval": 33.6,
-      "rerank": 574.1,
-      "llm_baseline": 3803.9,
-      "llm_reranked": 9629.3
+      "rerank": 525.3,
+      "llm_baseline": 6834.4,
+      "llm_reranked": 8602.8
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "The provided context does not answer this."
+    "answer_reranked": "Based on the provided context, a complete definition of a \"Money Bill\" is not fully set out, but the text specifies the following criteria:\n\n* **Incidental matters:** A Money Bill includes any matter incidental to any of the matters specified in sub-clauses (a) to (f) [Article 199].\n* **Exclusions:** A Bill shall **not** be deemed to be a Money Bill by reason only that it provides for:\n  1. The imposition of fines or other pecuniary penalties [Article 110, Article 199].\n  2. The demand or payment of fees for licences or fees for services rendered [Article 110, Article 199].\n  3. The imposition, abolition, remission, alteration, or regulation of any tax by any local authority or body for local purposes [Article 110, Article 199]."
   }
 ]

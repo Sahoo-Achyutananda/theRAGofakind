@@ -1,15 +1,3 @@
-% =====================================================================================
-%  RAG Assignment report - SKELETON
-%
-%  How to use this file:
-%   * Every section has a grey "Write here" box: replace it with your own paragraphs.
-%   * Under each box, the lines starting with % are NOTES: facts and numbers taken from
-%     rag.ipynb and failure_modes/results. They are not printed. Use them, write in your words.
-%   * Tables and figures are data (generated from your results) and can stay as they are.
-%   * When you are done, delete the \writehere boxes and (optionally) the % notes.
-%
-%  Build (inside report/):   pdflatex report.tex   (run twice so references resolve)
-% =====================================================================================
 \documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -31,67 +19,27 @@
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \renewcommand{\arraystretch}{1.15}
 
-% grey placeholder box - delete each one once you've written that part
-\newcommand{\writehere}[1]{\par\noindent\fcolorbox{gray!60}{gray!8}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\small\itshape Write here: #1}}\par}
-
 \begin{document}
 
-{\LARGE\bfseries RAG Assignment: Baseline vs.\ Re-Ranking}\par\vspace{0.3em}
-{\large Retrieval-augmented QA over the articles of the Constitution of India}\par\vspace{0.6em}
-{[Your name] \quad\textbullet\quad [Roll number / course] \quad\textbullet\quad October 2026}\par
-{\small Code: \url{https://github.com/Sahoo-Achyutananda/theRAGofakind} (notebook: \texttt{rag.ipynb})}\par
-\vspace{0.8em}
+\begin{center}
+{\LARGE\bfseries Retrieval-augmented QA over the articles of the Constitution of India}\par\vspace{0.6em}
+{Achyutananda Sahoo \quad\textbullet\quad Reg.\ No.\ 2025202028}\par\vspace{0.3em}
+{\small Code: \url{https://github.com/Sahoo-Achyutananda/theRAGofakind} (notebook: \texttt{rag.ipynb})}\par\vspace{0.1em}
+{\small Dataset: \url{https://www.legislative.gov.in/constitution-of-india}}\par
+\end{center}
+\vspace{0.4em}
 
 The Constitution of India consists of articles and schedules. The RAG is built on top of the articles alone; the schedules are not normal text and require additional preprocessing, and hence, for simplicity, were skipped for this assignment submission. The Constitution is complex and equally interesting. It also has its own set of contradictions (for example Art.~15(1) vs.\ 15(3), Art.~13(2) vs.\ 13(4), Art.~359 with its exception for Articles 20 and 21, and Art.~31 omitted with the right to property moved to Art.~300A), hence it fit well for this assignment, especially to analyze failure modes.
 
 One caveat: the LLMs would have been trained on the Constitution, therefore the system prompt must specify to use only the chunks for answering these questions.
-% NOTES - setup summary
-% - Document: Constitution of India "as on 1 May 2026" (diglot pocket edition PDF, 402 pages); ARTICLES ONLY = PDF pages 33-283
-%   (Art. 1 on p.33 to Art. 395 on p.283). Schedules (p.284+) and appendices excluded.
-% - 500 articles found (395 base + inserted ones like 21A, 243A-243ZT); Art. 238 has no heading (Part VII repealed).
-% - 1,035 chunks. Bi-encoder: sentence-transformers/all-MiniLM-L6-v2 (384-dim, max 256 tokens).
-%   Cross-encoder: cross-encoder/ms-marco-MiniLM-L-6-v2. LLM: Gemini (gemini-3.5-flash), temperature 0.
-% - Pipeline 1: bi-encoder top 10 -> top 3 -> LLM (Answer 1). Pipeline 2: same top 10 -> cross-encoder -> top 3 -> LLM (Answer 2).
-% - Same prompt for both: "Use ONLY the context below ... say 'The provided context does not answer this' ... cite article numbers".
-% - Headline numbers, original 42 queries with an expected article: Hit@3 0.76 -> 0.79, Precision@3 0.39 -> 0.43, MRR 0.72 -> 0.68.
-%   All 48 (incl. 6 added rescue-search queries): Hit@3 0.69 -> 0.81, Precision@3 0.35 -> 0.42, MRR 0.67 -> 0.71.
 
-% =====================================================================================
 \section{Chunking}
-% =====================================================================================
 
 \subsection{Text extraction with pdfplumber}
 Normal text extraction includes the footnotes. To exclude the footnotes, a complex regex was required, and the regex worked for some pages but not for others. The articles and footnotes are separated by a horizontal line, and pdfplumber has its own codes defined for these graphical elements, hence pdfplumber was used.
-% NOTES - what plain whole-page text extraction produced (page 41, Article 19):
-% - FOOTNOTES mixed into the article text, e.g. "1. Ins. by the Constitution (Forty-fourth Amendment) Act, 1978, s. 2 (w.e.f. 20-6-1979)."
-%   appended after clause (5) of Art. 19 -> amendment history would be embedded as if it were article content.
-% - FOOTNOTE MARKERS merged into the text: "1[and]", "2[(f)* * * * *]", "3[(2) Nothing in ..." -> stray digits in words.
-% - RUNNING HEADERS / PAGE NUMBERS: "3 THE CONSTITUTION OF INDIA", "(Part I.—Union and its territory)", bare "4".
-% - Once a page is one flat string, a footnote line and an article line look the same -> can't separate them afterwards.
-% NOTES - what pdfplumber gives:
-% - page.lines = drawn vector lines. The footnote separator is a DRAWN LINE, not text (page 41: x0~36, x1~312, top~403;
-%   page is 360 x 504 pt). Code keeps horizontal lines (|top-bottom| < 1) longer than 100 pt and crops ABOVE the highest one.
-% - Pages with no separator line had no footnotes (checked pages 35, 45, 151).
-% - page.chars = per-character font size: markers 6-6.5 pt vs body 9-10 pt -> page.filter(size >= 7) drops markers.
-% - crop() / filter() return a cleaned page view; extract_text() is called only after cleaning. Header regex removes
-%   "N THE CONSTITUTION OF INDIA", "(Part ...)", bare page numbers.
-% NOTES - side effects / limits:
-% - Size filter also removed small-caps letters of chapter headings ("CHAPTER I.—THE EXECUTIVE" -> "C I.—T E").
-% - One footnote leaked anyway: chunk 304_0 contains "1. Ins. by the Constitution (Seventh Amendment) Act, 1956 ...".
-% - Extraction of 251 pages takes ~80 s -> cached in data/articles_text.txt.
-% - Footnotes were removed deliberately for this version, so amendment-history questions can't be answered (Appendix C, out-of-corpus).
 
 \subsection{Splitting the text into articles}
 An article here is the text between one article heading and the next; a regex was used to identify the headings. Articles contain clauses. Most articles fit within 1000 characters, and hence article-wise splitting was done. Longer articles are split at their clauses, and clauses that still exceed 1000 characters are split into multiple chunks at line breaks.
-% NOTES:
-% - Regex on article headings: number like 19 / 21A / 243ZH at line start, optional "[" (amended), title up to 3 lines,
-%   ending in an em-dash (the PDF uses two dash characters: — and ⎯). Requiring the dash avoids matching numbered list items.
-% - First version (title on one line) missed ~1/3 of articles because long titles wrap (e.g. Art. 3, Art. 4).
-% - Result: 500 articles, numbers strictly increasing; only Art. 238 missing (repealed with Part VII).
-% - Text between an article and the next heading was wrongly attached to the earlier article: Part/section headings
-%   ("PART II / CITIZENSHIP" at the end of Art. 4, "PART III / FUNDAMENTAL RIGHTS / General" at the end of Art. 11,
-%   "Right to Equality" at the end of Art. 13). Fix: peel trailing lines that don't end in punctuation (76 articles affected).
-% - Why it matters: Art. 11 (citizenship) would match "fundamental rights" queries; Art. 14 loses the "Right to Equality" label.
 
 \subsection{Structure-aware chunking}
 The maximum chunk size is 1000 characters. Figure~\ref{fig:chunkflow} shows the chunking flow used in the notebook.
@@ -127,29 +75,8 @@ There is no overlap, because most articles and article clauses fit into the 1000
 \end{tikzpicture}
 \captionof{figure}{Chunking flow used in \texttt{rag.ipynb}. Maximum body size 1000 characters ($\approx$ the bi-encoder's 256-token limit); with the prefix the longest chunk is 1,124 characters.}\label{fig:chunkflow}
 \end{center}
-% NOTES - strategy (three levels + prefix):
-% - Level 1: an article <= 1000 characters stays one chunk (rule and its exceptions together).
-% - Level 2: longer articles split at numbered clauses (1), (2), (1A) at line start (regex needs a DIGIT, so (a)/(ii) sub-clauses
-%   are not split). Provisos ("Provided that ...") and Explanations stay with the clause before them.
-% - Level 3: a clause still > 1000 chars is split at line breaks into ~1000-char windows (e.g. Art. 371F, Sikkim, ~6,000 chars).
-% - Every chunk starts with "Article N — title" so clause chunks like "(3) Nothing in sub-clause (b) of the said clause..." know
-%   which article they belong to.
-% - Why 1000 chars: the bi-encoder reads at most 256 tokens (~1000 characters); longer text is silently truncated.
-%   157 of the 500 articles are longer than 1000 characters (after the heading fix).
-% - Counts per branch (Figure~\ref{fig:chunkflow}): 343 articles kept whole (343 chunks); 157 split at clauses
-%   -> 550 clause chunks; 65 clauses in 56 articles still too long -> 142 window chunks. Total 343 + 550 + 142 = 1,035.
-% - Result: 1,035 chunks; max 1,124 chars (1000 + prefix), min 53, mean ~510.
-% - Example: Article 19 -> 6 chunks, 19_0 = clause (1) ... 19_5 = clause (6).
-% NOTES - why no overlap:
-% - Overlap patches arbitrary cut points of fixed-size chunking; here cuts are at article/clause boundaries, so no sentence is cut.
-% - The prefix already gives each chunk its context.
-% - Overlapping chunks are near-duplicates that rank next to each other and waste the 3 LLM slots.
-% - Exception: the line-window fallback DOES cut mid-sentence (chunk 359_2 starts "is not in operation, if ...";
-%   191_1 is just "a Minister either for the Union or for such State.") -> overlap there would help (limitation).
 
-% =====================================================================================
 \section{Architecture comparison: bi-encoder vs.\ cross-encoder}
-% =====================================================================================
 \begin{itemize}[leftmargin=1.2em]
 \item \textbf{Bi-encoder:} we pass the chunks and the query separately, and then find the cosine similarity.
 \item \textbf{Cross-encoder:} we pass the query and the chunk attached together, for each chunk. The attention layer involves matching the tokens of the query and the chunk, making the ranking more accurate.
@@ -164,7 +91,6 @@ There is no overlap, because most articles and article clauses fit into the 1000
     vec/.style={draw, fill=white, align=center, inner sep=3pt, font=\footnotesize},
     sc/.style={draw, rounded corners=2pt, fill=green!8, align=center, inner sep=4pt},
     note/.style={font=\footnotesize\itshape, text=black!65, align=center}]
-  % ---------------- bi-encoder ----------------
   \node[font=\bfseries] at (2.4,4.9) {Bi-encoder (Pipeline 1)};
   \node[txt] (q) at (0.9,4.1) {query};
   \node[txt] (c) at (3.9,4.1) {chunk};
@@ -179,7 +105,6 @@ There is no overlap, because most articles and article clauses fit into the 1000
   \node[note, anchor=west] (off) at (5.35,1.95) {computed once,\\offline, for all\\1,035 chunks};
   \draw[black!40] (vc.east) -- (off.west);
   \node[note] at (2.4,0.0) {query and chunk never see each other};
-  % ---------------- cross-encoder ----------------
   \begin{scope}[xshift=9.5cm]
   \node[font=\bfseries] at (2.4,4.9) {Cross-encoder (Pipeline 2)};
   \node[txt, minimum width=4.6cm] (pair) at (2.4,4.1) {\texttt{[CLS]} query \texttt{[SEP]} chunk \texttt{[SEP]}};
@@ -201,7 +126,7 @@ Input & query and chunk encoded separately (max 256 tokens) & query and chunk to
 Output & 384-dim vector per text; score = cosine & one relevance score (logit) per pair\\
 Precomputable & yes: 1,035 chunk vectors stored in \texttt{chunk\_embs.npy} & no: the score depends on the query\\
 Work per query & 1 query encoding + 1 matrix--vector product & 1 transformer pass per candidate (10 here)\\
-Measured time & 21\,ms for all 1,035 chunks ($\approx$0.02\,ms per chunk) & 477\,ms for 10 pairs ($\approx$47.7\,ms per pair)\\
+Measured time & 23\,ms for all 1,035 chunks ($\approx$0.02\,ms per chunk) & 482\,ms for 10 pairs ($\approx$48.2\,ms per pair)\\
 Used for & retrieving the top 10 from the whole corpus & re-ordering those 10 and picking the top 3\\\bottomrule
 \end{tabularx}
 \end{minipage}\par\medskip
@@ -210,32 +135,26 @@ Used for & retrieving the top 10 from the whole corpus & re-ordering those 10 an
 \includegraphics[width=\linewidth]{../figures/score_spread_women.png}
 \captionof{figure}{The same 10 candidates scored by both models for the women query. Bi-encoder cosines are bunched within 0.10; cross-encoder scores spread from $+6.15$ to $-10.73$, demoting the State law-making distractors (Art.~246, 304, 187) but also the general rule 15(1) (\texttt{15\_0}).}\label{fig:spread}
 \end{center}
-% NOTES:
-% - Bi-encoder: query and chunk encoded SEPARATELY into 384-dim vectors; similarity = dot product of normalised vectors (= cosine).
-%   Chunk vectors computed once offline (1,035 x 384 matrix); a query costs one encoding + one matrix-vector product.
-% - Cross-encoder: query and chunk fed TOGETHER into one transformer; attention runs across both texts; outputs one relevance
-%   score (a logit, not a cosine; only the order matters). Nothing can be precomputed: one full pass per (query, chunk) pair.
-% - Evidence (women query "Can the State make special laws only for women?"): bi-encoder top-10 scores bunched within 0.10
-%   (0.455-0.559); cross-encoder scores from +6.15 to -10.73 (Figure fig:spread). It promoted the exception clauses
-%   (15(3) 6.15, 15(5) -1.52, 15(4) -2.03) and 332A (-2.47) but scored the general rule 15(1) (15_0) at -7.69,
-%   alongside the distractors - so the separation is not a clean "relevant vs irrelevant" split.
-% - Bi-encoder put "State makes laws" distractors (Art. 246, 304, 187) at ranks 2,4,5,10 - the query vector was pulled by
-%   "State"+"laws"; the cross-encoder pushed all of them below -7.
-% - Cross-encoder can link paraphrases inside the pair: "remain silent" -> Art. 20 ("compelled to be a witness against himself").
 
-% =====================================================================================
 \section{Failure-mode analysis}
-% =====================================================================================
 The test set contains 52 queries across six categories, including questions about specific articles, exceptions, keyword traps, negation, synonyms, and information missing from the corpus. Each query has expected article(s) and a note about why retrieval might fail. We compared the top 10 chunks from both pipelines, checked the rank of the first relevant chunk, and compared the answers generated from the top 3. Since matching the right article does not always mean matching the right clause, the rescue cases were also checked at clause level. The categories and query results are listed in the separate results appendix (\texttt{results\_appendix.pdf}).
-% NOTES:
-% - 52 queries in failure_modes/queries/*.json: keyword_trap 10, synonyms 10, exceptions 10, negation 7, document_specific 9,
-%   out_of_corpus 6; 8 have hand-checked relevant_chunks (selected cases). 6 were added after a rescue search.
-% - For each query: both pipelines' top 10 / top 3, rank shifts for all 10 candidates, Answer 1, Answer 2, latencies.
-% - Article-level verdict turned out too coarse: e.g. "MP as Union Minister" matched Art. 75 via chunk 75_2 = clause (1B),
-%   but the answer is 75(5) = chunk 75_6 -> real miss. So rescue cases were checked at CLAUSE level.
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\centering\small
+\captionof{table}{Failure-mode categories.}\label{tab:categories}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}Yr@{}}\toprule
+Category & What it tests & Queries\\\midrule
+Document-specific & Questions about particular articles or clauses. These test whether retrieval can identify the correct provisions, especially when article numbers are involved. & 9\\
+Exceptions & Questions about specific groups or exceptions to general rules. These test whether retrieval finds the specific provision instead of a general rule. & 10\\
+Keyword traps & Articles with similar words but different meanings. These test whether retrieval finds the passage that actually answers the question. & 10\\
+Negation & Questions about when rules do not apply or when certain actions are prohibited. These test whether retrieval can distinguish between positive and negative conditions. & 7\\
+Out of corpus & Questions whose answers are absent from the document. The LLM should acknowledge that the provided context is insufficient rather than make up an answer. & 6\\
+Synonyms & Questions that use different words from the document but have the same meaning. These test whether retrieval can handle differences in wording. & 10\\\midrule
+\textbf{Total} & & \textbf{52}\\\bottomrule
+\end{tabularx}
+\end{minipage}\par\medskip
 
 \subsection{Rank shifts and answers in the rescue cases}
-In the rescue cases, re-ranking moved the relevant chunks into the top 3 and often improved the answer. For example, Article 361 moved from rank 7 to rank 1, allowing the second answer to explain the President's immunity and its exception. For caste discrimination, Article 15 moved from rank 6 to rank 1, so the second answer included the relevant prohibitions that the baseline missed. Article 370 also moved up, and the re-ranked answer included more of its clauses. However, retrieving the right chunk did not always guarantee a correct answer: both answers refused the question about the right to remain silent, showing that the LLM did not connect the wording of the question to Article 20.
+In the rescue cases, re-ranking moved the relevant chunks into the top 3 and often improved the answer. For example, Article 361 moved from rank 7 to rank 1, allowing the second answer to explain the President's immunity and its exception. For caste discrimination, Article 15 moved from rank 6 to rank 1, so the second answer included the relevant prohibitions that the baseline missed. Article 370 also moved up, and the re-ranked answer included more of its clauses. However, retrieving the right chunk did not always guarantee a correct answer: both answers refused the question about the right to remain silent, showing that the LLM did not treat Article 20(3) (``compelled to be a witness against himself'') as a right to remain silent.
 
 \par\medskip\noindent\begin{minipage}{\linewidth}\centering\small
 \captionof{table}{Rescue cases: the answering chunk sat outside the baseline top 3 and the cross-encoder promoted it (clause-level).}\label{tab:rescue}
@@ -247,38 +166,13 @@ Does an accused person have the right to remain silent? & 20\_0: 6$\to$2 & Refus
 What is Article 370? & 370\_0: 8$\to$2 & Only 370(3); 2 of 3 chunks unrelated & 370(1)(a), 370(1)(b) and 370(3)\\
 Can the Vice-President act as President? & 65\_0: 4$\to$1 & Refused & Correct: vacancy 65(1); President unable to act 65(2)\\
 Who appoints the judges of a High Court? & 217\_0: 7$\to$1 & Described additional/acting judges (Art.\ 224), not 217(1) & Correct: appointed by the President, 217(1)\\
-Who is the supreme commander of the Defence Forces? & 53\_0: 4$\to$1 & Refused & Correct: vested in the President, 53(2)\\
+Who is the supreme commander of the Defence Forces? & 53\_0: 4$\to$1 & Refused & Correct: vested in the President (Art.\ 53)\\
 Can the Council of States be dissolved? & 83\_0: 6$\to$1 & Refused & Correct: not subject to dissolution, 83(1)\\\bottomrule
 \end{tabularx}
 \end{minipage}\par\medskip
-% NOTES:
-% - President: baseline top 3 = 124_4, 128_0, 356_1 (judges / Art. 356) - none about Art. 361.
-% - Caste: baseline top 3 = 15_3, 15_4, 15_6 (special provisions/reservations); re-ranked = 15_0, 15_3, 15_1 (the prohibitions).
-% - Remain silent: retrieval rescued, but BOTH answers refused - the LLM didn't connect "remain silent" with
-%   "compelled to be a witness against himself" (prompt says ONLY use context). Better retrieval != better answer.
-% - Art. 370: baseline top 3 = 232_0, 370_3, 145_2; re-ranked = 370_3, 370_0, 344_5. NB the 2019 declaration under 370(3)
-%   is in Appendix III of the PDF (excluded) - both answers describe 370 as if fully operative (corpus-scope limitation).
-% - Keyword-trap example: "Can the President be a member of Parliament?" Art. 59: rank 3 -> 1 (both answers correct).
-% - Exception example: women query, 15(5) rank 9 -> 2 (but 15(5) is about backward classes, not women).
-% - Assignment wording: President = baseline missed the critical chunk -> refused; caste/370 = baseline omitted essential clauses.
 
 \subsection{Where re-ranking did not help}
 Re-ranking did not help every query. For the right to equality, Article 14 moved from rank 1 to rank 3. In the free-speech query, the top 3 missed the relevant clause on restrictions, and the second answer used provisions about speech in Parliament instead. Some questions also remained difficult because the wording differed from the document; for example, the Constitution uses “House of the People” rather than “Lok Sabha.” In other cases, the answer depended on a cross-reference or information outside the indexed text. Eight queries had no relevant chunk in the original top 10, so re-ranking could not recover them.
-% NOTES - made worse / no gain:
-% - Right to equality: Art. 14 rank 1 -> 3 (RR 1.00 -> 0.33).
-% - Free speech: 19_4 (clause 5, movement) in top 3 but not 19_1 (clause 2, speech restrictions); Answer 2 answered from
-%   Art. 105/194 (freedom of speech IN Parliament) - confident answer from the wrong chunk.
-% - Lok Sabha minimum age: 84_0 in BOTH contexts; Answer 1 "25 years", Answer 2 refused ("Lok Sabha" never appears in the text,
-%   it says "House of the People").
-% - Directive Principles: 37_0 in both contexts; Answer 1 good summary, Answer 2 refused.
-% - Ordinances: both answers name Governor (213) and Puducherry Administrator (239B) but OMIT the President (Art. 123).
-% - Right to life in an emergency: 359_0 ("except articles 20 and 21") in both contexts, both refused - chunk never says Art. 21
-%   is the right to life (cross-reference problem at generation time).
-% - Same women query gave different Answer 1 wording across two runs at temperature 0 (LLM output not fully deterministic).
-% NOTES - never in the top 10 (8 queries, Appendix E):
-% - right to property (300A at rank 15), Article 31 (15), peaceful assembly (19 at 12), peaceful protest (19 at 12),
-%   President sued (361 at 11), Money Bill (109 at 12), Scheduled Tribe areas (19(5) at 29), amendment of 21A (38; footnote-only).
-% - Most missed by tiny cosine margins (e.g. 0.394 vs 0.395 for #10). Top-20 pool would contain 6 of 8; top-50 all 8.
 
 \subsection{Retrieval metrics}
 On the 48 queries with an expected article, re-ranking improved Hit@3 from 0.69 to 0.81 and Precision@3 from 0.35 to 0.42. This means the top 3 contained relevant material more often; Hit@1 and MRR also increased slightly (0.60 to 0.62 and 0.67 to 0.71). Hit@10 stayed the same because both pipelines use the same initial set of 10 candidates. These scores are measured at article level, which can hide whether the exact clause was retrieved. The rescue cases show stronger gains at clause level, but they were selected because re-ranking helped and should not be treated as a general result.
@@ -297,77 +191,35 @@ nDCG@10 & 0.69 & 0.73\\\midrule
 First relevant chunk moved up / down & \multicolumn{2}{c}{8 / 8}\\\bottomrule
 \end{tabular}
 \end{minipage}\par\medskip
-% NOTES:
-% - First relevant chunk after re-ranking: 3 moved up, 7 moved down, 24 unchanged, 8 never in the top 10.
-% - Hit@10 identical by construction (same 10 chunks reordered). 19% of queries fail before the cross-encoder runs.
-% - By category (Appendix B): synonyms improved most (Recall@3 0.56 -> 0.67); exceptions got worse on MRR (0.79 -> 0.68);
-%   keyword traps and negation mostly unchanged.
-% - Rescue cases at clause level (Appendix D): Recall@3 0.00 -> 1.00, MRR 0.16 -> 0.75, nDCG@10 0.38 -> 0.80 - but these were
-%   picked because re-ranking helped.
-% - Possible reason for the modest overall gain: ms-marco-MiniLM was trained on web search queries, not legal text.
 
-% =====================================================================================
 \section{Latency profiling}
-% =====================================================================================
-Latency was measured on a laptop CPU, with the first model call excluded as warm-up. Retrieval and re-ranking were timed over 52 queries with three runs each; LLM timing was taken from saved calls. The bi-encoder took about 21 ms to retrieve 10 chunks from 1,035, while re-ranking those 10 took about 477 ms. So the retrieval stage became roughly 22 times slower. End-to-end median time increased from about 3.71 s to 4.22 s, around 14\%, because LLM generation still accounts for most of the total time.
+Latency was measured on a laptop CPU, with the first model call excluded as warm-up. Retrieval and re-ranking were timed over 52 queries with three runs each; LLM timing was taken from saved calls. The bi-encoder took about 23 ms to retrieve 10 chunks from 1,035, while re-ranking those 10 took about 482 ms. So the retrieval stage became roughly 21 times slower. End-to-end median time increased from about 4.46 s to 4.97 s, around 11\%, because LLM generation still accounts for most of the total time.
 
 \par\medskip\noindent\begin{minipage}{\linewidth}\centering\small
 \captionof{table}{Latency per query (CPU; 52 queries $\times$ 3 runs after warm-up; LLM from 120 saved calls).}\label{tab:latency}
 \begin{tabular}{@{}lrrr@{}}\toprule
 Stage & Mean (ms) & Median (ms) & p95 (ms)\\\midrule
-Bi-encoder retrieval (top 10 of 1,035) & 21.3 & 21.0 & 24.3\\
-Cross-encoder re-ranking (10 pairs) & 477.0 & 508.9 & 568.0\\
-Pipeline 1 retrieval total & 21.3 & 21.0 & 24.3\\
-Pipeline 2 retrieval total (retrieval + re-rank) & 498.3 & 529.8 & 590.5\\
-LLM generation (Gemini, per call) & 4380.2 & 3693.0 & 8540.7\\\bottomrule
+Bi-encoder retrieval (top 10 of 1,035) & 23.0 & 21.6 & 31.4\\
+Cross-encoder re-ranking (10 pairs) & 482.0 & 506.1 & 595.8\\
+Pipeline 1 retrieval total & 23.0 & 21.6 & 31.4\\
+Pipeline 2 retrieval total (retrieval + re-rank) & 505.0 & 527.6 & 621.5\\
+LLM generation (Gemini, per call) & 5147.8 & 4442.9 & 9910.5\\\bottomrule
 \end{tabular}
 \end{minipage}\par\medskip
 
 \begin{center}
 \includegraphics[width=0.9\linewidth]{../figures/latency_end_to_end.png}
-\captionof{figure}{Median end-to-end time per query: Pipeline 1 $\approx$ 3.71\,s, Pipeline 2 $\approx$ 4.22\,s.}\label{fig:e2e}
+\captionof{figure}{Median end-to-end time per query: Pipeline 1 $\approx$ 4.46\,s, Pipeline 2 $\approx$ 4.97\,s.}\label{fig:e2e}
 \end{center}
 \begin{center}
 \includegraphics[width=0.9\linewidth]{../figures/latency_retrieval_vs_rerank.png}
 \captionof{figure}{Bi-encoder retrieval vs.\ cross-encoder re-ranking for every timed query.}\label{fig:dist}
 \end{center}
-% NOTES:
-% - Per chunk: bi-encoder ~0.021 ms (one query encoding + dot products), cross-encoder ~47.7 ms per pair (~2,000x per chunk).
-% - Re-ranking 10 chunks ~22-23x the bi-encoder search over ALL 1,035 chunks.
-% - LLM time is network-dominated and varies a lot (p95 8.5 s) - kept as a separate row so it doesn't hide the comparison.
-% - Measured on a laptop CPU, no GPU; first call to each model excluded (warm-up).
 
-% =====================================================================================
 \section{Scaling: why not cross-encode everything?}
-% =====================================================================================
-The cross-encoder must process each query and chunk together, so its score cannot be computed in advance. At about 47.7 ms per pair, scoring all 1,035 chunks would take roughly 49 seconds per query, compared with about half a second to re-rank only 10. The bi-encoder can store chunk embeddings ahead of time and quickly retrieve candidates; the cross-encoder then re-orders this smaller set more carefully. A larger candidate pool may recover more relevant chunks, but it also increases latency: in these tests, a top-20 pool would catch six of the eight missed queries, while a top-50 pool would catch all eight, at a higher cost.
-% NOTES:
-% - Cross-encoder score depends on the query -> nothing precomputable; one transformer pass per (query, chunk) pair at query time.
-% - Bi-encoder: chunk vectors computed once offline; per query = 1 encoding + a matrix-vector product (fast, can use ANN indexes).
-% - Measured: ~47.7 ms per pair -> all 1,035 chunks ~49 s per query (vs ~0.5 s now); 1 million chunks ~13 hours per query.
-% - Funnel: cheap bi-encoder over everything -> small pool -> expensive cross-encoder on the pool.
-% - Pool size = recall ceiling vs latency: 6 of the 8 complete failures were at ranks 11-15 (top-20 pool catches 6/8,
-%   top-50 all 8), but 50 pairs ~2.4 s of re-ranking instead of ~0.5 s.
+The cross-encoder must process each query and chunk together, so its score cannot be computed in advance. At about 48.2 ms per pair, scoring all 1,035 chunks would take roughly 50 seconds per query, compared with about half a second to re-rank only 10. The bi-encoder can store chunk embeddings ahead of time and quickly retrieve candidates; the cross-encoder then re-orders this smaller set more carefully. A larger candidate pool may recover more relevant chunks, but it also increases latency: in these tests, a top-20 pool would catch six of the eight missed queries, while a top-50 pool would catch all eight, at a higher cost.
 
-% =====================================================================================
 \section{Limitations and possible extensions}
-% =====================================================================================
 This version uses article text only, so questions that depend on schedules, appendices, or amendment footnotes may fail. Cross-references are not expanded, and the fallback splitting can sometimes cut a clause mid-sentence. The test set is also small, and article-level scoring does not always reflect clause-level relevance. A useful next step would be to combine dense retrieval with BM25, use a larger candidate pool, and expand cross-references. Query rewriting for terms such as “Lok Sabha” and better handling of footnotes could also improve results. A re-ranker trained on legal text may work better for this document.
-% NOTES - limitations:
-% - Footnotes (amendment history) removed -> "when was Art. X added?" fails; Schedules/appendices excluded (e.g. Art. 370 status).
-% - Cross-references not resolved ("the said clause", "except articles 20 and 21").
-% - Window fallback cuts mid-sentence (359_2, 191_1); one footnote leaked (304_0).
-% - Article-level evaluation hides clause-level differences; small test set (52 queries, 6 of them chosen after seeing results); LLM output varies between runs.
-% NOTES - extensions tried / possible:
-% - Hybrid BM25 + dense with Reciprocal Rank Fusion (branch f-hybrid, hybrid.ipynb): Hit@10 0.81 -> 0.90; hybrid+cross-encoder
-%   Hit@3 0.83 vs 0.79. Fixed "What does Article 31 say?" (not found -> #1) and "peaceful assembly" (-> #2), but hurt paraphrases
-%   whose everyday words appear in other articles: "President dies in office" (Art. 65), "term of the Lok Sabha" (Art. 83),
-%   "take away my land" (Art. 300A) - BM25 has no stemming/synonyms.
-% - Bigger candidate pool (20-50) for the cross-encoder; query rewriting ("Lok Sabha" -> "House of the People");
-%   cross-reference expansion; footnotes as metadata / amendment index (probe parsed 13 of 14 footnotes incl. "ibid.");
-%   overlap only in the window fallback; a legal-domain re-ranker.
-
-% =====================================================================================
-% The results appendix is a separate document: results_appendix.pdf
 
 \end{document}

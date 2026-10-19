@@ -152,23 +152,23 @@ Answers (same prompt and model for both pipelines):
 
 **What is Article 370?**
 
-- *Answer 1 (baseline):* Based on the provided context, Article 370 contains "Temporary provisions with respect to the State of Jammu and Kashmir" (Article 370). Under clause (3) of Article 370, the President may declare by public notification that the article shall cease to be operative, or shall be operative only with specified exceptions and modifications from a date he specifies, provided that the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370(3)).
-- *Answer 2 (re-ranked):* Based on the provided context, Article 370 outlines "Temporary provisions with respect to the State of Jammu and Kashmir" [Article 370]. Its main provisions include: • **Non-applicability of Article 238:** The provisions of Article 238 shall not apply to the State of Jammu and Kashmir [Article 370(1)(a)]. • **Limitation on Parliament's Legislative Power:** Parliament's power to make laws for Jammu and Kashmir is limited to matters in the Union List and Concurrent List that the President declares—in consultation with the State Government—correspond to the Instrument of Accession [Article 370(1)(b)(i)], as well as other matters in those Lists specified by the President with the concurrence of the State Government [Article 370(1)(b)(ii)]. • **Definition of State Government:** The "Government of the State" is defined as the person recognized by the President as the Maharaja of Jammu and Kashmir acting on advice [Article 370(1)]. • **Cessation or Modification:** The President may declare by public notification that Article 370 shall cease to be operative or shall be operative only with specified exceptions and modifications, provided that the recommendation of the Legislative Assembly of the State is necessary before issuing such a notification [Article 370(3)].
+- *Answer 1 (baseline):* Based on the provided context, Article 370 deals with "Temporary provisions with respect to the State of Jammu and Kashmir" (Article 370). Under this article, the President may declare by public notification that the article shall cease to be operative or shall be operative only with specified exceptions and modifications from a specified date (Article 370). However, the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370).
+- *Answer 2 (re-ranked):* Based on the provided context, Article 370 consists of temporary provisions with respect to the State of Jammu and Kashmir (Article 370). Key provisions include: • **Non-applicability of Article 238:** The provisions of Article 238 do not apply in relation to the State of Jammu and Kashmir (Article 370). • **Limitation on Parliamentary Powers:** The power of Parliament to make laws for Jammu and Kashmir is limited to matters in the Union List and Concurrent List that are declared by the President, in consultation with or concurrence of the Government of the State, to correspond to the Instrument of Accession or as otherwise specified by order (Article 370). • **Power to Cease or Modify:** The President may declare by public notification that Article 370 shall cease to be operative or shall be operative with exceptions and modifications, provided that a recommendation from the Legislative Assembly of the State is necessary before issuing such a notification (Article 370).
 
 **Can the Vice-President act as President?**
 
 - *Answer 1 (baseline):* The provided context does not answer this.
-- *Answer 2 (re-ranked):* Yes, the Vice-President can act as President under the following conditions: • In the event of a vacancy in the office of the President due to death, resignation, removal, or otherwise, the Vice-President shall act as President until a newly elected President enters upon his office (Article 65(1)). • When the President is unable to discharge his functions owing to absence, illness, or any other cause, the Vice-President shall discharge his functions until the President resumes his duties (Article 65(2)).
+- *Answer 2 (re-ranked):* Yes, the Vice-President can act as President. According to Article 65(1), the Vice-President shall act as President in the event of any vacancy in the office of the President occurring by reason of death, resignation, removal, or otherwise, until a new President is elected and enters upon the office. Additionally, under Article 65(2), when the President is unable to discharge their functions owing to absence, illness, or any other cause, the Vice-President shall discharge those functions until the President resumes duties.
 
 **Who appoints the judges of a High Court?**
 
-- *Answer 1 (baseline):* Based on the provided context, the appointment of specific types of High Court judges is as follows: • **Additional and Acting Judges:** The President, in consultation with the National Judicial Appointments Commission, appoints additional and acting Judges of a High Court [Article 224(1), Article 224(2)]. • **Retired Judges sitting as Judges:** The National Judicial Appointments Commission, on a reference made to it by the Chief Justice of a High Court and with the previous consent of the President, may request a retired judge to sit and act as a Judge of a High Court [Article 224A]. The provided context does not contain information regarding who appoints permanent or regular High Court judges generally.
-- *Answer 2 (re-ranked):* Based on the provided context, the judges of a High Court are appointed by the President (Article 216, Article 217(1)). Specifically, Article 217(1) states that every Judge of a High Court shall be appointed by the President by warrant under his hand and seal. Additionally, Article 216 mentions that a High Court consists of a Chief Justice and such other Judges as the President may deem necessary to appoint.
+- *Answer 1 (baseline):* Based on the provided context, the appointment of regular permanent High Court judges is not mentioned. However, for specific types of High Court judges: • **Additional and Acting Judges:** They are appointed by the President, in consultation with the National Judicial Appointments Commission [Article 224(1), Article 224(2)]. • **Retired Judges (sitting at High Court sittings):** They are requested to sit and act by the National Judicial Appointments Commission (on a reference by the Chief Justice of the High Court) with the previous consent of the President [Article 224A]. If the question refers to regular permanent High Court judges, the provided context does not answer this.
+- *Answer 2 (re-ranked):* Based on the provided context, the judges of a High Court are appointed by the President (Article 217, Article 216). Specifically: • Article 217(1) states that every Judge of a High Court shall be appointed by the President by warrant under his hand and seal. • Article 216 states that a High Court consists of a Chief Justice and such other Judges as the President may from time to time deem necessary to appoint.
 
 **Who is the supreme commander of the Defence Forces?**
 
 - *Answer 1 (baseline):* The provided context does not answer this.
-- *Answer 2 (re-ranked):* The supreme command of the Defence Forces of the Union is vested in the President (Article 53(2)).
+- *Answer 2 (re-ranked):* Based on the provided context, the supreme command of the Defence Forces of the Union is vested in the President (Article 53).
 
 **Can the Council of States be dissolved?**
 
@@ -178,17 +178,17 @@ Answers (same prompt and model for both pipelines):
 **Does an accused person have the right to remain silent?**
 
 - *Answer 1 (baseline):* The provided context does not answer this.
-- *Answer 2 (re-ranked):* The provided context does not answer this.
+- *Answer 2 (re-ranked):* The provided context does not answer this. (Note: Under Article 20(3), the context states that no person accused of any offence shall be compelled to be a witness against himself, but it does not explicitly mention a "right to remain silent.")
 
 **Is caste discrimination illegal?**
 
-- *Answer 1 (baseline):* Based on the provided context, Article 15 provides for the "Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth" [Article 15]. However, the context specifies that Article 15 does not prevent the State from making special provisions for the advancement of socially and educationally backward classes of citizens, the Scheduled Castes, or the Scheduled Tribes, including provisions related to admission to educational institutions [Article 15(4), Article 15(5)].
-- *Answer 2 (re-ranked):* Yes, caste discrimination is prohibited under the Constitution of India: • **Article 15(1)** states that the State shall not discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth, or any of them. • **Article 15(2)** provides that no citizen shall, on grounds only of religion, race, caste, sex, place of birth, or any of them, be subjected to any disability, liability, restriction, or condition regarding: • Access to shops, public restaurants, hotels, and places of public entertainment [Article 15(2)(a)]. • The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public [Article 15(2)(b)].
+- *Answer 1 (baseline):* Yes, discrimination on the grounds of caste is prohibited under Article 15 [Article 15]. However, the State is not prevented from making special provisions for the advancement of socially and educationally backward classes of citizens, the Scheduled Castes, or the Scheduled Tribes, including special provisions regarding admission to educational institutions [Article 15(4), Article 15(5)].
+- *Answer 2 (re-ranked):* Yes, caste discrimination is prohibited under Article 15: • **Discrimination by the State:** The State shall not discriminate against any citizen on grounds only of caste (among other grounds) under Article 15(1). • **Restrictions on citizens:** No citizen can be subjected to any disability, liability, restriction, or condition based on caste regarding access to shops, public restaurants, hotels, and places of public entertainment, or the use of wells, tanks, bathing ghats, roads, and places of public resort maintained out of State funds or dedicated to the general public under Article 15(2).
 
 **Is the President immune from court proceedings?**
 
 - *Answer 1 (baseline):* The provided context does not answer this.
-- *Answer 2 (re-ranked):* Based on the provided context, the President has immunity from certain court proceedings: • Under **Article 361(1)**, the President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties. • However, under **Article 361(1)**, this immunity is limited in that the conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under Article 61. • Under **Article 361(2)**, no criminal proceedings whatsoever can be instituted or continued against the President in any court during his term of office.
+- *Answer 2 (re-ranked):* Yes, the President enjoys immunity from certain court proceedings as specified under Article 361: • **Immunity for official acts:** Under Article 361(1), the President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties. • **Exceptions/Qualifications under Article 361(1):** • The conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under Article 61 (Article 361(1)). • This immunity does not restrict the right of any person to bring appropriate proceedings against the Government of India (Article 361(1)). • **Immunity from criminal proceedings:** Under Article 361(2), no criminal proceedings whatsoever can be instituted or continued against the President in any court during his term of office.
 
 ## E. Queries with no relevant chunk in the top 10
 
@@ -214,14 +214,14 @@ Setup: CPU; 52 queries x 3 runs (after warm-up); LLM: 120 saved calls.
 
 | Stage | Mean (ms) | Median (ms) | p95 (ms) |
 |---|---|---|---|
-| Bi-encoder retrieval (top 10) | 21.3 | 21.0 | 24.3 |
-| Cross-encoder re-ranking (10 pairs) | 477.0 | 508.9 | 568.0 |
-| Pipeline 1 retrieval total | 21.3 | 21.0 | 24.3 |
-| Pipeline 2 retrieval total (retr + rerank) | 498.3 | 529.8 | 590.5 |
-| LLM generation (Gemini, per call) | 4380.2 | 3693.0 | 8540.7 |
+| Bi-encoder retrieval (top 10) | 23.0 | 21.6 | 31.4 |
+| Cross-encoder re-ranking (10 pairs) | 482.0 | 506.1 | 595.8 |
+| Pipeline 1 retrieval total | 23.0 | 21.6 | 31.4 |
+| Pipeline 2 retrieval total (retr + rerank) | 505.0 | 527.6 | 621.5 |
+| LLM generation (Gemini, per call) | 5147.8 | 4442.9 | 9910.5 |
 
-- Re-ranking 10 chunks costs ~22x the bi-encoder search over all 1035 chunks.
-- Per chunk: bi-encoder ~0.021 ms (1 query encoding + dot products), cross-encoder ~47.7 ms (a full transformer pass per pair)
+- Re-ranking 10 chunks costs ~21x the bi-encoder search over all 1035 chunks.
+- Per chunk: bi-encoder ~0.022 ms (1 query encoding + dot products), cross-encoder ~48.2 ms (a full transformer pass per pair)
 
 ![End-to-end latency](../figures/latency_end_to_end.png)
 

@@ -97,13 +97,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 36.9,
-      "rerank": 153.5,
-      "llm_baseline": 2708.9,
-      "llm_reranked": 2807.6
+      "retrieval": 32.4,
+      "rerank": 160.9,
+      "llm_baseline": 3157.8,
+      "llm_reranked": 2900.6
     },
-    "answer_baseline": "Article 21 states that no person shall be deprived of his life or personal liberty except according to procedure established by law (Article 21). It is titled \"Protection of life and personal liberty\" (Article 21).",
-    "answer_reranked": "Article 21 guarantees the \"Protection of life and personal liberty,\" stating that no person shall be deprived of his life or personal liberty except according to procedure established by law (Article 21)."
+    "answer_baseline": "According to Article 21, titled \"Protection of life and personal liberty,\" no person shall be deprived of his life or personal liberty except according to procedure established by law (Article 21).",
+    "answer_reranked": "According to Article 21, no person shall be deprived of his life or personal liberty except according to procedure established by law (Article 21)."
   },
   {
     "query": "What is Article 356 about?",
@@ -207,13 +207,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 25.5,
-      "rerank": 169.3,
-      "llm_baseline": 3722.6,
-      "llm_reranked": 4417.0
+      "retrieval": 27.6,
+      "rerank": 165.9,
+      "llm_baseline": 3053.6,
+      "llm_reranked": 5116.8
     },
-    "answer_baseline": "Based on the provided context, Article 356 is about the \"Provisions in case of failure of constitutional machinery in States\" (Article 356). It specifies that any such Proclamation issued under this article may be revoked or varied by a subsequent Proclamation (Article 356).",
-    "answer_reranked": "Based on the provided context, Article 356 is about provisions in case of failure of constitutional machinery in States (Article 356). \n\nSpecifically, the context highlights that:\n* Any Proclamation made under this article may be revoked or varied by a subsequent Proclamation (Article 356(2)).\n* It does not authorize the President to assume powers vested in or exercisable by a High Court, or to suspend in whole or in part the operation of any provision of the Constitution relating to High Courts (Article 356).\n* It contains provisions regarding the approval of a Proclamation by the House of the People after its reconstitution (Article 356)."
+    "answer_baseline": "Based on the provided context, Article 356 is about \"Provisions in case of failure of constitutional machinery in States\" (Article 356).",
+    "answer_reranked": "Based on the provided context, Article 356 is about **provisions in case of failure of constitutional machinery in States** (Article 356). \n\nSpecifically, the context outlines the following details regarding Article 356:\n* It sets requirements regarding the approval of a Proclamation by the House of the People after its reconstitution (Article 356).\n* It specifies that the President is not authorized to assume any powers vested in or exercisable by a High Court, nor to suspend in whole or in part any provision of the Constitution relating to High Courts (Article 356).\n* It provides that any Proclamation issued under this article may be revoked or varied by a subsequent Proclamation (Article 356)."
   },
   {
     "query": "What is Article 370?",
@@ -221,6 +221,9 @@
       "370"
     ],
     "note": "Article-number lookup; watch for LLM answering from its own knowledge",
+    "relevant_chunks": [
+      "370_0"
+    ],
     "verdict": "both_ok",
     "expected_ranks": {
       "baseline": [
@@ -315,16 +318,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 20.8,
-      "rerank": 427.2,
-      "llm_baseline": 4770.0,
-      "llm_reranked": 5234.1
+      "retrieval": 25.8,
+      "rerank": 460.7,
+      "llm_baseline": 7073.9,
+      "llm_reranked": 5677.8
     },
-    "answer_baseline": "Based on the provided context, Article 370 contains \"Temporary provisions with respect to the State of Jammu and Kashmir\" (Article 370). \n\nUnder clause (3) of Article 370, the President may declare by public notification that the article shall cease to be operative or shall be operative only with specified exceptions and modifications from a given date (Article 370). However, the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370).",
-    "answer_reranked": "Based on the provided context, Article 370 outlines \"Temporary provisions with respect to the State of Jammu and Kashmir\" [Article 370]. Its main provisions include:\n\n* **Non-applicability of Article 238:** The provisions of Article 238 do not apply to the State of Jammu and Kashmir [Article 370(1)(a)].\n* **Limitation on Parliament's Legislative Power:** Parliament's power to make laws for Jammu and Kashmir is limited to matters in the Union List and Concurrent List specified by the President in consultation with, or with the concurrence of, the Government of the State [Article 370(1)(b)].\n* **Power to Cease or Modify:** The President may declare by public notification that Article 370 shall cease to be operative, or shall be operative only with specified exceptions and modifications [Article 370(3)]. However, the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification [Article 370(3)].",
-    "relevant_chunks": [
-      "370_0"
-    ]
+    "answer_baseline": "Based on the provided context, Article 370 relates to \"Temporary provisions with respect to the State of Jammu and Kashmir\" (Article 370). \n\nUnder this article, the President may declare by public notification that Article 370 shall cease to be operative, or shall be operative only with specified exceptions and modifications from a given date, provided that the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370).",
+    "answer_reranked": "Based on the provided context, Article 370 contains temporary provisions with respect to the State of Jammu and Kashmir [Article 370]. Its main provisions include:\n\n* **Non-applicability of Article 238:** The provisions of article 238 shall not apply in relation to the State of Jammu and Kashmir [Article 370(1)(a)].\n* **Limitation on Parliament's Law-Making Power:** Parliament's power to make laws for the State is limited to specific matters in the Union List and Concurrent List that are declared by the President, either in consultation with the Government of the State (for matters corresponding to the Instrument of Accession) or with the concurrence of the Government of the State [Article 370(1)(b)].\n* **Cessation or Modification:** The President may declare by public notification that Article 370 shall cease to be operative, or shall be operative only with specified exceptions and modifications, provided that the recommendation of the Legislative Assembly of the State is necessary before issuing such a notification [Article 370(3)]."
   },
   {
     "query": "Is the right to property a fundamental right?",
@@ -420,10 +420,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 27.2,
-      "rerank": 550.8,
-      "llm_baseline": 7111.9,
-      "llm_reranked": 2977.7
+      "retrieval": 41.7,
+      "rerank": 559.5,
+      "llm_baseline": 6863.1,
+      "llm_reranked": 3012.0
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -522,10 +522,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 35.6,
-      "rerank": 327.7,
-      "llm_baseline": 2937.0,
-      "llm_reranked": 2711.3
+      "retrieval": 34.4,
+      "rerank": 319.8,
+      "llm_baseline": 3283.9,
+      "llm_reranked": 3155.6
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -624,10 +624,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 41.4,
-      "rerank": 551.6,
-      "llm_baseline": 3349.2,
-      "llm_reranked": 3387.3
+      "retrieval": 27.7,
+      "rerank": 564.2,
+      "llm_baseline": 4093.5,
+      "llm_reranked": 3214.1
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -730,13 +730,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 40.4,
-      "rerank": 530.2,
-      "llm_baseline": 4548.3,
-      "llm_reranked": 5051.9
+      "retrieval": 28.0,
+      "rerank": 553.4,
+      "llm_baseline": 5820.7,
+      "llm_reranked": 4541.1
     },
-    "answer_baseline": "Based on the provided context, the right to equality includes the following provisions:\n\n* **Equality before the law:** The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India (Article 14).\n* **Equality of opportunity in public employment:** There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State (Article 16).\n* **Equal justice and equal opportunity:** The legal system must promote justice on the basis of equal opportunity, and the State must provide free legal aid to ensure opportunities for securing justice are not denied to any citizen due to economic or other disabilities (Article 39A).",
-    "answer_reranked": "Based on the provided context, the provisions relating to equality state:\n\n* The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India (Article 14).\n* There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State (Article 16(1)).\n* No citizen shall, on grounds only of religion, race, caste, sex, descent, place of birth, residence, or any of them, be ineligible for, or discriminated against in respect of, any employment or office under the State (Article 16(2))."
+    "answer_baseline": "Based on the provided context, the provisions regarding equality state the following:\n\n* **Equality before the law:** The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India (Article 14).\n* **Equality in public employment:** There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State (Article 16).\n* **Equal justice:** The State shall secure that the operation of the legal system promotes justice on a basis of equal opportunity, including providing free legal aid so that opportunities for securing justice are not denied to any citizen due to economic or other disabilities (Article 39A).",
+    "answer_reranked": "Based on the provided context, the provisions regarding equality state the following:\n\n* **Article 14:** The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.\n* **Article 16(1):** There shall be equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State.\n* **Article 16(2):** No citizen shall be ineligible for, or discriminated against in respect of, any employment or office under the State on grounds only of religion, race, caste, sex, descent, place of birth, residence, or any of them."
   },
   {
     "query": "What are the fundamental duties of citizens?",
@@ -838,13 +838,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 35.2,
-      "rerank": 559.4,
-      "llm_baseline": 5716.9,
-      "llm_reranked": 6327.9
+      "retrieval": 31.6,
+      "rerank": 524.2,
+      "llm_baseline": 5837.1,
+      "llm_reranked": 6201.7
     },
-    "answer_baseline": "According to Article 51A, it is the duty of every citizen of India:\n\n* To abide by the Constitution and respect its ideals and institutions, the National Flag, and the National Anthem (Article 51A(a)).\n* To cherish and follow the noble ideals which inspired our national struggle for freedom (Article 51A(b)).\n* To uphold and protect the sovereignty, unity, and integrity of India (Article 51A(c)).\n* To defend the country and render national service when called upon to do so (Article 51A(d)).\n* To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic, and regional or sectional diversities, and to renounce practices derogatory to the dignity of women (Article 51A(e)).\n* To value and preserve the rich heritage of our composite culture (Article 51A(f)).\n* To protect and improve the natural environment including forests, lakes, rivers, and wild life, and to have compassion for living creatures (Article 51A(g)).\n* To develop the scientific temper, humanism, and the spirit of inquiry and reform (Article 51A(h)).\n* To safeguard public property and to abjure violence (Article 51A(i)).",
-    "answer_reranked": "According to Article 51A, it is the duty of every citizen of India:\n\n* To abide by the Constitution and respect its ideals and institutions, the National Flag, and the National Anthem [Article 51A(a)].\n* To cherish and follow the noble ideals which inspired our national struggle for freedom [Article 51A(b)].\n* To uphold and protect the sovereignty, unity, and integrity of India [Article 51A(c)].\n* To defend the country and render national service when called upon to do so [Article 51A(d)].\n* To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic, and regional or sectional diversities, and to renounce practices derogatory to the dignity of women [Article 51A(e)].\n* To value and preserve the rich heritage of our composite culture [Article 51A(f)].\n* To protect and improve the natural environment including forests, lakes, rivers, and wild life, and to have compassion for living creatures [Article 51A(g)].\n* To develop the scientific temper, humanism, and the spirit of inquiry and reform [Article 51A(h)].\n* To safeguard public property and to abjure violence [Article 51A(i)].\n* To strive towards excellence in all spheres of individual and collective activity so that the nation constantly rises to higher levels of endeavour and achievement [Article 51A(j)].\n* For a parent or guardian, to provide opportunities for education to his child or ward between the age of six and fourteen years [Article 51A(k)]."
+    "answer_baseline": "According to Article 51A, it is the fundamental duty of every citizen of India:\n\n* To abide by the Constitution and respect its ideals and institutions, the National Flag and the National Anthem [Article 51A(a)].\n* To cherish and follow the noble ideals which inspired the national struggle for freedom [Article 51A(b)].\n* To uphold and protect the sovereignty, unity, and integrity of India [Article 51A(c)].\n* To defend the country and render national service when called upon to do so [Article 51A(d)].\n* To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic, and regional or sectional diversities, and to renounce practices derogatory to the dignity of women [Article 51A(e)].\n* To value and preserve the rich heritage of our composite culture [Article 51A(f)].\n* To protect and improve the natural environment including forests, lakes, rivers, and wildlife, and to have compassion for living creatures [Article 51A(g)].\n* To develop the scientific temper, humanism, and the spirit of inquiry and reform [Article 51A(h)].\n* To safeguard public property and to abjure violence [Article 51A(i)].",
+    "answer_reranked": "According to Article 51A, it is the duty of every citizen of India:\n\n* To abide by the Constitution and respect its ideals and institutions, the National Flag, and the National Anthem [Article 51A].\n* To cherish and follow the noble ideals which inspired the national struggle for freedom [Article 51A].\n* To uphold and protect the sovereignty, unity, and integrity of India [Article 51A].\n* To defend the country and render national service when called upon to do so [Article 51A].\n* To promote harmony and the spirit of common brotherhood amongst all the people of India transcending religious, linguistic, and regional or sectional diversities, and to renounce practices derogatory to the dignity of women [Article 51A].\n* To value and preserve the rich heritage of our composite culture [Article 51A].\n* To protect and improve the natural environment including forests, lakes, rivers, and wild life, and to have compassion for living creatures [Article 51A].\n* To develop the scientific temper, humanism, and the spirit of inquiry and reform [Article 51A].\n* To safeguard public property and to abjure violence [Article 51A].\n* To strive towards excellence in all spheres of individual and collective activity so that the nation constantly rises to higher levels of endeavour and achievement [Article 51A].\n* For a parent or guardian, to provide opportunities for education to their child or ward between the age of six and fourteen years [Article 51A]."
   },
   {
     "query": "What are the Directive Principles of State Policy?",
@@ -945,12 +945,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 37.9,
-      "rerank": 542.9,
-      "llm_baseline": 9772.6,
-      "llm_reranked": 10265.4
+      "retrieval": 36.9,
+      "rerank": 539.0,
+      "llm_baseline": 9268.9,
+      "llm_reranked": 10196.5
     },
-    "answer_baseline": "Based on the provided context, the Directive Principles of State Policy are the principles laid down in Part IV of the Constitution. They are characterized by the following:\n\n* **Non-enforceable in Court:** The provisions contained in Part IV are not enforceable by any court [Article 37].\n* **Fundamental to Governance:** The principles are fundamental in the governance of the country [Article 37].\n* **Duty of the State:** It is the duty of the State to apply these principles when making laws [Article 37].\n* **Protection of Laws Giving Effect to Them:** A law giving effect to the policy of the State towards securing all or any of the principles in Part IV cannot be deemed void on the ground that it takes away, abridges, or is inconsistent with the rights conferred by Article 14 or Article 19 [Article 31C].",
-    "answer_reranked": "Based on the provided context, Directive Principles (the principles laid down in Part IV) are defined by the following characteristics:\n\n* They are provisions/principles that are not enforceable by any court (Article 37).\n* They are fundamental in the governance of the country, and it is the duty of the State to apply these principles when making laws (Article 37).\n* Laws enacted to give effect to the policy of the State towards securing all or any of these principles cannot be deemed void on the ground that they are inconsistent with, take away, or abridge the rights conferred by Article 14 or Article 19 (Article 31C)."
+    "answer_baseline": "Based on the provided context, the Directive Principles (referred to as the principles laid down in Part IV) have the following characteristics:\n\n* **Fundamental to Governance:** They are principles that are fundamental in the governance of the country, and it is the duty of the State to apply them when making laws (Article 37).\n* **Non-Enforceable:** They are not enforceable by any court (Article 37).\n* **Protection of Laws Giving Them Effect:** A law giving effect to the State policy towards securing all or any of these principles cannot be deemed void on the grounds that it is inconsistent with, takes away, or abridges the rights conferred by Article 14 or Article 19 (Article 31C).\n\n*(Note: The provided context does not contain a specific list of the individual Directive Principles.)*",
+    "answer_reranked": "Based on the provided context, the Directive Principles of State Policy (referred to as the principles laid down in Part IV) are characterized by the following:\n\n* **Legal nature and purpose:** They are provisions that are not enforceable by any court, but they are fundamental in the governance of the country, and it is the duty of the State to apply these principles when making laws (Article 37).\n* **Protection of laws implementing them:** A law giving effect to the policy of the State towards securing all or any of the principles laid down in Part IV cannot be deemed void on the ground that it is inconsistent with, takes away, or abridges the rights conferred by Article 14 or Article 19 (Article 31C).\n\n*(Note: The provided context does not contain an itemized list of the specific individual Directive Principles.)*"
   }
 ]

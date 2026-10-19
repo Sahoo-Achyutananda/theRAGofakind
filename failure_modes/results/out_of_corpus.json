@@ -91,10 +91,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 162.0,
-      "rerank": 528.9,
-      "llm_baseline": 2873.6,
-      "llm_reranked": 2549.2
+      "retrieval": 31.6,
+      "rerank": 520.0,
+      "llm_baseline": 2891.2,
+      "llm_reranked": 3078.7
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -197,10 +197,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 36.3,
-      "rerank": 564.3,
-      "llm_baseline": 3555.0,
-      "llm_reranked": 3126.2
+      "retrieval": 31.6,
+      "rerank": 502.0,
+      "llm_baseline": 3552.1,
+      "llm_reranked": 3058.9
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -299,10 +299,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 25.3,
-      "rerank": 155.3,
-      "llm_baseline": 2715.5,
-      "llm_reranked": 2326.4
+      "retrieval": 28.2,
+      "rerank": 239.2,
+      "llm_baseline": 2869.9,
+      "llm_reranked": 2838.9
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -399,10 +399,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 20.6,
-      "rerank": 390.8,
-      "llm_baseline": 2698.3,
-      "llm_reranked": 2410.9
+      "retrieval": 21.9,
+      "rerank": 425.7,
+      "llm_baseline": 2798.0,
+      "llm_reranked": 2795.0
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -499,10 +499,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 32.3,
-      "rerank": 396.3,
-      "llm_baseline": 5836.4,
-      "llm_reranked": 3062.5
+      "retrieval": 25.9,
+      "rerank": 372.1,
+      "llm_baseline": 2754.8,
+      "llm_reranked": 2852.4
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -599,10 +599,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 23.2,
-      "rerank": 584.8,
-      "llm_baseline": 3216.0,
-      "llm_reranked": 2649.1
+      "retrieval": 26.4,
+      "rerank": 504.6,
+      "llm_baseline": 3355.0,
+      "llm_reranked": 2868.6
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."

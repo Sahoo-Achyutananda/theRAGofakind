@@ -109,13 +109,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 127.7,
-      "rerank": 462.6,
-      "llm_baseline": 4487.1,
-      "llm_reranked": 4145.4
+      "retrieval": 38.4,
+      "rerank": 411.1,
+      "llm_baseline": 4285.7,
+      "llm_reranked": 3998.5
     },
-    "answer_baseline": "Based on the provided context, the safeguards against arrest and detention under clauses (1) and (2) do not apply to:\n\n1. Any person who is for the time being an enemy alien (Article 22(3)(a)).\n2. Any person who is arrested or detained under any law providing for preventive detention (Article 22(3)(b)).",
-    "answer_reranked": "Based on the provided context, the safeguards against arrest and detention (set out in clauses 1 and 2 of Article 22) do not apply to:\n\n1. Any person who for the time being is an enemy alien (Article 22(3)(a)).\n2. Any person who is arrested or detained under any law providing for preventive detention (Article 22(3)(b))."
+    "answer_baseline": "Based on the provided context, the safeguards in clauses (1) and (2) of Article 22 do not apply to:\n\n1. Any person who for the time being is an enemy alien [Article 22(3)(a)].\n2. Any person who is arrested or detained under any law providing for preventive detention [Article 22(3)(b)].",
+    "answer_reranked": "Based on the provided context, the safeguards against arrest and detention (specified in clauses 1 and 2) do not apply to:\n\n1. Any person who for the time being is an enemy alien (Article 22(3)(a)).\n2. Any person who is arrested or detained under any law providing for preventive detention (Article 22(3)(b))."
   },
   {
     "query": "Within how many hours must an arrested person be produced before a magistrate?",
@@ -225,13 +225,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 37.9,
-      "rerank": 594.8,
-      "llm_baseline": 3498.6,
-      "llm_reranked": 2864.5
+      "retrieval": 42.5,
+      "rerank": 560.1,
+      "llm_baseline": 3106.2,
+      "llm_reranked": 3027.6
     },
     "answer_baseline": "An arrested person must be produced before the nearest magistrate within twenty-four hours of their arrest, excluding the time necessary for the journey from the place of arrest to the court of the magistrate (Article 22(2)).",
-    "answer_reranked": "An arrested person must be produced before the nearest magistrate within a period of twenty-four hours of their arrest, excluding the time necessary for the journey from the place of arrest to the court of the magistrate (Article 22(2))."
+    "answer_reranked": "An arrested person must be produced before the nearest magistrate within twenty-four hours of their arrest, excluding the time necessary for the journey from the place of arrest to the court of the magistrate (Article 22(2))."
   },
   {
     "query": "What can the Rajya Sabha NOT do with a Money Bill?",
@@ -327,10 +327,10 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 32.1,
-      "rerank": 603.7,
-      "llm_baseline": 3301.3,
-      "llm_reranked": 3699.6
+      "retrieval": 29.8,
+      "rerank": 531.8,
+      "llm_baseline": 3781.2,
+      "llm_reranked": 3593.5
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "The provided context does not answer this."
@@ -433,12 +433,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 30.3,
-      "rerank": 598.1,
-      "llm_baseline": 3102.3,
-      "llm_reranked": 2890.1
+      "retrieval": 31.5,
+      "rerank": 573.9,
+      "llm_baseline": 3006.7,
+      "llm_reranked": 2686.5
     },
-    "answer_baseline": "Based on Article 18(1), the State is not allowed to confer any title, with the exception of a military or academic distinction.",
+    "answer_baseline": "Based on the provided context, the State is not allowed to confer any title that is not a military or academic distinction (Article 18(1)).",
     "answer_reranked": "Based on the provided context, the State is not allowed to confer any title that is not a military or academic distinction (Article 18(1))."
   },
   {
@@ -539,13 +539,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 34.5,
-      "rerank": 582.9,
-      "llm_baseline": 3744.1,
-      "llm_reranked": 3372.5
+      "retrieval": 40.5,
+      "rerank": 626.0,
+      "llm_baseline": 4307.7,
+      "llm_reranked": 3876.7
     },
-    "answer_baseline": "Based on the provided context, no. A person who is not a citizen of India and holds an office of profit or trust under the State cannot accept any title from any foreign State without the consent of the President (Article 18(3)).",
-    "answer_reranked": "No. Under Article 18(3), a person who is not a citizen of India holding an office of profit or trust under the State cannot accept any title from any foreign State without the consent of the President."
+    "answer_baseline": "No. Under Article 18(3), a person who is not a citizen of India and holds any office of profit or trust under the State cannot accept any title from any foreign State without the consent of the President.",
+    "answer_reranked": "No. A person who is not a citizen of India and holds an office of profit or trust under the State cannot accept any title from any foreign State without the consent of the President (Article 18(3))."
   },
   {
     "query": "Is religious instruction allowed in government-funded schools?",
@@ -645,13 +645,13 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 31.4,
-      "rerank": 511.7,
-      "llm_baseline": 4450.9,
-      "llm_reranked": 4789.9
+      "retrieval": 29.2,
+      "rerank": 497.0,
+      "llm_baseline": 5513.2,
+      "llm_reranked": 4386.4
     },
-    "answer_baseline": "Based on the provided context:\n\n* **Wholly State-funded institutions:** No religious instruction is allowed in any educational institution that is wholly maintained out of State funds [Article 28(1)]. \n* **State-administered institutions established under a trust/endowment:** Religious instruction is permitted if the institution is administered by the State but was established under an endowment or trust that requires religious instruction to be imparted [Article 28(2)].\n* **State-aided or recognized institutions:** Religious instruction may be imparted, but no person attending an institution receiving aid out of State funds (or recognized by the State) can be required to participate in it unless they (or their guardian, if a minor) give their consent [Article 28(3)].",
-    "answer_reranked": "Based on the provided context:\n\n* **No religious instruction** is allowed in any educational institution that is wholly maintained out of State funds (Article 28(1)).\n* **Exception for State-administered institutions under trust/endowment:** Religious instruction is permitted if the institution, though administered by the State, was established under an endowment or trust requiring religious instruction to be imparted (Article 28(2)).\n* **Institutions receiving State aid:** In an educational institution receiving aid out of State funds or recognised by the State, religious instruction may be imparted, but no person attending can be required to take part in it or attend religious worship unless they (or their guardian, if they are a minor) give consent (Article 28(3))."
+    "answer_baseline": "Based on the provided context, whether religious instruction is allowed depends on the type of government funding and institution setup:\n\n* **Wholly State-Funded Institutions:** No religious instruction shall be provided in any educational institution that is wholly maintained out of State funds [Article 28(1)]. However, religious instruction is allowed if the institution is administered by the State but was established under an endowment or trust requiring religious instruction [Article 28(2)].\n* **State-Aided Institutions:** In an educational institution receiving aid out of State funds, religious instruction may be imparted, but no person attending can be required to participate in it (or attend religious worship) unless they have given consent, or if a minor, their guardian has given consent [Article 28(3)].",
+    "answer_reranked": "Based on the provided context:\n\n* No religious instruction is allowed in any educational institution that is **wholly maintained out of State funds** [Article 28(1)].\n* However, religious instruction is permitted in an institution administered by the State if it was **established under an endowment or trust** that requires religious instruction to be imparted [Article 28(2)].\n* In educational institutions **receiving aid out of State funds**, religious instruction may be imparted, but no person (or their guardian, if the person is a minor) can be required to take part in it without their consent [Article 28(3)]."
   },
   {
     "query": "Can the Council of States be dissolved?",
@@ -754,12 +754,12 @@
       }
     ],
     "latency_ms": {
-      "retrieval": 241.9,
-      "rerank": 525.5,
-      "llm_baseline": 3442.5,
-      "llm_reranked": 2701.0
+      "retrieval": 21.3,
+      "rerank": 402.0,
+      "llm_baseline": 3426.3,
+      "llm_reranked": 3417.3
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "No, the Council of States cannot be dissolved. According to Article 83(1), the Council of States shall not be subject to dissolution, but as nearly as possible one-third of its members shall retire on the expiration of every second year."
+    "answer_reranked": "No, the Council of States cannot be dissolved. According to Article 83(1), the Council of States shall not be subject to dissolution, but as nearly as possible one-third of its members retire on the expiration of every second year."
   }
 ]
