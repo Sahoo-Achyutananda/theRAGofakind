@@ -759,5 +759,339 @@
     },
     "answer_baseline": "Based on the provided context, no, the President shall not be a member of either House of Parliament (Article 59(1)). \n\nIf a member of either House of Parliament is elected President, he shall be deemed to have vacated his seat in that House on the date on which he enters upon his office as President (Article 59(1)). \n\nNote that while the President is part of the Parliament—which consists of the President and two Houses (Article 79)—the President cannot be a member of either House of Parliament (Article 59(1)).",
     "answer_reranked": "No, the President shall not be a member of either House of Parliament (Article 59(1)). \n\nIf a member of either House of Parliament is elected President, he shall be deemed to have vacated his seat in that House on the date on which he enters upon his office as President (Article 59(1)). While Parliament consists of the President and two Houses (Article 79), the President cannot be a member of either House (Article 59(1))."
+  },
+  {
+    "query": "Who appoints the judges of a High Court?",
+    "expected_articles": [
+      "217"
+    ],
+    "relevant_chunks": [
+      "217_0"
+    ],
+    "note": "Supreme Court (124) and High Court (217) appointment articles are near-duplicates",
+    "verdict": "rescued",
+    "expected_ranks": {
+      "baseline": [
+        5,
+        7
+      ],
+      "reranked": [
+        1,
+        5
+      ]
+    },
+    "baseline_top3": [
+      "233_0",
+      "224A_0",
+      "224_0"
+    ],
+    "reranked_top3": [
+      "217_0",
+      "216_0",
+      "229_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "217_0",
+        "bi_rank": 7,
+        "ce_rank": 1,
+        "bi_score": 0.6145,
+        "ce_score": 7.4888
+      },
+      {
+        "chunk_id": "216_0",
+        "bi_rank": 6,
+        "ce_rank": 2,
+        "bi_score": 0.6248,
+        "ce_score": 7.2355
+      },
+      {
+        "chunk_id": "229_0",
+        "bi_rank": 4,
+        "ce_rank": 3,
+        "bi_score": 0.6387,
+        "ce_score": 6.4092
+      },
+      {
+        "chunk_id": "224A_0",
+        "bi_rank": 2,
+        "ce_rank": 4,
+        "bi_score": 0.68,
+        "ce_score": 6.3831
+      },
+      {
+        "chunk_id": "217_3",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "bi_score": 0.6259,
+        "ce_score": 6.3462
+      },
+      {
+        "chunk_id": "224_0",
+        "bi_rank": 3,
+        "ce_rank": 6,
+        "bi_score": 0.6463,
+        "ce_score": 6.0813
+      },
+      {
+        "chunk_id": "233_0",
+        "bi_rank": 1,
+        "ce_rank": 7,
+        "bi_score": 0.6824,
+        "ce_score": 5.6209
+      },
+      {
+        "chunk_id": "234_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "bi_score": 0.5845,
+        "ce_score": 2.956
+      },
+      {
+        "chunk_id": "128_0",
+        "bi_rank": 10,
+        "ce_rank": 9,
+        "bi_score": 0.5734,
+        "ce_score": 2.8009
+      },
+      {
+        "chunk_id": "124_3",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.6036,
+        "ce_score": 2.7177
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 78.7,
+      "rerank": 846.4,
+      "llm_baseline": 11394.6,
+      "llm_reranked": 3604.6
+    },
+    "answer_baseline": "The provided context does not contain an answer regarding who appoints permanent judges of a High Court. \n\nHowever, based on the provided context for other categories of High Court judges:\n* **Additional Judges:** Appointed by the President, in consultation with the National Judicial Appointments Commission [Article 224(1)].\n* **Acting Judges:** Appointed by the President, in consultation with the National Judicial Appointments Commission [Article 224(2)].\n* **Retired Judges (to sit and act as a Judge):** Requested by the National Judicial Appointments Commission on a reference made to it by the Chief Justice of a High Court, with the previous consent of the President [Article 224A].",
+    "answer_reranked": "According to the provided context, the Judges of a High Court are appointed by the **President**:\n\n* **Article 217(1)** states that every Judge of a High Court shall be appointed by the President by warrant under his hand and seal. \n* **Article 216** states that a High Court shall consist of a Chief Justice and such other Judges as the President may from time to time deem it necessary to appoint."
+  },
+  {
+    "query": "Who is the supreme commander of the Defence Forces?",
+    "expected_articles": [
+      "53"
+    ],
+    "relevant_chunks": [
+      "53_0"
+    ],
+    "note": "53(2) vests the supreme command in the President; Art. 33/34 also mention the Armed Forces",
+    "verdict": "rescued",
+    "expected_ranks": {
+      "baseline": [
+        4
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "148_0",
+      "33_0",
+      "76_0"
+    ],
+    "reranked_top3": [
+      "53_0",
+      "33_0",
+      "146_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "53_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.2904,
+        "ce_score": 0.3344
+      },
+      {
+        "chunk_id": "33_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.3042,
+        "ce_score": -10.7595
+      },
+      {
+        "chunk_id": "146_0",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "bi_score": 0.281,
+        "ce_score": -10.8412
+      },
+      {
+        "chunk_id": "76_0",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.2941,
+        "ce_score": -10.8892
+      },
+      {
+        "chunk_id": "60_0",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "bi_score": 0.2642,
+        "ce_score": -10.9196
+      },
+      {
+        "chunk_id": "148_0",
+        "bi_rank": 1,
+        "ce_rank": 6,
+        "bi_score": 0.3142,
+        "ce_score": -10.93
+      },
+      {
+        "chunk_id": "239AA_6",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.275,
+        "ce_score": -11.0768
+      },
+      {
+        "chunk_id": "69_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.2637,
+        "ce_score": -11.0944
+      },
+      {
+        "chunk_id": "78_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.2639,
+        "ce_score": -11.1252
+      },
+      {
+        "chunk_id": "338B_2",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "bi_score": 0.274,
+        "ce_score": -11.1291
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 37.9,
+      "rerank": 474.1,
+      "llm_baseline": 3019.8,
+      "llm_reranked": 2571.8
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Based on the provided context, the supreme command of the Defence Forces of the Union is vested in the President (Article 53)."
+  },
+  {
+    "query": "What is a Money Bill?",
+    "expected_articles": [
+      "110"
+    ],
+    "note": "Arts. 107, 109, 110 and 117 all mention 'Money Bill'; only 110 defines it",
+    "verdict": "both_ok",
+    "expected_ranks": {
+      "baseline": [
+        1,
+        3,
+        4,
+        8,
+        10
+      ],
+      "reranked": [
+        3,
+        4,
+        6,
+        9,
+        10
+      ]
+    },
+    "baseline_top3": [
+      "110_2",
+      "199_2",
+      "110_3"
+    ],
+    "reranked_top3": [
+      "199_1",
+      "199_2",
+      "110_2"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "199_1",
+        "bi_rank": 7,
+        "ce_rank": 1,
+        "bi_score": 0.6584,
+        "ce_score": 8.0115
+      },
+      {
+        "chunk_id": "199_2",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "bi_score": 0.7248,
+        "ce_score": 7.8753
+      },
+      {
+        "chunk_id": "110_2",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "bi_score": 0.7492,
+        "ce_score": 7.7449
+      },
+      {
+        "chunk_id": "110_1",
+        "bi_rank": 8,
+        "ce_rank": 4,
+        "bi_score": 0.6574,
+        "ce_score": 7.6073
+      },
+      {
+        "chunk_id": "199_0",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "bi_score": 0.6737,
+        "ce_score": 7.4672
+      },
+      {
+        "chunk_id": "110_0",
+        "bi_rank": 10,
+        "ce_rank": 6,
+        "bi_score": 0.6324,
+        "ce_score": 7.114
+      },
+      {
+        "chunk_id": "199_4",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "bi_score": 0.6564,
+        "ce_score": 6.8439
+      },
+      {
+        "chunk_id": "199_3",
+        "bi_rank": 6,
+        "ce_rank": 8,
+        "bi_score": 0.6605,
+        "ce_score": 6.7661
+      },
+      {
+        "chunk_id": "110_4",
+        "bi_rank": 4,
+        "ce_rank": 9,
+        "bi_score": 0.7055,
+        "ce_score": 6.5809
+      },
+      {
+        "chunk_id": "110_3",
+        "bi_rank": 3,
+        "ce_rank": 10,
+        "bi_score": 0.7156,
+        "ce_score": 5.9608
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 33.6,
+      "rerank": 574.1,
+      "llm_baseline": 3803.9,
+      "llm_reranked": 9629.3
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this."
   }
 ]

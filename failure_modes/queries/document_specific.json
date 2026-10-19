@@ -1,7 +1,7 @@
 [
   {"query": "What does Article 21 say?", "expected_articles": ["21"], "note": "Article-number lookup - embeddings are weak with numbers"},
   {"query": "What is Article 356 about?", "expected_articles": ["356"], "note": "Article-number lookup"},
-  {"query": "What is Article 370?", "expected_articles": ["370"], "note": "Article-number lookup; watch for LLM answering from its own knowledge"},
+  {"query": "What is Article 370?", "expected_articles": ["370"], "note": "Article-number lookup; watch for LLM answering from its own knowledge", "relevant_chunks": ["370_0"]},
   {"query": "Is the right to property a fundamental right?", "expected_articles": ["300A"], "note": "Answer lives in Part XII, far from the Fundamental Rights chunks"},
   {"query": "What does Article 31 say?", "expected_articles": ["31"], "note": "Omitted article - does the LLM admit it was omitted?"},
   {"query": "Can peaceful assembly be restricted in the interest of public order?", "expected_articles": ["19"], "note": "19(3) only says 'sub-clause (b) of the said clause' - 'assembly' is in 19(1)"},

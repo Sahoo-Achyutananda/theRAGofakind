@@ -1,0 +1,49 @@
+mode,query,R@3_baseline,R@3_reranked,P@3_baseline,P@3_reranked,RR_baseline,RR_reranked,nDCG_baseline,nDCG_reranked
+document_specific,What does Article 21 say?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+document_specific,What is Article 356 about?,1.0,1.0,0.667,1.0,1.0,1.0,1.0,1.0
+document_specific,What is Article 370?,1.0,1.0,0.333,0.667,0.5,1.0,0.631,1.0
+document_specific,Is the right to property a fundamental right?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+document_specific,What does Article 31 say?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+document_specific,Can peaceful assembly be restricted in the interest of public order?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+document_specific,What does the right to equality say?,1.0,1.0,0.333,0.333,1.0,0.333,1.0,0.631
+document_specific,What are the fundamental duties of citizens?,1.0,1.0,0.333,0.667,1.0,1.0,1.0,1.0
+document_specific,What are the Directive Principles of State Policy?,0.5,0.5,0.333,0.333,1.0,0.5,0.613,0.387
+exceptions,Can the State make special laws only for women?,1.0,1.0,0.667,1.0,1.0,1.0,1.0,1.0
+exceptions,Can the State reserve government jobs for backward classes?,0.0,0.0,0.0,0.0,0.1,0.1,0.387,0.387
+exceptions,Can fundamental rights be suspended during an emergency?,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+exceptions,Can the right to life be suspended during an emergency?,0.5,0.5,0.667,1.0,1.0,1.0,0.92,0.877
+exceptions,Does Article 13 invalidate constitutional amendments that violate fundamental rights?,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+exceptions,Can a person who is not an MP be appointed as a Union Minister?,1.0,1.0,0.333,0.333,1.0,0.5,1.0,0.631
+exceptions,Can a person who is not an MLA become a State Minister?,1.0,1.0,0.667,0.667,1.0,1.0,1.0,1.0
+exceptions,Can citizens be stopped from moving freely in Scheduled Tribe areas?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+exceptions,On what grounds can free speech be restricted?,1.0,1.0,0.333,0.333,1.0,0.5,1.0,0.631
+exceptions,Can the Vice-President act as President?,0.0,1.0,0.0,0.333,0.25,1.0,0.5,1.0
+keyword_trap,Can the Governor pardon a person sentenced to death?,1.0,1.0,0.667,0.667,1.0,1.0,1.0,1.0
+keyword_trap,What is the minimum age to become President of India?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+keyword_trap,What is the minimum age to become a member of the Lok Sabha?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+keyword_trap,Who can issue Ordinances when the legislature is not in session?,0.5,0.5,0.667,0.333,1.0,1.0,0.85,0.92
+keyword_trap,Which court can issue a writ of habeas corpus?,1.0,1.0,0.667,0.667,1.0,0.5,0.92,0.693
+keyword_trap,What is the maximum gap allowed between two sessions of Parliament?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+keyword_trap,Can the President be a member of Parliament?,1.0,1.0,0.333,0.333,0.333,1.0,0.5,1.0
+keyword_trap,Who appoints the judges of a High Court?,0.0,1.0,0.0,0.333,0.2,1.0,0.387,1.0
+keyword_trap,Who is the supreme commander of the Defence Forces?,0.0,1.0,0.0,0.333,0.25,1.0,0.431,1.0
+keyword_trap,What is a Money Bill?,1.0,1.0,0.667,0.333,1.0,0.333,1.0,0.631
+negation,Who is NOT protected by the arrest and detention safeguards?,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+negation,Within how many hours must an arrested person be produced before a magistrate?,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+negation,What can the Rajya Sabha NOT do with a Money Bill?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+negation,Which titles is the State NOT allowed to confer?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+negation,Can a non-citizen holding a public office accept a foreign title without permission?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+negation,Is religious instruction allowed in government-funded schools?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+negation,Can the Council of States be dissolved?,0.0,1.0,0.0,0.333,0.167,1.0,0.5,1.0
+out_of_corpus,When was the right to education added to the Constitution?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+out_of_corpus,Which amendment inserted Article 21A?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+synonyms,Does an accused person have the right to remain silent?,0.0,1.0,0.0,0.333,0.167,0.5,0.387,0.631
+synonyms,Can the government ban a peaceful protest?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+synonyms,Is child labour allowed in India?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+synonyms,Is human trafficking illegal?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+synonyms,Can the President be sued in court?,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+synonyms,How can the President be removed from office?,0.5,0.5,0.333,0.333,0.5,0.333,0.624,0.571
+synonyms,At what age can a citizen vote?,1.0,1.0,0.333,0.333,1.0,1.0,1.0,1.0
+synonyms,What is the national language of India?,1.0,1.0,0.333,0.333,0.5,0.333,0.631,0.5
+synonyms,Is caste discrimination illegal?,0.5,0.5,1.0,1.0,1.0,1.0,0.613,0.613
+synonyms,Is the President immune from court proceedings?,0.0,1.0,0.0,0.667,0.2,1.0,0.387,1.0

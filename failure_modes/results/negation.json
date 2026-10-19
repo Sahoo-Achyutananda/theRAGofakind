@@ -652,5 +652,114 @@
     },
     "answer_baseline": "Based on the provided context:\n\n* **Wholly State-funded institutions:** No religious instruction is allowed in any educational institution that is wholly maintained out of State funds [Article 28(1)]. \n* **State-administered institutions established under a trust/endowment:** Religious instruction is permitted if the institution is administered by the State but was established under an endowment or trust that requires religious instruction to be imparted [Article 28(2)].\n* **State-aided or recognized institutions:** Religious instruction may be imparted, but no person attending an institution receiving aid out of State funds (or recognized by the State) can be required to participate in it unless they (or their guardian, if a minor) give their consent [Article 28(3)].",
     "answer_reranked": "Based on the provided context:\n\n* **No religious instruction** is allowed in any educational institution that is wholly maintained out of State funds (Article 28(1)).\n* **Exception for State-administered institutions under trust/endowment:** Religious instruction is permitted if the institution, though administered by the State, was established under an endowment or trust requiring religious instruction to be imparted (Article 28(2)).\n* **Institutions receiving State aid:** In an educational institution receiving aid out of State funds or recognised by the State, religious instruction may be imparted, but no person attending can be required to take part in it or attend religious worship unless they (or their guardian, if they are a minor) give consent (Article 28(3))."
+  },
+  {
+    "query": "Can the Council of States be dissolved?",
+    "expected_articles": [
+      "83"
+    ],
+    "relevant_chunks": [
+      "83_0"
+    ],
+    "note": "Answer is a negative: 83(1) 'shall not be subject to dissolution'",
+    "verdict": "rescued",
+    "expected_ranks": {
+      "baseline": [
+        6
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "172_0",
+      "80_0",
+      "80_1"
+    ],
+    "reranked_top3": [
+      "83_0",
+      "172_0",
+      "90_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "83_0",
+        "bi_rank": 6,
+        "ce_rank": 1,
+        "bi_score": 0.5441,
+        "ce_score": 7.0906
+      },
+      {
+        "chunk_id": "172_0",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "bi_score": 0.6508,
+        "ce_score": 3.884
+      },
+      {
+        "chunk_id": "90_0",
+        "bi_rank": 7,
+        "ce_rank": 3,
+        "bi_score": 0.5439,
+        "ce_score": 3.2407
+      },
+      {
+        "chunk_id": "80_1",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.5676,
+        "ce_score": -0.1632
+      },
+      {
+        "chunk_id": "80_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "bi_score": 0.6023,
+        "ce_score": -1.0749
+      },
+      {
+        "chunk_id": "80_4",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.5655,
+        "ce_score": -1.5313
+      },
+      {
+        "chunk_id": "80_3",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "bi_score": 0.5453,
+        "ce_score": -1.9895
+      },
+      {
+        "chunk_id": "243U_4",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "bi_score": 0.5426,
+        "ce_score": -3.0258
+      },
+      {
+        "chunk_id": "243U_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.5343,
+        "ce_score": -4.8007
+      },
+      {
+        "chunk_id": "239_1",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.5281,
+        "ce_score": -9.3046
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 241.9,
+      "rerank": 525.5,
+      "llm_baseline": 3442.5,
+      "llm_reranked": 2701.0
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "No, the Council of States cannot be dissolved. According to Article 83(1), the Council of States shall not be subject to dissolution, but as nearly as possible one-third of its members shall retire on the expiration of every second year."
   }
 ]

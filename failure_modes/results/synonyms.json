@@ -103,7 +103,10 @@
       "llm_reranked": 7300.2
     },
     "answer_baseline": "The provided context does not answer this.",
-    "answer_reranked": "The provided context does not answer this."
+    "answer_reranked": "The provided context does not answer this.",
+    "relevant_chunks": [
+      "20_0"
+    ]
   },
   {
     "query": "Can the government ban a peaceful protest?",
@@ -965,6 +968,122 @@
       "llm_reranked": 4764.4
     },
     "answer_baseline": "Based on the provided context, Article 15 provides for the \"Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth\" (Article 15).",
-    "answer_reranked": "Yes, caste discrimination is prohibited based on the following provisions:\n\n* **Article 15(1)** provides that the State shall not discriminate against any citizen on grounds only of caste (along with religion, race, sex, place of birth, or any of them).\n* **Article 15(2)** provides that no citizen shall, on grounds only of caste (or religion, race, sex, place of birth, or any of them), be subjected to any disability, liability, restriction, or condition regarding:\n  * Access to shops, public restaurants, hotels, and places of public entertainment; or\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public."
+    "answer_reranked": "Yes, caste discrimination is prohibited based on the following provisions:\n\n* **Article 15(1)** provides that the State shall not discriminate against any citizen on grounds only of caste (along with religion, race, sex, place of birth, or any of them).\n* **Article 15(2)** provides that no citizen shall, on grounds only of caste (or religion, race, sex, place of birth, or any of them), be subjected to any disability, liability, restriction, or condition regarding:\n  * Access to shops, public restaurants, hotels, and places of public entertainment; or\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public.",
+    "relevant_chunks": [
+      "15_0",
+      "15_1"
+    ]
+  },
+  {
+    "query": "Is the President immune from court proceedings?",
+    "expected_articles": [
+      "361"
+    ],
+    "relevant_chunks": [
+      "361_0",
+      "361_1"
+    ],
+    "note": "Text says 'shall not be answerable to any court' and 'no criminal proceedings', never 'immune'",
+    "verdict": "rescued",
+    "expected_ranks": {
+      "baseline": [
+        5,
+        7
+      ],
+      "reranked": [
+        1,
+        2
+      ]
+    },
+    "baseline_top3": [
+      "124_4",
+      "128_0",
+      "356_1"
+    ],
+    "reranked_top3": [
+      "361_1",
+      "361_0",
+      "124_4"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "361_1",
+        "bi_rank": 7,
+        "ce_rank": 1,
+        "bi_score": 0.5293,
+        "ce_score": 0.1138
+      },
+      {
+        "chunk_id": "361_0",
+        "bi_rank": 5,
+        "ce_rank": 2,
+        "bi_score": 0.5438,
+        "ce_score": -0.5874
+      },
+      {
+        "chunk_id": "124_4",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "bi_score": 0.5556,
+        "ce_score": -5.4795
+      },
+      {
+        "chunk_id": "356_1",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "bi_score": 0.5481,
+        "ce_score": -5.5439
+      },
+      {
+        "chunk_id": "128_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "bi_score": 0.5503,
+        "ce_score": -6.3993
+      },
+      {
+        "chunk_id": "143_0",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "bi_score": 0.544,
+        "ce_score": -6.8101
+      },
+      {
+        "chunk_id": "224A_0",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "bi_score": 0.5345,
+        "ce_score": -6.8577
+      },
+      {
+        "chunk_id": "317_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "bi_score": 0.5005,
+        "ce_score": -7.4621
+      },
+      {
+        "chunk_id": "217_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.5105,
+        "ce_score": -8.0781
+      },
+      {
+        "chunk_id": "124_1",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "bi_score": 0.5252,
+        "ce_score": -8.7166
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 37.4,
+      "rerank": 606.3,
+      "llm_baseline": 3084.1,
+      "llm_reranked": 4700.6
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Based on the provided context:\n\n* Under **Article 361(1)**, the President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties. \n* Under **Article 361(1)**, an exception exists where the conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under article 61.\n* Under **Article 361(2)**, the President is immune from criminal proceedings, as no criminal proceedings whatsoever shall be instituted or continued against the President in any court during his term of office."
   }
 ]

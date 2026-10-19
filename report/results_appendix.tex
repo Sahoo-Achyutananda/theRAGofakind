@@ -1,0 +1,224 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,textcomp,amsmath,amssymb}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs,tabularx,array,caption,enumitem,graphicx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue!60!black]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\definecolor{upc}{HTML}{2E7D4F}
+\definecolor{downc}{HTML}{B3403A}
+\newcommand{\up}{\textcolor{upc}{$\blacktriangle$}}
+\newcommand{\down}{\textcolor{downc}{$\blacktriangledown$}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}p{1.8cm}}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+
+{\Large\bfseries Results Appendix: Baseline vs.\ Re-Ranking RAG over the Constitution of India}\par
+\vspace{0.3em}{\small Code and data: \url{https://github.com/Sahoo-Achyutananda/theRAGofakind}}\par\vspace{0.6em}
+All values are computed from the saved runs in \texttt{failure\_modes/results/} and the latency cells of \texttt{rag.ipynb}. \textbf{Baseline} = bi-encoder top 10 $\to$ top 3; \textbf{re-ranked} = the same 10 re-scored by the cross-encoder $\to$ top 3. Relevance is article-level unless stated: a chunk is relevant if its article is in the query's expected list.
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \textbf{First rank}: rank of the first relevant chunk in the top 10 (-- = not in the top 10)
+\item \textbf{Recall@3}: share of the expected articles that appear in the top 3
+\item \textbf{Precision@3}: share of the 3 chunks sent to the LLM that are relevant
+\item \textbf{RR / MRR}: $1/\text{rank}$ of the first relevant chunk (0 if none); MRR is the mean over queries
+\item \textbf{nDCG@10}: every relevant article counts, discounted by $\log_2(\text{rank}+1)$, divided by the ideal ordering
+\end{itemize}
+Cells read baseline$\to$re-ranked; \up\ / \down\ = better / worse after re-ranking.
+
+\section*{A.\quad Failure categories tested}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}p{4.3cm}Yr@{}}\toprule
+Category & What it tests & Queries\\\midrule
+Keyword trap / distractor & The query shares many words with the wrong passage: mostly near-duplicate Union vs.\ State articles (President vs.\ Governor, Parliament vs.\ State Legislature). & 10\\
+Synonyms / different terminology & The user's everyday words differ from the Constitution's legal wording (``remain silent'' vs.\ ``compelled to be a witness against himself''). & 10\\
+Exceptions \& corner cases & The general rule sits in one clause and the exception (``Nothing in this article shall\ldots'', ``Provided that\ldots'') in another. & 10\\
+Negation \& constraints & Questions about what is \emph{not} allowed or who is excluded, where embeddings blur positive and negative statements. & 7\\
+Document-specific & Article-number lookups, omitted articles, cross-references (``the said clause'') and section headings that are not part of the article text. & 9\\
+Out-of-corpus / hallucination checks & The answer is not in the article text (court doctrines, footnote-only amendment history, Schedules); the correct behaviour is to refuse. & 6\\
+\midrule\textbf{Total} & & \textbf{52}\\\bottomrule
+\end{tabularx}\end{center}
+\section*{B.\quad Summary: mean metrics per category}
+Only queries with an expected article are averaged (the four ``refuse'' queries are excluded).
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}YrCCCC@{}}\toprule
+Category & $n$ & Recall@3 & Precision@3 & MRR & nDCG@10\\\midrule
+Keyword trap / distractor & 10 & 0.75$\to$0.95\,\up & 0.40$\to$0.40 & 0.78$\to$0.88\,\up & 0.81$\to$0.92\,\up\\
+Synonyms / different terminology & 10 & 0.50$\to$0.70\,\up & 0.27$\to$0.37\,\up & 0.54$\to$0.62\,\up & 0.56$\to$0.63\,\up\\
+Exceptions \& corner cases & 10 & 0.65$\to$0.75\,\up & 0.47$\to$0.57\,\up & 0.73$\to$0.71\,\down & 0.78$\to$0.75\,\down\\
+Negation \& constraints & 7 & 0.71$\to$0.86\,\up & 0.43$\to$0.48\,\up & 0.74$\to$0.86\,\up & 0.79$\to$0.86\,\up\\
+Document-specific & 9 & 0.61$\to$0.61 & 0.26$\to$0.37\,\up & 0.61$\to$0.54\,\down & 0.58$\to$0.56\,\down\\
+Out-of-corpus / hallucination checks & 2 & 0.50$\to$0.50 & 0.17$\to$0.17 & 0.50$\to$0.50 & 0.50$\to$0.50\\
+\midrule\textbf{All} & \textbf{48} & \textbf{0.64$\to$0.76\,\up} & \textbf{0.35$\to$0.42\,\up} & \textbf{0.67$\to$0.71\,\up} & \textbf{0.69$\to$0.73\,\up}\\\bottomrule
+\end{tabularx}\end{center}
+\begin{center}\small\centering\begin{tabular}{@{}lcc@{}}\toprule Hit rate & Baseline & Re-ranked\\\midrule
+Hit@1 & 0.60 & 0.62\\
+Hit@3 & 0.69 & 0.81\\
+Hit@10 & 0.83 & 0.83\\
+\bottomrule\end{tabular}\end{center}
+Hit@10 is identical by construction: re-ranking only reorders the same 10 chunks. After re-ranking, the first relevant chunk moved \textbf{up in 8}, \textbf{down in 8} and stayed in place in 24 queries; 8 queries had no relevant chunk in the top 10 (Section E).
+\section*{C.\quad Queries and per-query metrics}
+\subsection*{Keyword trap / distractor}
+{\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{1.25cm}cCCCC@{}}\toprule
+Query & Expected & First rank & Recall@3 & Precision@3 & RR & nDCG@10\\\midrule
+Can the Governor pardon a person sentenced to death? & 72, 161 & 1$\to$1 & 1.00$\to$1.00 & 0.67$\to$0.67 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What is the minimum age to become President of India? & 58 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What is the minimum age to become a member of the Lok Sabha? & 84 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Who can issue Ordinances when the legislature is not in session? & 123, 213 & 1$\to$1 & 0.50$\to$0.50 & 0.67$\to$0.33\,\down & 1.00$\to$1.00 & 0.85$\to$0.92\,\up\\
+Which court can issue a writ of habeas corpus? & 32, 226 & 1$\to$2 & 1.00$\to$1.00 & 0.67$\to$0.67 & 1.00$\to$0.50\,\down & 0.92$\to$0.69\,\down\\
+What is the maximum gap allowed between two sessions of Parliament? & 85 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can the President be a member of Parliament? & 59 & 3$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 0.33$\to$1.00\,\up & 0.50$\to$1.00\,\up\\
+Who appoints the judges of a High Court? & 217 & 5$\to$1 & 0.00$\to$1.00\,\up & 0.00$\to$0.33\,\up & 0.20$\to$1.00\,\up & 0.39$\to$1.00\,\up\\
+Who is the supreme commander of the Defence Forces? & 53 & 4$\to$1 & 0.00$\to$1.00\,\up & 0.00$\to$0.33\,\up & 0.25$\to$1.00\,\up & 0.43$\to$1.00\,\up\\
+What is a Money Bill? & 110 & 1$\to$3 & 1.00$\to$1.00 & 0.67$\to$0.33\,\down & 1.00$\to$0.33\,\down & 1.00$\to$0.63\,\down\\
+\bottomrule\end{tabularx}}
+\subsection*{Synonyms / different terminology}
+{\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{1.25cm}cCCCC@{}}\toprule
+Query & Expected & First rank & Recall@3 & Precision@3 & RR & nDCG@10\\\midrule
+Does an accused person have the right to remain silent? & 20 & 6$\to$2 & 0.00$\to$1.00\,\up & 0.00$\to$0.33\,\up & 0.17$\to$0.50\,\up & 0.39$\to$0.63\,\up\\
+Can the government ban a peaceful protest? & 19 & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+Is child labour allowed in India? & 24 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Is human trafficking illegal? & 23 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can the President be sued in court? & 361 & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+How can the President be removed from office? & 56, 61 & 2$\to$3 & 0.50$\to$0.50 & 0.33$\to$0.33 & 0.50$\to$0.33\,\down & 0.62$\to$0.57\,\down\\
+At what age can a citizen vote? & 326 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What is the national language of India? & 343 & 2$\to$3 & 1.00$\to$1.00 & 0.33$\to$0.33 & 0.50$\to$0.33\,\down & 0.63$\to$0.50\,\down\\
+Is caste discrimination illegal? & 15, 17 & 1$\to$1 & 0.50$\to$0.50 & 1.00$\to$1.00 & 1.00$\to$1.00 & 0.61$\to$0.61\\
+Is the President immune from court proceedings? & 361 & 5$\to$1 & 0.00$\to$1.00\,\up & 0.00$\to$0.67\,\up & 0.20$\to$1.00\,\up & 0.39$\to$1.00\,\up\\
+\bottomrule\end{tabularx}}
+\subsection*{Exceptions \& corner cases}
+{\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{1.25cm}cCCCC@{}}\toprule
+Query & Expected & First rank & Recall@3 & Precision@3 & RR & nDCG@10\\\midrule
+Can the State make special laws only for women? & 15 & 1$\to$1 & 1.00$\to$1.00 & 0.67$\to$1.00\,\up & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can the State reserve government jobs for backward classes? & 16 & 10$\to$10 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.10$\to$0.10 & 0.39$\to$0.39\\
+Can fundamental rights be suspended during an emergency? & 359 & 1$\to$1 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can the right to life be suspended during an emergency? & 359, 21 & 1$\to$1 & 0.50$\to$0.50 & 0.67$\to$1.00\,\up & 1.00$\to$1.00 & 0.92$\to$0.88\,\down\\
+Does Article 13 invalidate constitutional amendments that violate fundamental rights? & 13 & 1$\to$1 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can a person who is not an MP be appointed as a Union Minister? & 75 & 1$\to$2 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$0.50\,\down & 1.00$\to$0.63\,\down\\
+Can a person who is not an MLA become a State Minister? & 164 & 1$\to$1 & 1.00$\to$1.00 & 0.67$\to$0.67 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can citizens be stopped from moving freely in Scheduled Tribe areas? & 19 & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+On what grounds can free speech be restricted? & 19 & 1$\to$2 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$0.50\,\down & 1.00$\to$0.63\,\down\\
+Can the Vice-President act as President? & 65 & 4$\to$1 & 0.00$\to$1.00\,\up & 0.00$\to$0.33\,\up & 0.25$\to$1.00\,\up & 0.50$\to$1.00\,\up\\
+\bottomrule\end{tabularx}}
+\subsection*{Negation \& constraints}
+{\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{1.25cm}cCCCC@{}}\toprule
+Query & Expected & First rank & Recall@3 & Precision@3 & RR & nDCG@10\\\midrule
+Who is NOT protected by the arrest and detention safeguards? & 22 & 1$\to$1 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Within how many hours must an arrested person be produced before a magistrate? & 22 & 1$\to$1 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What can the Rajya Sabha NOT do with a Money Bill? & 109 & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+Which titles is the State NOT allowed to confer? & 18 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can a non-citizen holding a public office accept a foreign title without permission? & 18 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Is religious instruction allowed in government-funded schools? & 28 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Can the Council of States be dissolved? & 83 & 6$\to$1 & 0.00$\to$1.00\,\up & 0.00$\to$0.33\,\up & 0.17$\to$1.00\,\up & 0.50$\to$1.00\,\up\\
+\bottomrule\end{tabularx}}
+\subsection*{Document-specific}
+{\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{1.25cm}cCCCC@{}}\toprule
+Query & Expected & First rank & Recall@3 & Precision@3 & RR & nDCG@10\\\midrule
+What does Article 21 say? & 21 & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What is Article 356 about? & 356 & 1$\to$1 & 1.00$\to$1.00 & 0.67$\to$1.00\,\up & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What is Article 370? & 370 & 2$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.67\,\up & 0.50$\to$1.00\,\up & 0.63$\to$1.00\,\up\\
+Is the right to property a fundamental right? & 300A & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+What does Article 31 say? & 31 & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+Can peaceful assembly be restricted in the interest of public order? & 19 & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+What does the right to equality say? & 14 & 1$\to$3 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$0.33\,\down & 1.00$\to$0.63\,\down\\
+What are the fundamental duties of citizens? & 51A & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.67\,\up & 1.00$\to$1.00 & 1.00$\to$1.00\\
+What are the Directive Principles of State Policy? & 36, 37 & 1$\to$2 & 0.50$\to$0.50 & 0.33$\to$0.33 & 1.00$\to$0.50\,\down & 0.61$\to$0.39\,\down\\
+\bottomrule\end{tabularx}}
+\subsection*{Out-of-corpus / hallucination checks}
+{\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{1.25cm}cCCCC@{}}\toprule
+Query & Expected & First rank & Recall@3 & Precision@3 & RR & nDCG@10\\\midrule
+Is the right to privacy a fundamental right? & \emph{refuse} & \multicolumn{5}{c}{\emph{no article to retrieve: judged on the answer}}\\
+When was the right to education added to the Constitution? & 21A & 1$\to$1 & 1.00$\to$1.00 & 0.33$\to$0.33 & 1.00$\to$1.00 & 1.00$\to$1.00\\
+Which amendment inserted Article 21A? & 21A & --$\to$-- & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00 & 0.00$\to$0.00\\
+What is the basic structure doctrine? & \emph{refuse} & \multicolumn{5}{c}{\emph{no article to retrieve: judged on the answer}}\\
+What is the definition of an illiterate person in the Constitution? & \emph{refuse} & \multicolumn{5}{c}{\emph{no article to retrieve: judged on the answer}}\\
+What does the First Schedule list? & \emph{refuse} & \multicolumn{5}{c}{\emph{no article to retrieve: judged on the answer}}\\
+\bottomrule\end{tabularx}}
+\clearpage
+\section*{D.\quad Selected rescue cases (clause-level relevance)}
+These cases were chosen \emph{because} re-ranking promoted the answering clause, so their averages are biased in favour of re-ranking; they illustrate the mechanism rather than overall performance.
+\begin{center}\footnotesize\begin{tabularx}{\linewidth}{@{}Y>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{2.1cm}CCC@{}}\toprule
+Query & Answering chunks (bi$\to$ce rank) & Baseline top 3 & Re-ranked top 3 & Recall@3 & RR & nDCG@10\\\midrule
+What is Article 370? & 370\_0 8$\to$2 & 232\_0, 370\_3, 145\_2 & 370\_3, 370\_0, 344\_5 & 0.00$\to$1.00\,\up & 0.12$\to$0.50\,\up & 0.32$\to$0.63\,\up\\
+Can the Vice-President act as President? & 65\_0 4$\to$1 & 66\_3, 71\_0, 66\_1 & 65\_0, 64\_0, 66\_1 & 0.00$\to$1.00\,\up & 0.25$\to$1.00\,\up & 0.43$\to$1.00\,\up\\
+Who appoints the judges of a High Court? & 217\_0 7$\to$1 & 233\_0, 224A\_0, 224\_0 & 217\_0, 216\_0, 229\_0 & 0.00$\to$1.00\,\up & 0.14$\to$1.00\,\up & 0.33$\to$1.00\,\up\\
+Who is the supreme commander of the Defence Forces? & 53\_0 4$\to$1 & 148\_0, 33\_0, 76\_0 & 53\_0, 33\_0, 146\_0 & 0.00$\to$1.00\,\up & 0.25$\to$1.00\,\up & 0.43$\to$1.00\,\up\\
+Can the Council of States be dissolved? & 83\_0 6$\to$1 & 172\_0, 80\_0, 80\_1 & 83\_0, 172\_0, 90\_0 & 0.00$\to$1.00\,\up & 0.17$\to$1.00\,\up & 0.36$\to$1.00\,\up\\
+Does an accused person have the right to remain silent? & 20\_0 6$\to$2 & 311\_1, 22\_5, 22\_0 & 22\_0, 20\_0, 22\_4 & 0.00$\to$1.00\,\up & 0.17$\to$0.50\,\up & 0.36$\to$0.63\,\up\\
+Is caste discrimination illegal? & 15\_0 6$\to$1, 15\_1 10$\to$3 & 15\_3, 15\_4, 15\_6 & 15\_0, 15\_3, 15\_1 & 0.00$\to$1.00\,\up & 0.17$\to$1.00\,\up & 0.40$\to$0.92\,\up\\
+Is the President immune from court proceedings? & 361\_1 7$\to$1, 361\_0 5$\to$2 & 124\_4, 128\_0, 356\_1 & 361\_1, 361\_0, 124\_4 & 0.00$\to$1.00\,\up & 0.20$\to$1.00\,\up & 0.44$\to$1.00\,\up\\
+\midrule\textbf{Mean} & & & & \textbf{0.00$\to$1.00\,\up} & \textbf{0.18$\to$0.88\,\up} & \textbf{0.38$\to$0.90\,\up}\\\bottomrule
+\end{tabularx}\end{center}
+\subsection*{Answers (same prompt and model for both pipelines)}
+\textbf{What is Article 370?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} Based on the provided context, Article 370 contains ``Temporary provisions with respect to the State of Jammu and Kashmir'' (Article 370). Under clause (3) of Article 370, the President may declare by public notification that the article shall cease to be operative, or shall be operative only with specified exceptions and modifications from a date he specifies, provided that the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370(3)).
+\item \emph{Answer 2 (re-ranked):} Based on the provided context, Article 370 outlines ``Temporary provisions with respect to the State of Jammu and Kashmir'' [Article 370]. Its main provisions include: \textbullet{} \textbf{Non-applicability of Article 238:} The provisions of Article 238 shall not apply to the State of Jammu and Kashmir [Article 370(1)(a)]. \textbullet{} \textbf{Limitation on Parliament's Legislative Power:} Parliament's power to make laws for Jammu and Kashmir is limited to matters in the Union List and Concurrent List that the President declares---in consultation with the State Government---correspond to the Instrument of Accession [Article 370(1)(b)(i)], as well as other matters in those Lists specified by the President with the concurrence of the State Government [Article 370(1)(b)(ii)]. \textbullet{} \textbf{Definition of State Government:} The ``Government of the State'' is defined as the person recognized by the President as the Maharaja of Jammu and Kashmir acting on advice [Article 370(1)]. \textbullet{} \textbf{Cessation or Modification:} The President may declare by public notification that Article 370 shall cease to be operative or shall be operative only with specified exceptions and modifications, provided that the recommendation of the Legislative Assembly of the State is necessary before issuing such a notification [Article 370(3)].
+\end{itemize}
+\textbf{Can the Vice-President act as President?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} The provided context does not answer this.
+\item \emph{Answer 2 (re-ranked):} Yes, the Vice-President can act as President under the following conditions: \textbullet{} In the event of a vacancy in the office of the President due to death, resignation, removal, or otherwise, the Vice-President shall act as President until a newly elected President enters upon his office (Article 65(1)). \textbullet{} When the President is unable to discharge his functions owing to absence, illness, or any other cause, the Vice-President shall discharge his functions until the President resumes his duties (Article 65(2)).
+\end{itemize}
+\textbf{Who appoints the judges of a High Court?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} Based on the provided context, the appointment of specific types of High Court judges is as follows: \textbullet{} \textbf{Additional and Acting Judges:} The President, in consultation with the National Judicial Appointments Commission, appoints additional and acting Judges of a High Court [Article 224(1), Article 224(2)]. \textbullet{} \textbf{Retired Judges sitting as Judges:} The National Judicial Appointments Commission, on a reference made to it by the Chief Justice of a High Court and with the previous consent of the President, may request a retired judge to sit and act as a Judge of a High Court [Article 224A]. The provided context does not contain information regarding who appoints permanent or regular High Court judges generally.
+\item \emph{Answer 2 (re-ranked):} Based on the provided context, the judges of a High Court are appointed by the President (Article 216, Article 217(1)). Specifically, Article 217(1) states that every Judge of a High Court shall be appointed by the President by warrant under his hand and seal. Additionally, Article 216 mentions that a High Court consists of a Chief Justice and such other Judges as the President may deem necessary to appoint.
+\end{itemize}
+\textbf{Who is the supreme commander of the Defence Forces?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} The provided context does not answer this.
+\item \emph{Answer 2 (re-ranked):} The supreme command of the Defence Forces of the Union is vested in the President (Article 53(2)).
+\end{itemize}
+\textbf{Can the Council of States be dissolved?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} The provided context does not answer this.
+\item \emph{Answer 2 (re-ranked):} No, the Council of States cannot be dissolved. According to Article 83(1), the Council of States shall not be subject to dissolution, but as nearly as possible one-third of its members shall retire on the expiration of every second year.
+\end{itemize}
+\textbf{Does an accused person have the right to remain silent?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} The provided context does not answer this.
+\item \emph{Answer 2 (re-ranked):} The provided context does not answer this.
+\end{itemize}
+\textbf{Is caste discrimination illegal?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} Based on the provided context, Article 15 provides for the ``Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth'' [Article 15]. However, the context specifies that Article 15 does not prevent the State from making special provisions for the advancement of socially and educationally backward classes of citizens, the Scheduled Castes, or the Scheduled Tribes, including provisions related to admission to educational institutions [Article 15(4), Article 15(5)].
+\item \emph{Answer 2 (re-ranked):} Yes, caste discrimination is prohibited under the Constitution of India: \textbullet{} \textbf{Article 15(1)} states that the State shall not discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth, or any of them. \textbullet{} \textbf{Article 15(2)} provides that no citizen shall, on grounds only of religion, race, caste, sex, place of birth, or any of them, be subjected to any disability, liability, restriction, or condition regarding: \textbullet{} Access to shops, public restaurants, hotels, and places of public entertainment [Article 15(2)(a)]. \textbullet{} The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public [Article 15(2)(b)].
+\end{itemize}
+\textbf{Is the President immune from court proceedings?}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item \emph{Answer 1 (baseline):} The provided context does not answer this.
+\item \emph{Answer 2 (re-ranked):} Based on the provided context, the President has immunity from certain court proceedings: \textbullet{} Under \textbf{Article 361(1)}, the President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties. \textbullet{} However, under \textbf{Article 361(1)}, this immunity is limited in that the conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under Article 61. \textbullet{} Under \textbf{Article 361(2)}, no criminal proceedings whatsoever can be instituted or continued against the President in any court during his term of office.
+\end{itemize}
+\section*{E.\quad Queries with no relevant chunk in the top 10}
+Re-ranking cannot help these: the cross-encoder only re-orders the bi-encoder's top 10. \emph{Actual rank} is the first relevant chunk's position when all 1{,}035 chunks are ranked.
+\begin{center}\footnotesize\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.6cm}Ycc>{\centering\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.6cm}@{}}\toprule
+Category & Query & Expected & Actual rank & Cosine (vs.\ \#10) & Retrieved instead (top 3)\\\midrule
+Synonyms / different terminology & Can the government ban a peaceful protest? & 19 & 12 & 0.327 vs.\ 0.330 & 359\_3, 359\_0, 123\_2\\
+Synonyms / different terminology & Can the President be sued in court? & 361 & 11 & 0.433 vs.\ 0.438 & 356\_1, 224A\_0, 222\_0\\
+Exceptions \& corner cases & Can citizens be stopped from moving freely in Scheduled Tribe areas? & 19 & 29 & 0.358 vs.\ 0.404 & 342\_0, 366\_25, 244\_0\\
+Negation \& constraints & What can the Rajya Sabha NOT do with a Money Bill? & 109 & 12 & 0.543 vs.\ 0.549 & 117\_2, 110\_0, 198\_0\\
+Document-specific & Is the right to property a fundamental right? & 300A & 15 & 0.389 vs.\ 0.408 & 31\_0, 13\_3, 31A\_0\\
+Document-specific & What does Article 31 say? & 31 & 15 & 0.540 vs.\ 0.549 & 31D\_0, 32A\_0, 31B\_0\\
+Document-specific & Can peaceful assembly be restricted in the interest of public order? & 19 & 12 & 0.394 vs.\ 0.395 & 359\_5, 33\_0, 121\_0\\
+Out-of-corpus / hallucination checks & Which amendment inserted Article 21A? & 21A & 38 & 0.534 vs.\ 0.614 & 242\_0, 257A\_0, 31D\_0\\
+\bottomrule\end{tabularx}\end{center}
+A top-20 candidate pool would contain the relevant chunk for \textbf{6 of 8} of these queries, and a top-50 pool for \textbf{8 of 8}.
+\section*{F.\quad Latency}
+Setup: CPU; 52 queries $\times$ 3 runs (after warm-up); LLM: 120 saved calls.
+\begin{center}\small\centering\begin{tabular}{@{}lrrr@{}}\toprule Stage & Mean (ms) & Median (ms) & p95 (ms)\\\midrule
+Bi-encoder retrieval (top 10) & 21.3 & 21.0 & 24.3\\
+Cross-encoder re-ranking (10 pairs) & 477.0 & 508.9 & 568.0\\
+Pipeline 1 retrieval total & 21.3 & 21.0 & 24.3\\
+Pipeline 2 retrieval total (retr + rerank) & 498.3 & 529.8 & 590.5\\
+LLM generation (Gemini, per call) & 4380.2 & 3693.0 & 8540.7\\
+\bottomrule\end{tabular}\end{center}
+\begin{itemize}[nosep,leftmargin=1.2em]
+\item Re-ranking 10 chunks costs $\sim$22x the bi-encoder search over all 1035 chunks.
+\item Per chunk: bi-encoder $\sim$0.021 ms (1 query encoding + dot products), cross-encoder $\sim$47.7 ms (a full transformer pass per pair)
+\end{itemize}
+\begin{center}\includegraphics[width=0.92\linewidth]{../figures/latency_end_to_end.png}\captionof{figure}{Median end-to-end time per query, split by stage.}\end{center}
+\begin{center}\includegraphics[width=0.92\linewidth]{../figures/latency_retrieval_vs_rerank.png}\captionof{figure}{Bi-encoder retrieval vs.\ cross-encoder re-ranking, every timed query.}\end{center}
+\end{document}

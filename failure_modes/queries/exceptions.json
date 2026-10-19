@@ -7,5 +7,6 @@
   {"query": "Can a person who is not an MP be appointed as a Union Minister?", "expected_articles": ["75"], "note": "Allowed, but only for six consecutive months - 75(5)"},
   {"query": "Can a person who is not an MLA become a State Minister?", "expected_articles": ["164"], "note": "Same six-month rule, State version - 164(4)"},
   {"query": "Can citizens be stopped from moving freely in Scheduled Tribe areas?", "expected_articles": ["19"], "note": "Right is in 19(1)(d); the restriction is in 19(5)"},
-  {"query": "On what grounds can free speech be restricted?", "expected_articles": ["19"], "note": "19(1)(a) grants the right; restrictions are in 19(2)"}
+  {"query": "On what grounds can free speech be restricted?", "expected_articles": ["19"], "note": "19(1)(a) grants the right; restrictions are in 19(2)"},
+  {"query": "Can the Vice-President act as President?", "expected_articles": ["65"], "relevant_chunks": ["65_0"], "note": "Only in a vacancy or when the President is unable to act - 65(1)/(2)"}
 ]

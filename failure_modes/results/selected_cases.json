@@ -1,0 +1,692 @@
+[
+  {
+    "query": "What is Article 370?",
+    "relevant": [
+      "370_0"
+    ],
+    "baseline_top3": [
+      "232_0",
+      "370_3",
+      "145_2"
+    ],
+    "reranked_top3": [
+      "370_3",
+      "370_0",
+      "344_5"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "370_3",
+        "bi_rank": 2,
+        "ce_rank": 1,
+        "ce_score": 7.8094
+      },
+      {
+        "chunk_id": "370_0",
+        "bi_rank": 8,
+        "ce_rank": 2,
+        "ce_score": 5.7368
+      },
+      {
+        "chunk_id": "344_5",
+        "bi_rank": 10,
+        "ce_rank": 3,
+        "ce_score": -2.9208
+      },
+      {
+        "chunk_id": "323B_5",
+        "bi_rank": 9,
+        "ce_rank": 4,
+        "ce_score": -3.5674
+      },
+      {
+        "chunk_id": "323B_1",
+        "bi_rank": 4,
+        "ce_rank": 5,
+        "ce_score": -3.5959
+      },
+      {
+        "chunk_id": "232_0",
+        "bi_rank": 1,
+        "ce_rank": 6,
+        "ce_score": -3.7834
+      },
+      {
+        "chunk_id": "145_2",
+        "bi_rank": 3,
+        "ce_rank": 7,
+        "ce_score": -4.1105
+      },
+      {
+        "chunk_id": "338B_10",
+        "bi_rank": 7,
+        "ce_rank": 8,
+        "ce_score": -4.2116
+      },
+      {
+        "chunk_id": "214_0",
+        "bi_rank": 6,
+        "ce_rank": 9,
+        "ce_score": -5.6769
+      },
+      {
+        "chunk_id": "241_1",
+        "bi_rank": 5,
+        "ce_rank": 10,
+        "ce_score": -5.9065
+      }
+    ],
+    "answer_baseline": "Based on the provided context, Article 370 contains \"Temporary provisions with respect to the State of Jammu and Kashmir\" (Article 370). \n\nUnder clause (3) of Article 370, the President may declare by public notification that the article shall cease to be operative, or shall be operative only with specified exceptions and modifications from a date he specifies, provided that the recommendation of the Legislative Assembly of the State is necessary before the President issues such a notification (Article 370(3)).",
+    "answer_reranked": "Based on the provided context, Article 370 outlines \"Temporary provisions with respect to the State of Jammu and Kashmir\" [Article 370]. Its main provisions include:\n\n* **Non-applicability of Article 238:** The provisions of Article 238 shall not apply to the State of Jammu and Kashmir [Article 370(1)(a)].\n* **Limitation on Parliament's Legislative Power:** Parliament's power to make laws for Jammu and Kashmir is limited to matters in the Union List and Concurrent List that the President declares—in consultation with the State Government—correspond to the Instrument of Accession [Article 370(1)(b)(i)], as well as other matters in those Lists specified by the President with the concurrence of the State Government [Article 370(1)(b)(ii)].\n* **Definition of State Government:** The \"Government of the State\" is defined as the person recognized by the President as the Maharaja of Jammu and Kashmir acting on advice [Article 370(1)].\n* **Cessation or Modification:** The President may declare by public notification that Article 370 shall cease to be operative or shall be operative only with specified exceptions and modifications, provided that the recommendation of the Legislative Assembly of the State is necessary before issuing such a notification [Article 370(3)].",
+    "latency_ms": {
+      "retrieval": 37.5,
+      "rerank": 819.7,
+      "llm_baseline": 4037.7,
+      "llm_reranked": 6660.6
+    }
+  },
+  {
+    "query": "Can the Vice-President act as President?",
+    "relevant": [
+      "65_0"
+    ],
+    "baseline_top3": [
+      "66_3",
+      "71_0",
+      "66_1"
+    ],
+    "reranked_top3": [
+      "65_0",
+      "64_0",
+      "66_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "65_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "ce_score": 7.9326
+      },
+      {
+        "chunk_id": "64_0",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "ce_score": 4.2992
+      },
+      {
+        "chunk_id": "66_1",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "ce_score": 3.4258
+      },
+      {
+        "chunk_id": "66_3",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "ce_score": 2.7945
+      },
+      {
+        "chunk_id": "71_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "ce_score": 2.7665
+      },
+      {
+        "chunk_id": "66_2",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "ce_score": 2.5584
+      },
+      {
+        "chunk_id": "66_0",
+        "bi_rank": 8,
+        "ce_rank": 7,
+        "ce_score": 1.8623
+      },
+      {
+        "chunk_id": "67_0",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "ce_score": 1.3211
+      },
+      {
+        "chunk_id": "63_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "ce_score": 0.9489
+      },
+      {
+        "chunk_id": "56_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "ce_score": -0.9182
+      }
+    ],
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Yes, the Vice-President can act as President under the following conditions:\n\n* In the event of a vacancy in the office of the President due to death, resignation, removal, or otherwise, the Vice-President shall act as President until a newly elected President enters upon his office (Article 65(1)).\n* When the President is unable to discharge his functions owing to absence, illness, or any other cause, the Vice-President shall discharge his functions until the President resumes his duties (Article 65(2)).",
+    "latency_ms": {
+      "retrieval": 50.0,
+      "rerank": 1009.1,
+      "llm_baseline": 3340.9,
+      "llm_reranked": 3980.1
+    }
+  },
+  {
+    "query": "Who appoints the judges of a High Court?",
+    "relevant": [
+      "217_0"
+    ],
+    "baseline_top3": [
+      "233_0",
+      "224A_0",
+      "224_0"
+    ],
+    "reranked_top3": [
+      "217_0",
+      "216_0",
+      "229_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "217_0",
+        "bi_rank": 7,
+        "ce_rank": 1,
+        "ce_score": 7.4888
+      },
+      {
+        "chunk_id": "216_0",
+        "bi_rank": 6,
+        "ce_rank": 2,
+        "ce_score": 7.2355
+      },
+      {
+        "chunk_id": "229_0",
+        "bi_rank": 4,
+        "ce_rank": 3,
+        "ce_score": 6.4092
+      },
+      {
+        "chunk_id": "224A_0",
+        "bi_rank": 2,
+        "ce_rank": 4,
+        "ce_score": 6.3831
+      },
+      {
+        "chunk_id": "217_3",
+        "bi_rank": 5,
+        "ce_rank": 5,
+        "ce_score": 6.3462
+      },
+      {
+        "chunk_id": "224_0",
+        "bi_rank": 3,
+        "ce_rank": 6,
+        "ce_score": 6.0813
+      },
+      {
+        "chunk_id": "233_0",
+        "bi_rank": 1,
+        "ce_rank": 7,
+        "ce_score": 5.6209
+      },
+      {
+        "chunk_id": "234_0",
+        "bi_rank": 9,
+        "ce_rank": 8,
+        "ce_score": 2.956
+      },
+      {
+        "chunk_id": "128_0",
+        "bi_rank": 10,
+        "ce_rank": 9,
+        "ce_score": 2.8009
+      },
+      {
+        "chunk_id": "124_3",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "ce_score": 2.7177
+      }
+    ],
+    "answer_baseline": "Based on the provided context, the appointment of specific types of High Court judges is as follows:\n\n* **Additional and Acting Judges:** The President, in consultation with the National Judicial Appointments Commission, appoints additional and acting Judges of a High Court [Article 224(1), Article 224(2)].\n* **Retired Judges sitting as Judges:** The National Judicial Appointments Commission, on a reference made to it by the Chief Justice of a High Court and with the previous consent of the President, may request a retired judge to sit and act as a Judge of a High Court [Article 224A].\n\nThe provided context does not contain information regarding who appoints permanent or regular High Court judges generally.",
+    "answer_reranked": "Based on the provided context, the judges of a High Court are appointed by the President (Article 216, Article 217(1)). \n\nSpecifically, Article 217(1) states that every Judge of a High Court shall be appointed by the President by warrant under his hand and seal. Additionally, Article 216 mentions that a High Court consists of a Chief Justice and such other Judges as the President may deem necessary to appoint.",
+    "latency_ms": {
+      "retrieval": 23.9,
+      "rerank": 587.9,
+      "llm_baseline": 6463.4,
+      "llm_reranked": 3723.8
+    }
+  },
+  {
+    "query": "Who is the supreme commander of the Defence Forces?",
+    "relevant": [
+      "53_0"
+    ],
+    "baseline_top3": [
+      "148_0",
+      "33_0",
+      "76_0"
+    ],
+    "reranked_top3": [
+      "53_0",
+      "33_0",
+      "146_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "53_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "ce_score": 0.3344
+      },
+      {
+        "chunk_id": "33_0",
+        "bi_rank": 2,
+        "ce_rank": 2,
+        "ce_score": -10.7595
+      },
+      {
+        "chunk_id": "146_0",
+        "bi_rank": 5,
+        "ce_rank": 3,
+        "ce_score": -10.8412
+      },
+      {
+        "chunk_id": "76_0",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "ce_score": -10.8892
+      },
+      {
+        "chunk_id": "60_0",
+        "bi_rank": 8,
+        "ce_rank": 5,
+        "ce_score": -10.9196
+      },
+      {
+        "chunk_id": "148_0",
+        "bi_rank": 1,
+        "ce_rank": 6,
+        "ce_score": -10.93
+      },
+      {
+        "chunk_id": "239AA_6",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "ce_score": -11.0768
+      },
+      {
+        "chunk_id": "69_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "ce_score": -11.0944
+      },
+      {
+        "chunk_id": "78_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "ce_score": -11.1252
+      },
+      {
+        "chunk_id": "338B_2",
+        "bi_rank": 7,
+        "ce_rank": 10,
+        "ce_score": -11.1291
+      }
+    ],
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The supreme command of the Defence Forces of the Union is vested in the President (Article 53(2)).",
+    "latency_ms": {
+      "retrieval": 24.7,
+      "rerank": 452.3,
+      "llm_baseline": 2550.7,
+      "llm_reranked": 2584.4
+    }
+  },
+  {
+    "query": "Can the Council of States be dissolved?",
+    "relevant": [
+      "83_0"
+    ],
+    "baseline_top3": [
+      "172_0",
+      "80_0",
+      "80_1"
+    ],
+    "reranked_top3": [
+      "83_0",
+      "172_0",
+      "90_0"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "83_0",
+        "bi_rank": 6,
+        "ce_rank": 1,
+        "ce_score": 7.0906
+      },
+      {
+        "chunk_id": "172_0",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "ce_score": 3.884
+      },
+      {
+        "chunk_id": "90_0",
+        "bi_rank": 7,
+        "ce_rank": 3,
+        "ce_score": 3.2407
+      },
+      {
+        "chunk_id": "80_1",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "ce_score": -0.1632
+      },
+      {
+        "chunk_id": "80_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "ce_score": -1.0749
+      },
+      {
+        "chunk_id": "80_4",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "ce_score": -1.5313
+      },
+      {
+        "chunk_id": "80_3",
+        "bi_rank": 5,
+        "ce_rank": 7,
+        "ce_score": -1.9895
+      },
+      {
+        "chunk_id": "243U_4",
+        "bi_rank": 8,
+        "ce_rank": 8,
+        "ce_score": -3.0258
+      },
+      {
+        "chunk_id": "243U_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "ce_score": -4.8007
+      },
+      {
+        "chunk_id": "239_1",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "ce_score": -9.3046
+      }
+    ],
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "No, the Council of States cannot be dissolved. According to Article 83(1), the Council of States shall not be subject to dissolution, but as nearly as possible one-third of its members shall retire on the expiration of every second year.",
+    "latency_ms": {
+      "retrieval": 28.0,
+      "rerank": 419.2,
+      "llm_baseline": 3821.7,
+      "llm_reranked": 3332.3
+    }
+  },
+  {
+    "query": "Does an accused person have the right to remain silent?",
+    "relevant": [
+      "20_0"
+    ],
+    "baseline_top3": [
+      "311_1",
+      "22_5",
+      "22_0"
+    ],
+    "reranked_top3": [
+      "22_0",
+      "20_0",
+      "22_4"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "22_0",
+        "bi_rank": 3,
+        "ce_rank": 1,
+        "ce_score": -4.7611
+      },
+      {
+        "chunk_id": "20_0",
+        "bi_rank": 6,
+        "ce_rank": 2,
+        "ce_score": -5.4388
+      },
+      {
+        "chunk_id": "22_4",
+        "bi_rank": 7,
+        "ce_rank": 3,
+        "ce_score": -8.9766
+      },
+      {
+        "chunk_id": "311_1",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "ce_score": -9.0098
+      },
+      {
+        "chunk_id": "22_5",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "ce_score": -9.8084
+      },
+      {
+        "chunk_id": "96_0",
+        "bi_rank": 5,
+        "ce_rank": 6,
+        "ce_score": -10.1496
+      },
+      {
+        "chunk_id": "181_0",
+        "bi_rank": 9,
+        "ce_rank": 7,
+        "ce_score": -10.5503
+      },
+      {
+        "chunk_id": "105_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "ce_score": -10.6287
+      },
+      {
+        "chunk_id": "14_0",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "ce_score": -11.0067
+      },
+      {
+        "chunk_id": "121_0",
+        "bi_rank": 4,
+        "ce_rank": 10,
+        "ce_score": -11.0251
+      }
+    ],
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "The provided context does not answer this.",
+    "latency_ms": {
+      "retrieval": 27.6,
+      "rerank": 585.6,
+      "llm_baseline": 3157.5,
+      "llm_reranked": 8435.9
+    }
+  },
+  {
+    "query": "Is caste discrimination illegal?",
+    "relevant": [
+      "15_0",
+      "15_1"
+    ],
+    "baseline_top3": [
+      "15_3",
+      "15_4",
+      "15_6"
+    ],
+    "reranked_top3": [
+      "15_0",
+      "15_3",
+      "15_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "15_0",
+        "bi_rank": 6,
+        "ce_rank": 1,
+        "ce_score": 3.6069
+      },
+      {
+        "chunk_id": "15_3",
+        "bi_rank": 1,
+        "ce_rank": 2,
+        "ce_score": 3.4414
+      },
+      {
+        "chunk_id": "15_1",
+        "bi_rank": 10,
+        "ce_rank": 3,
+        "ce_score": 2.3494
+      },
+      {
+        "chunk_id": "15_2",
+        "bi_rank": 7,
+        "ce_rank": 4,
+        "ce_score": 2.2185
+      },
+      {
+        "chunk_id": "15_6",
+        "bi_rank": 3,
+        "ce_rank": 5,
+        "ce_score": 2.0143
+      },
+      {
+        "chunk_id": "15_4",
+        "bi_rank": 2,
+        "ce_rank": 6,
+        "ce_score": 1.7931
+      },
+      {
+        "chunk_id": "15_5",
+        "bi_rank": 4,
+        "ce_rank": 7,
+        "ce_score": -0.3295
+      },
+      {
+        "chunk_id": "16_4",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "ce_score": -4.9361
+      },
+      {
+        "chunk_id": "338_9",
+        "bi_rank": 8,
+        "ce_rank": 9,
+        "ce_score": -5.6454
+      },
+      {
+        "chunk_id": "341_0",
+        "bi_rank": 9,
+        "ce_rank": 10,
+        "ce_score": -6.1214
+      }
+    ],
+    "answer_baseline": "Based on the provided context, Article 15 provides for the \"Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth\" [Article 15]. \n\nHowever, the context specifies that Article 15 does not prevent the State from making special provisions for the advancement of socially and educationally backward classes of citizens, the Scheduled Castes, or the Scheduled Tribes, including provisions related to admission to educational institutions [Article 15(4), Article 15(5)].",
+    "answer_reranked": "Yes, caste discrimination is prohibited under the Constitution of India:\n\n* **Article 15(1)** states that the State shall not discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth, or any of them.\n* **Article 15(2)** provides that no citizen shall, on grounds only of religion, race, caste, sex, place of birth, or any of them, be subjected to any disability, liability, restriction, or condition regarding:\n  * Access to shops, public restaurants, hotels, and places of public entertainment [Article 15(2)(a)].\n  * The use of wells, tanks, bathing ghats, roads, and places of public resort maintained wholly or partly out of State funds or dedicated to the use of the general public [Article 15(2)(b)].",
+    "latency_ms": {
+      "retrieval": 25.2,
+      "rerank": 550.6,
+      "llm_baseline": 7192.6,
+      "llm_reranked": 4301.2
+    }
+  },
+  {
+    "query": "Is the President immune from court proceedings?",
+    "relevant": [
+      "361_0",
+      "361_1"
+    ],
+    "baseline_top3": [
+      "124_4",
+      "128_0",
+      "356_1"
+    ],
+    "reranked_top3": [
+      "361_1",
+      "361_0",
+      "124_4"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "361_1",
+        "bi_rank": 7,
+        "ce_rank": 1,
+        "ce_score": 0.1138
+      },
+      {
+        "chunk_id": "361_0",
+        "bi_rank": 5,
+        "ce_rank": 2,
+        "ce_score": -0.5874
+      },
+      {
+        "chunk_id": "124_4",
+        "bi_rank": 1,
+        "ce_rank": 3,
+        "ce_score": -5.4795
+      },
+      {
+        "chunk_id": "356_1",
+        "bi_rank": 3,
+        "ce_rank": 4,
+        "ce_score": -5.5439
+      },
+      {
+        "chunk_id": "128_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "ce_score": -6.3993
+      },
+      {
+        "chunk_id": "143_0",
+        "bi_rank": 4,
+        "ce_rank": 6,
+        "ce_score": -6.8101
+      },
+      {
+        "chunk_id": "224A_0",
+        "bi_rank": 6,
+        "ce_rank": 7,
+        "ce_score": -6.8577
+      },
+      {
+        "chunk_id": "317_0",
+        "bi_rank": 10,
+        "ce_rank": 8,
+        "ce_score": -7.4621
+      },
+      {
+        "chunk_id": "217_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "ce_score": -8.0781
+      },
+      {
+        "chunk_id": "124_1",
+        "bi_rank": 8,
+        "ce_rank": 10,
+        "ce_score": -8.7166
+      }
+    ],
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Based on the provided context, the President has immunity from certain court proceedings:\n\n* Under **Article 361(1)**, the President is not answerable to any court for the exercise and performance of the powers and duties of his office, or for any act done or purporting to be done by him in the exercise and performance of those powers and duties.\n* However, under **Article 361(1)**, this immunity is limited in that the conduct of the President may be brought under review by any court, tribunal, or body appointed or designated by either House of Parliament for the investigation of a charge under Article 61.\n* Under **Article 361(2)**, no criminal proceedings whatsoever can be instituted or continued against the President in any court during his term of office.",
+    "latency_ms": {
+      "retrieval": 138.2,
+      "rerank": 568.3,
+      "llm_baseline": 3234.9,
+      "llm_reranked": 4665.9
+    }
+  }
+]

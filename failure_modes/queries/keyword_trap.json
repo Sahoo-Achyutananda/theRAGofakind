@@ -5,5 +5,8 @@
   {"query": "Who can issue Ordinances when the legislature is not in session?", "expected_articles": ["123", "213"], "note": "Union and State versions are near-duplicates"},
   {"query": "Which court can issue a writ of habeas corpus?", "expected_articles": ["32", "226"], "note": "139 shares the same writ wording"},
   {"query": "What is the maximum gap allowed between two sessions of Parliament?", "expected_articles": ["85"], "note": "174 is the same rule for State Legislatures"},
-  {"query": "Can the President be a member of Parliament?", "expected_articles": ["59"], "note": "66 and 158 contain the same 'shall not be a member of either House' wording"}
+  {"query": "Can the President be a member of Parliament?", "expected_articles": ["59"], "note": "66 and 158 contain the same 'shall not be a member of either House' wording"},
+  {"query": "Who appoints the judges of a High Court?", "expected_articles": ["217"], "relevant_chunks": ["217_0"], "note": "Supreme Court (124) and High Court (217) appointment articles are near-duplicates"},
+  {"query": "Who is the supreme commander of the Defence Forces?", "expected_articles": ["53"], "relevant_chunks": ["53_0"], "note": "53(2) vests the supreme command in the President; Art. 33/34 also mention the Armed Forces"},
+  {"query": "What is a Money Bill?", "expected_articles": ["110"], "note": "Arts. 107, 109, 110 and 117 all mention 'Money Bill'; only 110 defines it"}
 ]

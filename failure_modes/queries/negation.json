@@ -4,5 +4,6 @@
   {"query": "What can the Rajya Sabha NOT do with a Money Bill?", "expected_articles": ["109"], "note": "Can only recommend within 14 days; 107 and 110 also say 'Money Bill'"},
   {"query": "Which titles is the State NOT allowed to confer?", "expected_articles": ["18"], "note": "Exceptions for military and academic distinctions"},
   {"query": "Can a non-citizen holding a public office accept a foreign title without permission?", "expected_articles": ["18"], "note": "Role-specific constraint in 18(3)"},
-  {"query": "Is religious instruction allowed in government-funded schools?", "expected_articles": ["28"], "note": "Banned in wholly State-funded schools, allowed in some others"}
+  {"query": "Is religious instruction allowed in government-funded schools?", "expected_articles": ["28"], "note": "Banned in wholly State-funded schools, allowed in some others"},
+  {"query": "Can the Council of States be dissolved?", "expected_articles": ["83"], "relevant_chunks": ["83_0"], "note": "Answer is a negative: 83(1) 'shall not be subject to dissolution'"}
 ]

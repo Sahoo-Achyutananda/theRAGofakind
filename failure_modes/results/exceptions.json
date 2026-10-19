@@ -999,5 +999,114 @@
     },
     "answer_baseline": "The provided context does not answer this.",
     "answer_reranked": "Based on the provided context, grounds regarding restrictions on freedom of speech are mentioned for Parliament and State Legislatures:\n\n* **In Parliament:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of Parliament (Article 105(1)).\n* **In State Legislatures:** Freedom of speech is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of the Legislature (Article 194(1)).\n\n*(Note: The provided text for Article 19(5) mentions restrictions in the interests of the general public or for the protection of any Scheduled Tribe, but specifies that this applies to sub-clauses (d) and (e), not freedom of speech).*"
+  },
+  {
+    "query": "Can the Vice-President act as President?",
+    "expected_articles": [
+      "65"
+    ],
+    "relevant_chunks": [
+      "65_0"
+    ],
+    "note": "Only in a vacancy or when the President is unable to act - 65(1)/(2)",
+    "verdict": "rescued",
+    "expected_ranks": {
+      "baseline": [
+        4
+      ],
+      "reranked": [
+        1
+      ]
+    },
+    "baseline_top3": [
+      "66_3",
+      "71_0",
+      "66_1"
+    ],
+    "reranked_top3": [
+      "65_0",
+      "64_0",
+      "66_1"
+    ],
+    "rank_shifts": [
+      {
+        "chunk_id": "65_0",
+        "bi_rank": 4,
+        "ce_rank": 1,
+        "bi_score": 0.5807,
+        "ce_score": 7.9326
+      },
+      {
+        "chunk_id": "64_0",
+        "bi_rank": 7,
+        "ce_rank": 2,
+        "bi_score": 0.5131,
+        "ce_score": 4.2992
+      },
+      {
+        "chunk_id": "66_1",
+        "bi_rank": 3,
+        "ce_rank": 3,
+        "bi_score": 0.5874,
+        "ce_score": 3.4258
+      },
+      {
+        "chunk_id": "66_3",
+        "bi_rank": 1,
+        "ce_rank": 4,
+        "bi_score": 0.5919,
+        "ce_score": 2.7945
+      },
+      {
+        "chunk_id": "71_0",
+        "bi_rank": 2,
+        "ce_rank": 5,
+        "bi_score": 0.5899,
+        "ce_score": 2.7665
+      },
+      {
+        "chunk_id": "66_2",
+        "bi_rank": 6,
+        "ce_rank": 6,
+        "bi_score": 0.5649,
+        "ce_score": 2.5584
+      },
+      {
+        "chunk_id": "66_0",
+        "bi_rank": 8,
+        "ce_rank": 7,
+        "bi_score": 0.5109,
+        "ce_score": 1.8623
+      },
+      {
+        "chunk_id": "67_0",
+        "bi_rank": 5,
+        "ce_rank": 8,
+        "bi_score": 0.5706,
+        "ce_score": 1.3211
+      },
+      {
+        "chunk_id": "63_0",
+        "bi_rank": 9,
+        "ce_rank": 9,
+        "bi_score": 0.5071,
+        "ce_score": 0.9489
+      },
+      {
+        "chunk_id": "56_0",
+        "bi_rank": 10,
+        "ce_rank": 10,
+        "bi_score": 0.5056,
+        "ce_score": -0.9182
+      }
+    ],
+    "latency_ms": {
+      "retrieval": 36.5,
+      "rerank": 654.9,
+      "llm_baseline": 4102.0,
+      "llm_reranked": 4124.9
+    },
+    "answer_baseline": "The provided context does not answer this.",
+    "answer_reranked": "Yes, the Vice-President can act as President. \n\nAccording to Article 65(1), the Vice-President shall act as President in the event of any vacancy in the office of the President due to death, resignation, removal, or otherwise, until a new President enters upon his office. Additionally, when the President is unable to discharge his functions owing to absence, illness, or any other cause, the Vice-President shall discharge his functions until the President resumes his duties (Article 65(2))."
   }
 ]
